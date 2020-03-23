@@ -503,7 +503,7 @@ Partial Class FrmTutores
         'DataGridView1
         '
         Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdTutorDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.FechaNacDataGridViewTextBoxColumn, Me.GradoEscolarDataGridViewTextBoxColumn, Me.OcupacionDataGridViewTextBoxColumn, Me.TelTabajoDataGridViewTextBoxColumn, Me.DomTabajoDataGridViewTextBoxColumn, Me.DomParticularDataGridViewTextBoxColumn, Me.TelFijoDataGridViewTextBoxColumn, Me.TelCelDataGridViewTextBoxColumn, Me.LugarRadicaDataGridViewTextBoxColumn, Me.EstadoCivilDataGridViewTextBoxColumn, Me.NumHijosDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.TutoresBindingSource
@@ -522,7 +522,7 @@ Partial Class FrmTutores
         Me.IdTutorDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdTutorDataGridViewTextBoxColumn.Name = "IdTutorDataGridViewTextBoxColumn"
         Me.IdTutorDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdTutorDataGridViewTextBoxColumn.Width = 82
+        Me.IdTutorDataGridViewTextBoxColumn.Width = 24
         '
         'NombreDataGridViewTextBoxColumn
         '
@@ -531,7 +531,7 @@ Partial Class FrmTutores
         Me.NombreDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
         Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombreDataGridViewTextBoxColumn.Width = 85
+        Me.NombreDataGridViewTextBoxColumn.Width = 24
         '
         'FechaNacDataGridViewTextBoxColumn
         '
@@ -540,7 +540,7 @@ Partial Class FrmTutores
         Me.FechaNacDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.FechaNacDataGridViewTextBoxColumn.Name = "FechaNacDataGridViewTextBoxColumn"
         Me.FechaNacDataGridViewTextBoxColumn.ReadOnly = True
-        Me.FechaNacDataGridViewTextBoxColumn.Width = 97
+        Me.FechaNacDataGridViewTextBoxColumn.Width = 24
         '
         'GradoEscolarDataGridViewTextBoxColumn
         '
@@ -549,7 +549,7 @@ Partial Class FrmTutores
         Me.GradoEscolarDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.GradoEscolarDataGridViewTextBoxColumn.Name = "GradoEscolarDataGridViewTextBoxColumn"
         Me.GradoEscolarDataGridViewTextBoxColumn.ReadOnly = True
-        Me.GradoEscolarDataGridViewTextBoxColumn.Width = 121
+        Me.GradoEscolarDataGridViewTextBoxColumn.Width = 24
         '
         'OcupacionDataGridViewTextBoxColumn
         '
@@ -558,7 +558,7 @@ Partial Class FrmTutores
         Me.OcupacionDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.OcupacionDataGridViewTextBoxColumn.Name = "OcupacionDataGridViewTextBoxColumn"
         Me.OcupacionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.OcupacionDataGridViewTextBoxColumn.Width = 102
+        Me.OcupacionDataGridViewTextBoxColumn.Width = 24
         '
         'TelTabajoDataGridViewTextBoxColumn
         '
@@ -567,7 +567,7 @@ Partial Class FrmTutores
         Me.TelTabajoDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.TelTabajoDataGridViewTextBoxColumn.Name = "TelTabajoDataGridViewTextBoxColumn"
         Me.TelTabajoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TelTabajoDataGridViewTextBoxColumn.Width = 96
+        Me.TelTabajoDataGridViewTextBoxColumn.Width = 24
         '
         'DomTabajoDataGridViewTextBoxColumn
         '
@@ -576,7 +576,7 @@ Partial Class FrmTutores
         Me.DomTabajoDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DomTabajoDataGridViewTextBoxColumn.Name = "DomTabajoDataGridViewTextBoxColumn"
         Me.DomTabajoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DomTabajoDataGridViewTextBoxColumn.Width = 108
+        Me.DomTabajoDataGridViewTextBoxColumn.Width = 24
         '
         'DomParticularDataGridViewTextBoxColumn
         '
@@ -585,7 +585,7 @@ Partial Class FrmTutores
         Me.DomParticularDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DomParticularDataGridViewTextBoxColumn.Name = "DomParticularDataGridViewTextBoxColumn"
         Me.DomParticularDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DomParticularDataGridViewTextBoxColumn.Width = 124
+        Me.DomParticularDataGridViewTextBoxColumn.Width = 24
         '
         'TelFijoDataGridViewTextBoxColumn
         '
@@ -594,7 +594,7 @@ Partial Class FrmTutores
         Me.TelFijoDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.TelFijoDataGridViewTextBoxColumn.Name = "TelFijoDataGridViewTextBoxColumn"
         Me.TelFijoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TelFijoDataGridViewTextBoxColumn.Width = 74
+        Me.TelFijoDataGridViewTextBoxColumn.Width = 24
         '
         'TelCelDataGridViewTextBoxColumn
         '
@@ -603,7 +603,7 @@ Partial Class FrmTutores
         Me.TelCelDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.TelCelDataGridViewTextBoxColumn.Name = "TelCelDataGridViewTextBoxColumn"
         Me.TelCelDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TelCelDataGridViewTextBoxColumn.Width = 72
+        Me.TelCelDataGridViewTextBoxColumn.Width = 24
         '
         'LugarRadicaDataGridViewTextBoxColumn
         '
@@ -612,7 +612,7 @@ Partial Class FrmTutores
         Me.LugarRadicaDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.LugarRadicaDataGridViewTextBoxColumn.Name = "LugarRadicaDataGridViewTextBoxColumn"
         Me.LugarRadicaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.LugarRadicaDataGridViewTextBoxColumn.Width = 113
+        Me.LugarRadicaDataGridViewTextBoxColumn.Width = 24
         '
         'EstadoCivilDataGridViewTextBoxColumn
         '
@@ -621,7 +621,7 @@ Partial Class FrmTutores
         Me.EstadoCivilDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.EstadoCivilDataGridViewTextBoxColumn.Name = "EstadoCivilDataGridViewTextBoxColumn"
         Me.EstadoCivilDataGridViewTextBoxColumn.ReadOnly = True
-        Me.EstadoCivilDataGridViewTextBoxColumn.Width = 105
+        Me.EstadoCivilDataGridViewTextBoxColumn.Width = 24
         '
         'NumHijosDataGridViewTextBoxColumn
         '
@@ -630,7 +630,7 @@ Partial Class FrmTutores
         Me.NumHijosDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.NumHijosDataGridViewTextBoxColumn.Name = "NumHijosDataGridViewTextBoxColumn"
         Me.NumHijosDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NumHijosDataGridViewTextBoxColumn.Width = 95
+        Me.NumHijosDataGridViewTextBoxColumn.Width = 24
         '
         'TutoresTableAdapter
         '
