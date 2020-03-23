@@ -19,8 +19,7 @@
     Private Sub btnUltimo_Click(sender As Object, e As EventArgs) Handles btnUltimo.Click
         PersonalBindingSource.MoveLast()
     End Sub
-
-    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) 
+    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         PersonalBindingSource.AddNew()
         btnGuardar.Enabled = True
         btnNuevo.Enabled = False
@@ -29,8 +28,7 @@
         GroupBox1.Enabled = True
         GroupBox2.Enabled = False
     End Sub
-
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) 
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
             PersonalBindingSource.EndEdit()
             PersonalTableAdapter.Update(GuarderiaDataSet.Personal)
@@ -45,8 +43,7 @@
         GroupBox1.Enabled = False
         GroupBox2.Enabled = True
     End Sub
-
-    Private Sub btnModificar_Click(sender As Object, e As EventArgs) 
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         btnModificar.Enabled = False
         btnNuevo.Enabled = False
         btnGuardar.Enabled = True
@@ -54,8 +51,7 @@
         GroupBox1.Enabled = True
         GroupBox2.Enabled = False
     End Sub
-
-    Private Sub btnSalir_Click(sender As Object, e As EventArgs) 
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Dispose()
     End Sub
 End Class

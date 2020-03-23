@@ -5,7 +5,7 @@
 
     End Sub
 
-    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) 
+    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Dim N As Integer
         N = PaseosBindingSource.Count + 1
         PaseosBindingSource.AddNew()
@@ -18,7 +18,7 @@
         GroupBox2.Enabled = False
     End Sub
 
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) 
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
             PaseosBindingSource.EndEdit()
             PaseosTableAdapter.Update(GuarderiaDataSet.Paseos)
@@ -34,13 +34,16 @@
         GroupBox2.Enabled = True
     End Sub
 
-    Private Sub btnModificar_Click(sender As Object, e As EventArgs) 
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         btnModificar.Enabled = False
         btnNuevo.Enabled = False
         btnGuardar.Enabled = True
         btnSalir.Enabled = False
         GroupBox1.Enabled = True
         GroupBox2.Enabled = False
+    End Sub
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Me.Dispose()
     End Sub
 
     Private Sub btnPrimero_Click(sender As Object, e As EventArgs) Handles btnPrimero.Click
@@ -59,7 +62,4 @@
         PaseosBindingSource.MoveLast()
     End Sub
 
-    Private Sub btnSalir_Click(sender As Object, e As EventArgs) 
-        Me.Dispose()
-    End Sub
 End Class
