@@ -22,21 +22,17 @@ Partial Class FrmPersonal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnUltimo = New System.Windows.Forms.Button()
         Me.btnSiguiente = New System.Windows.Forms.Button()
         Me.btnAnterior = New System.Windows.Forms.Button()
         Me.btnPrimero = New System.Windows.Forms.Button()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.btnNuevo = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.btnGuardar = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
-        Me.btnModificar = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
-        Me.btnSalir = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboEstudios = New System.Windows.Forms.ComboBox()
+        Me.PersonalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GuarderiaDataSet = New Guarderia.GuarderiaDataSet()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.NumId = New System.Windows.Forms.NumericUpDown()
         Me.txtTelCel = New System.Windows.Forms.TextBox()
         Me.txtCP = New System.Windows.Forms.TextBox()
@@ -52,12 +48,32 @@ Partial Class FrmPersonal
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboEstudios = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdPersonalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RfcDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DomicilioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelCelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GradoEstudioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PersonalTableAdapter = New Guarderia.GuarderiaDataSetTableAdapters.PersonalTableAdapter()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.btnNuevo = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.btnGuardar = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.btnModificar = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.btnSalir = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
         Me.GroupBox2.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PersonalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GuarderiaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumId, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -108,77 +124,6 @@ Partial Class FrmPersonal
         Me.btnPrimero.Text = "Primero"
         Me.btnPrimero.UseVisualStyleBackColor = True
         '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevo, Me.ToolStripLabel1, Me.btnGuardar, Me.ToolStripLabel2, Me.btnModificar, Me.ToolStripLabel3, Me.btnSalir, Me.ToolStripLabel4})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1158, 27)
-        Me.ToolStrip1.TabIndex = 12
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'btnNuevo
-        '
-        Me.btnNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnNuevo.Image = Global.Guarderia.My.Resources.Resources.copy
-        Me.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(29, 24)
-        Me.btnNuevo.Text = "ToolStripButton1"
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(52, 24)
-        Me.ToolStripLabel1.Text = "Nuevo"
-        '
-        'btnGuardar
-        '
-        Me.btnGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnGuardar.Enabled = False
-        Me.btnGuardar.Image = Global.Guarderia.My.Resources.Resources.plus
-        Me.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(29, 24)
-        Me.btnGuardar.Text = "ToolStripButton2"
-        '
-        'ToolStripLabel2
-        '
-        Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(62, 24)
-        Me.ToolStripLabel2.Text = "Guardar"
-        '
-        'btnModificar
-        '
-        Me.btnModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnModificar.Image = Global.Guarderia.My.Resources.Resources.rotate
-        Me.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(29, 24)
-        Me.btnModificar.Text = "ToolStripButton3"
-        '
-        'ToolStripLabel3
-        '
-        Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(73, 24)
-        Me.ToolStripLabel3.Text = "Modificar"
-        '
-        'btnSalir
-        '
-        Me.btnSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnSalir.Image = Global.Guarderia.My.Resources.Resources.cancel_2
-        Me.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(29, 24)
-        Me.btnSalir.Text = "ToolStripButton4"
-        '
-        'ToolStripLabel4
-        '
-        Me.ToolStripLabel4.Name = "ToolStripLabel4"
-        Me.ToolStripLabel4.Size = New System.Drawing.Size(38, 24)
-        Me.ToolStripLabel4.Text = "Salir"
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.ComboEstudios)
@@ -205,8 +150,38 @@ Partial Class FrmPersonal
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ingresa los datos:"
         '
+        'ComboEstudios
+        '
+        Me.ComboEstudios.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "gradoEstudio", True))
+        Me.ComboEstudios.FormattingEnabled = True
+        Me.ComboEstudios.Items.AddRange(New Object() {"Preescolar", "Primaria", "Secundaria", "Bachillerato", "Universidad", "Maestría", "Doctorado"})
+        Me.ComboEstudios.Location = New System.Drawing.Point(740, 39)
+        Me.ComboEstudios.Name = "ComboEstudios"
+        Me.ComboEstudios.Size = New System.Drawing.Size(166, 24)
+        Me.ComboEstudios.TabIndex = 29
+        '
+        'PersonalBindingSource
+        '
+        Me.PersonalBindingSource.DataMember = "Personal"
+        Me.PersonalBindingSource.DataSource = Me.GuarderiaDataSet
+        '
+        'GuarderiaDataSet
+        '
+        Me.GuarderiaDataSet.DataSetName = "GuarderiaDataSet"
+        Me.GuarderiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(737, 19)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(169, 17)
+        Me.Label5.TabIndex = 28
+        Me.Label5.Text = "Ultimo grado de estudios:"
+        '
         'NumId
         '
+        Me.NumId.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PersonalBindingSource, "idPersonal", True))
         Me.NumId.Location = New System.Drawing.Point(6, 42)
         Me.NumId.Name = "NumId"
         Me.NumId.Size = New System.Drawing.Size(74, 22)
@@ -214,6 +189,7 @@ Partial Class FrmPersonal
         '
         'txtTelCel
         '
+        Me.txtTelCel.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "telCel", True))
         Me.txtTelCel.Location = New System.Drawing.Point(512, 87)
         Me.txtTelCel.Name = "txtTelCel"
         Me.txtTelCel.Size = New System.Drawing.Size(123, 22)
@@ -221,6 +197,7 @@ Partial Class FrmPersonal
         '
         'txtCP
         '
+        Me.txtCP.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "cp", True))
         Me.txtCP.Location = New System.Drawing.Point(280, 87)
         Me.txtCP.Name = "txtCP"
         Me.txtCP.Size = New System.Drawing.Size(97, 22)
@@ -228,6 +205,7 @@ Partial Class FrmPersonal
         '
         'txtRFC
         '
+        Me.txtRFC.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "rfc", True))
         Me.txtRFC.Location = New System.Drawing.Point(494, 41)
         Me.txtRFC.Name = "txtRFC"
         Me.txtRFC.Size = New System.Drawing.Size(240, 22)
@@ -235,6 +213,7 @@ Partial Class FrmPersonal
         '
         'txtDom
         '
+        Me.txtDom.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "domicilio", True))
         Me.txtDom.Location = New System.Drawing.Point(6, 87)
         Me.txtDom.Name = "txtDom"
         Me.txtDom.Size = New System.Drawing.Size(268, 22)
@@ -242,6 +221,7 @@ Partial Class FrmPersonal
         '
         'txtTelPart
         '
+        Me.txtTelPart.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "telefono", True))
         Me.txtTelPart.Location = New System.Drawing.Point(383, 87)
         Me.txtTelPart.Name = "txtTelPart"
         Me.txtTelPart.Size = New System.Drawing.Size(123, 22)
@@ -249,6 +229,7 @@ Partial Class FrmPersonal
         '
         'TxtNombre
         '
+        Me.TxtNombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "nombre", True))
         Me.TxtNombre.Location = New System.Drawing.Point(95, 41)
         Me.TxtNombre.MaxLength = 40
         Me.TxtNombre.Name = "TxtNombre"
@@ -328,41 +309,193 @@ Partial Class FrmPersonal
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "PERSONAL"
         '
-        'ComboEstudios
+        'DataGridView1
         '
-        Me.ComboEstudios.FormattingEnabled = True
-        Me.ComboEstudios.Items.AddRange(New Object() {"Preescolar", "Primaria", "Secundaria", "Bachillerato", "Universidad", "Maestría", "Doctorado"})
-        Me.ComboEstudios.Location = New System.Drawing.Point(740, 39)
-        Me.ComboEstudios.Name = "ComboEstudios"
-        Me.ComboEstudios.Size = New System.Drawing.Size(166, 24)
-        Me.ComboEstudios.TabIndex = 29
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPersonalDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.RfcDataGridViewTextBoxColumn, Me.DomicilioDataGridViewTextBoxColumn, Me.CpDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.TelCelDataGridViewTextBoxColumn, Me.GradoEstudioDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.PersonalBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 289)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(1134, 256)
+        Me.DataGridView1.TabIndex = 14
         '
-        'Label5
+        'IdPersonalDataGridViewTextBoxColumn
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(737, 19)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(169, 17)
-        Me.Label5.TabIndex = 28
-        Me.Label5.Text = "Ultimo grado de estudios:"
+        Me.IdPersonalDataGridViewTextBoxColumn.DataPropertyName = "idPersonal"
+        Me.IdPersonalDataGridViewTextBoxColumn.HeaderText = "idPersonal"
+        Me.IdPersonalDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdPersonalDataGridViewTextBoxColumn.Name = "IdPersonalDataGridViewTextBoxColumn"
+        Me.IdPersonalDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdPersonalDataGridViewTextBoxColumn.Width = 104
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombreDataGridViewTextBoxColumn.Width = 85
+        '
+        'RfcDataGridViewTextBoxColumn
+        '
+        Me.RfcDataGridViewTextBoxColumn.DataPropertyName = "rfc"
+        Me.RfcDataGridViewTextBoxColumn.HeaderText = "rfc"
+        Me.RfcDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.RfcDataGridViewTextBoxColumn.Name = "RfcDataGridViewTextBoxColumn"
+        Me.RfcDataGridViewTextBoxColumn.ReadOnly = True
+        Me.RfcDataGridViewTextBoxColumn.Width = 53
+        '
+        'DomicilioDataGridViewTextBoxColumn
+        '
+        Me.DomicilioDataGridViewTextBoxColumn.DataPropertyName = "domicilio"
+        Me.DomicilioDataGridViewTextBoxColumn.HeaderText = "domicilio"
+        Me.DomicilioDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DomicilioDataGridViewTextBoxColumn.Name = "DomicilioDataGridViewTextBoxColumn"
+        Me.DomicilioDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DomicilioDataGridViewTextBoxColumn.Width = 91
+        '
+        'CpDataGridViewTextBoxColumn
+        '
+        Me.CpDataGridViewTextBoxColumn.DataPropertyName = "cp"
+        Me.CpDataGridViewTextBoxColumn.HeaderText = "cp"
+        Me.CpDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CpDataGridViewTextBoxColumn.Name = "CpDataGridViewTextBoxColumn"
+        Me.CpDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CpDataGridViewTextBoxColumn.Width = 52
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TelefonoDataGridViewTextBoxColumn.Width = 88
+        '
+        'TelCelDataGridViewTextBoxColumn
+        '
+        Me.TelCelDataGridViewTextBoxColumn.DataPropertyName = "telCel"
+        Me.TelCelDataGridViewTextBoxColumn.HeaderText = "telCel"
+        Me.TelCelDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.TelCelDataGridViewTextBoxColumn.Name = "TelCelDataGridViewTextBoxColumn"
+        Me.TelCelDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TelCelDataGridViewTextBoxColumn.Width = 72
+        '
+        'GradoEstudioDataGridViewTextBoxColumn
+        '
+        Me.GradoEstudioDataGridViewTextBoxColumn.DataPropertyName = "gradoEstudio"
+        Me.GradoEstudioDataGridViewTextBoxColumn.HeaderText = "gradoEstudio"
+        Me.GradoEstudioDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.GradoEstudioDataGridViewTextBoxColumn.Name = "GradoEstudioDataGridViewTextBoxColumn"
+        Me.GradoEstudioDataGridViewTextBoxColumn.ReadOnly = True
+        Me.GradoEstudioDataGridViewTextBoxColumn.Width = 121
+        '
+        'PersonalTableAdapter
+        '
+        Me.PersonalTableAdapter.ClearBeforeFill = True
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevo, Me.ToolStripLabel1, Me.btnGuardar, Me.ToolStripLabel2, Me.btnModificar, Me.ToolStripLabel3, Me.btnSalir, Me.ToolStripLabel4})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(1158, 27)
+        Me.ToolStrip1.TabIndex = 26
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'btnNuevo
+        '
+        Me.btnNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnNuevo.Image = Global.Guarderia.My.Resources.Resources.copy
+        Me.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(29, 24)
+        Me.btnNuevo.Text = "ToolStripButton1"
+        Me.btnNuevo.ToolTipText = "Crear un nuevo Tipo de Pago"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(52, 24)
+        Me.ToolStripLabel1.Text = "Nuevo"
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnGuardar.Enabled = False
+        Me.btnGuardar.Image = Global.Guarderia.My.Resources.Resources.plus
+        Me.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(29, 24)
+        Me.btnGuardar.Text = "ToolStripButton2"
+        Me.btnGuardar.ToolTipText = "Guardar los cambios"
+        '
+        'ToolStripLabel2
+        '
+        Me.ToolStripLabel2.Name = "ToolStripLabel2"
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(62, 24)
+        Me.ToolStripLabel2.Text = "Guardar"
+        '
+        'btnModificar
+        '
+        Me.btnModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnModificar.Image = Global.Guarderia.My.Resources.Resources.rotate
+        Me.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(29, 24)
+        Me.btnModificar.Text = "ToolStripButton3"
+        Me.btnModificar.ToolTipText = "Modificar un tipo de pago existente"
+        '
+        'ToolStripLabel3
+        '
+        Me.ToolStripLabel3.Name = "ToolStripLabel3"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(73, 24)
+        Me.ToolStripLabel3.Text = "Modificar"
+        '
+        'btnSalir
+        '
+        Me.btnSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnSalir.Image = Global.Guarderia.My.Resources.Resources.cancel_2
+        Me.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(29, 24)
+        Me.btnSalir.Text = "ToolStripButton4"
+        Me.btnSalir.ToolTipText = "Cerrar ventana"
+        '
+        'ToolStripLabel4
+        '
+        Me.ToolStripLabel4.Name = "ToolStripLabel4"
+        Me.ToolStripLabel4.Size = New System.Drawing.Size(38, 24)
+        Me.ToolStripLabel4.Text = "Salir"
         '
         'FrmPersonal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1158, 557)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmPersonal"
         Me.Text = "FrmPersonal"
         Me.GroupBox2.ResumeLayout(False)
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PersonalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GuarderiaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumId, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -373,15 +506,6 @@ Partial Class FrmPersonal
     Friend WithEvents btnSiguiente As Button
     Friend WithEvents btnAnterior As Button
     Friend WithEvents btnPrimero As Button
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents btnNuevo As ToolStripButton
-    Friend WithEvents ToolStripLabel1 As ToolStripLabel
-    Friend WithEvents btnGuardar As ToolStripButton
-    Friend WithEvents ToolStripLabel2 As ToolStripLabel
-    Friend WithEvents btnModificar As ToolStripButton
-    Friend WithEvents ToolStripLabel3 As ToolStripLabel
-    Friend WithEvents btnSalir As ToolStripButton
-    Friend WithEvents ToolStripLabel4 As ToolStripLabel
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents NumId As NumericUpDown
     Friend WithEvents txtTelCel As TextBox
@@ -400,4 +524,25 @@ Partial Class FrmPersonal
     Friend WithEvents Label1 As Label
     Friend WithEvents ComboEstudios As ComboBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents GuarderiaDataSet As GuarderiaDataSet
+    Friend WithEvents PersonalBindingSource As BindingSource
+    Friend WithEvents PersonalTableAdapter As GuarderiaDataSetTableAdapters.PersonalTableAdapter
+    Friend WithEvents IdPersonalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RfcDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DomicilioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CpDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TelCelDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents GradoEstudioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents btnNuevo As ToolStripButton
+    Friend WithEvents ToolStripLabel1 As ToolStripLabel
+    Friend WithEvents btnGuardar As ToolStripButton
+    Friend WithEvents ToolStripLabel2 As ToolStripLabel
+    Friend WithEvents btnModificar As ToolStripButton
+    Friend WithEvents ToolStripLabel3 As ToolStripLabel
+    Friend WithEvents btnSalir As ToolStripButton
+    Friend WithEvents ToolStripLabel4 As ToolStripLabel
 End Class

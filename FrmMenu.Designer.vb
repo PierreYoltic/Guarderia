@@ -23,7 +23,6 @@ Partial Class FrmMenu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CatalogosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TutoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PersonasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -33,6 +32,7 @@ Partial Class FrmMenu
         Me.TiposDePagoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PaseosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -42,73 +42,73 @@ Partial Class FrmMenu
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CatalogosToolStripMenuItem, Me.MovimientosToolStripMenuItem, Me.ReportesToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 30)
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'ReportesToolStripMenuItem
-        '
-        Me.ReportesToolStripMenuItem.Image = Global.Guarderia.My.Resources.Resources.printer_1
-        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(102, 26)
-        Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
         'CatalogosToolStripMenuItem
         '
         Me.CatalogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TutoresToolStripMenuItem, Me.PersonasToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.HorariosToolStripMenuItem, Me.SalasToolStripMenuItem, Me.TiposDePagoToolStripMenuItem, Me.PaseosToolStripMenuItem})
         Me.CatalogosToolStripMenuItem.Image = Global.Guarderia.My.Resources.Resources.upload
         Me.CatalogosToolStripMenuItem.Name = "CatalogosToolStripMenuItem"
-        Me.CatalogosToolStripMenuItem.Size = New System.Drawing.Size(110, 26)
+        Me.CatalogosToolStripMenuItem.Size = New System.Drawing.Size(110, 24)
         Me.CatalogosToolStripMenuItem.Text = "Catalogos"
         '
         'TutoresToolStripMenuItem
         '
         Me.TutoresToolStripMenuItem.Name = "TutoresToolStripMenuItem"
-        Me.TutoresToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.TutoresToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.TutoresToolStripMenuItem.Text = "Tutores"
         '
         'PersonasToolStripMenuItem
         '
         Me.PersonasToolStripMenuItem.Name = "PersonasToolStripMenuItem"
-        Me.PersonasToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.PersonasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.PersonasToolStripMenuItem.Text = "Personas"
         '
         'PersonalToolStripMenuItem
         '
         Me.PersonalToolStripMenuItem.Name = "PersonalToolStripMenuItem"
-        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.PersonalToolStripMenuItem.Text = "Personal"
         '
         'HorariosToolStripMenuItem
         '
         Me.HorariosToolStripMenuItem.Name = "HorariosToolStripMenuItem"
-        Me.HorariosToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.HorariosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.HorariosToolStripMenuItem.Text = "Horarios"
         '
         'SalasToolStripMenuItem
         '
         Me.SalasToolStripMenuItem.Name = "SalasToolStripMenuItem"
-        Me.SalasToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.SalasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.SalasToolStripMenuItem.Text = "Salas"
         '
         'TiposDePagoToolStripMenuItem
         '
         Me.TiposDePagoToolStripMenuItem.Name = "TiposDePagoToolStripMenuItem"
-        Me.TiposDePagoToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.TiposDePagoToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.TiposDePagoToolStripMenuItem.Text = "Tipos de Pago"
         '
         'PaseosToolStripMenuItem
         '
         Me.PaseosToolStripMenuItem.Name = "PaseosToolStripMenuItem"
-        Me.PaseosToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.PaseosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.PaseosToolStripMenuItem.Text = "Paseos"
         '
         'MovimientosToolStripMenuItem
         '
         Me.MovimientosToolStripMenuItem.Image = Global.Guarderia.My.Resources.Resources.refresh
         Me.MovimientosToolStripMenuItem.Name = "MovimientosToolStripMenuItem"
-        Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(129, 26)
+        Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(129, 24)
         Me.MovimientosToolStripMenuItem.Text = "Movimientos"
+        '
+        'ReportesToolStripMenuItem
+        '
+        Me.ReportesToolStripMenuItem.Image = Global.Guarderia.My.Resources.Resources.printer_1
+        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(102, 24)
+        Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
         'FrmMenu
         '

@@ -22,6 +22,7 @@ Partial Class FrmSalas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnUltimo = New System.Windows.Forms.Button()
@@ -42,10 +43,19 @@ Partial Class FrmSalas
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         Me.btnSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.GuarderiaDataSet = New Guarderia.GuarderiaDataSet()
+        Me.SalasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SalasTableAdapter = New Guarderia.GuarderiaDataSetTableAdapters.SalasTableAdapter()
+        Me.IdSalaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumId, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GuarderiaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SalasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -122,6 +132,7 @@ Partial Class FrmSalas
         '
         'NumId
         '
+        Me.NumId.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.SalasBindingSource, "idSala", True))
         Me.NumId.Enabled = False
         Me.NumId.Location = New System.Drawing.Point(6, 45)
         Me.NumId.Name = "NumId"
@@ -130,6 +141,7 @@ Partial Class FrmSalas
         '
         'TxtDescripcion
         '
+        Me.TxtDescripcion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SalasBindingSource, "descripcion", True))
         Me.TxtDescripcion.Location = New System.Drawing.Point(94, 44)
         Me.TxtDescripcion.MaxLength = 40
         Me.TxtDescripcion.Name = "TxtDescripcion"
@@ -160,7 +172,7 @@ Partial Class FrmSalas
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevo, Me.ToolStripLabel1, Me.btnGuardar, Me.ToolStripLabel2, Me.btnModificar, Me.ToolStripLabel3, Me.btnSalir, Me.ToolStripLabel4})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1153, 27)
+        Me.ToolStrip1.Size = New System.Drawing.Size(468, 27)
         Me.ToolStrip1.TabIndex = 24
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -229,11 +241,59 @@ Partial Class FrmSalas
         Me.ToolStripLabel4.Size = New System.Drawing.Size(38, 24)
         Me.ToolStripLabel4.Text = "Salir"
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdSalaDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.SalasBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 244)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(439, 217)
+        Me.DataGridView1.TabIndex = 25
+        '
+        'GuarderiaDataSet
+        '
+        Me.GuarderiaDataSet.DataSetName = "GuarderiaDataSet"
+        Me.GuarderiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SalasBindingSource
+        '
+        Me.SalasBindingSource.DataMember = "Salas"
+        Me.SalasBindingSource.DataSource = Me.GuarderiaDataSet
+        '
+        'SalasTableAdapter
+        '
+        Me.SalasTableAdapter.ClearBeforeFill = True
+        '
+        'IdSalaDataGridViewTextBoxColumn
+        '
+        Me.IdSalaDataGridViewTextBoxColumn.DataPropertyName = "idSala"
+        Me.IdSalaDataGridViewTextBoxColumn.HeaderText = "idSala"
+        Me.IdSalaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdSalaDataGridViewTextBoxColumn.Name = "IdSalaDataGridViewTextBoxColumn"
+        Me.IdSalaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdSalaDataGridViewTextBoxColumn.Width = 76
+        '
+        'DescripcionDataGridViewTextBoxColumn
+        '
+        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
+        Me.DescripcionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DescripcionDataGridViewTextBoxColumn.Width = 109
+        '
         'FrmSalas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1153, 473)
+        Me.ClientSize = New System.Drawing.Size(468, 473)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox2)
@@ -246,6 +306,9 @@ Partial Class FrmSalas
         CType(Me.NumId, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GuarderiaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SalasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -271,4 +334,10 @@ Partial Class FrmSalas
     Friend WithEvents ToolStripLabel3 As ToolStripLabel
     Friend WithEvents btnSalir As ToolStripButton
     Friend WithEvents ToolStripLabel4 As ToolStripLabel
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents GuarderiaDataSet As GuarderiaDataSet
+    Friend WithEvents SalasBindingSource As BindingSource
+    Friend WithEvents SalasTableAdapter As GuarderiaDataSetTableAdapters.SalasTableAdapter
+    Friend WithEvents IdSalaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
