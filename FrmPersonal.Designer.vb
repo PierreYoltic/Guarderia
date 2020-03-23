@@ -486,7 +486,7 @@ Partial Class FrmPersonal
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmPersonal"
-        Me.Text = "FrmPersonal"
+        Me.Text = "Personal"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

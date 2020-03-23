@@ -329,7 +329,7 @@ Partial Class FrmTipoPago
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmTipoPago"
-        Me.Text = "FrmTipoPago"
+        Me.Text = "TipoPago"
         Me.GroupBox2.ResumeLayout(False)
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()

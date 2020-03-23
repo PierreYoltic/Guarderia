@@ -647,7 +647,7 @@ Partial Class FrmTutores
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmTutores"
-        Me.Text = "FrmTutores"
+        Me.Text = "Tutores"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

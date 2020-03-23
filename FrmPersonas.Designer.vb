@@ -30,6 +30,8 @@ Partial Class FrmPersonas
         Me.btnPrimero = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.NumId = New System.Windows.Forms.NumericUpDown()
+        Me.PersonasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GuarderiaDataSet = New Guarderia.GuarderiaDataSet()
         Me.txtTelCel = New System.Windows.Forms.TextBox()
         Me.txtDom = New System.Windows.Forms.TextBox()
         Me.txtTelPart = New System.Windows.Forms.TextBox()
@@ -64,16 +66,14 @@ Partial Class FrmPersonas
         Me.TelFijoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TelTabajoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PersonasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GuarderiaDataSet = New Guarderia.GuarderiaDataSet()
         Me.PersonasTableAdapter = New Guarderia.GuarderiaDataSetTableAdapters.PersonasTableAdapter()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumId, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ToolStrip1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PersonasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GuarderiaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -157,6 +157,16 @@ Partial Class FrmPersonas
         Me.NumId.Name = "NumId"
         Me.NumId.Size = New System.Drawing.Size(82, 22)
         Me.NumId.TabIndex = 27
+        '
+        'PersonasBindingSource
+        '
+        Me.PersonasBindingSource.DataMember = "Personas"
+        Me.PersonasBindingSource.DataSource = Me.GuarderiaDataSet
+        '
+        'GuarderiaDataSet
+        '
+        Me.GuarderiaDataSet.DataSetName = "GuarderiaDataSet"
+        Me.GuarderiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'txtTelCel
         '
@@ -461,16 +471,6 @@ Partial Class FrmPersonas
         Me.TelTabajoDataGridViewTextBoxColumn.ReadOnly = True
         Me.TelTabajoDataGridViewTextBoxColumn.Width = 96
         '
-        'PersonasBindingSource
-        '
-        Me.PersonasBindingSource.DataMember = "Personas"
-        Me.PersonasBindingSource.DataSource = Me.GuarderiaDataSet
-        '
-        'GuarderiaDataSet
-        '
-        Me.GuarderiaDataSet.DataSetName = "GuarderiaDataSet"
-        Me.GuarderiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'PersonasTableAdapter
         '
         Me.PersonasTableAdapter.ClearBeforeFill = True
@@ -486,16 +486,16 @@ Partial Class FrmPersonas
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmPersonas"
-        Me.Text = "FrmPersonas"
+        Me.Text = "Personas"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.NumId, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PersonasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GuarderiaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PersonasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GuarderiaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

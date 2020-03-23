@@ -363,7 +363,7 @@ Partial Class FrmHorarios
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmHorarios"
-        Me.Text = "FrmHorarios"
+        Me.Text = "Horarios"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
