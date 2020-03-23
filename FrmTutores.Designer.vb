@@ -22,12 +22,16 @@ Partial Class FrmTutores
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnUltimo = New System.Windows.Forms.Button()
         Me.btnSiguiente = New System.Windows.Forms.Button()
         Me.btnAnterior = New System.Windows.Forms.Button()
         Me.btnPrimero = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.NumId = New System.Windows.Forms.NumericUpDown()
+        Me.TutoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GuarderiaDataSet = New Guarderia.GuarderiaDataSet()
         Me.NumHijos = New System.Windows.Forms.NumericUpDown()
         Me.ComboEstadoCivil = New System.Windows.Forms.ComboBox()
         Me.txtTelCel = New System.Windows.Forms.TextBox()
@@ -54,7 +58,6 @@ Partial Class FrmTutores
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.NumId = New System.Windows.Forms.NumericUpDown()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnNuevo = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
@@ -64,11 +67,29 @@ Partial Class FrmTutores
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         Me.btnSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdTutorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaNacDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GradoEscolarDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OcupacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelTabajoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DomTabajoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DomParticularDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelFijoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelCelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LugarRadicaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoCivilDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumHijosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TutoresTableAdapter = New Guarderia.GuarderiaDataSetTableAdapters.TutoresTableAdapter()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.NumHijos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumId, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TutoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GuarderiaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumHijos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -155,8 +176,27 @@ Partial Class FrmTutores
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ingresa los datos:"
         '
+        'NumId
+        '
+        Me.NumId.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.TutoresBindingSource, "idTutor", True))
+        Me.NumId.Location = New System.Drawing.Point(10, 42)
+        Me.NumId.Name = "NumId"
+        Me.NumId.Size = New System.Drawing.Size(74, 22)
+        Me.NumId.TabIndex = 27
+        '
+        'TutoresBindingSource
+        '
+        Me.TutoresBindingSource.DataMember = "Tutores"
+        Me.TutoresBindingSource.DataSource = Me.GuarderiaDataSet
+        '
+        'GuarderiaDataSet
+        '
+        Me.GuarderiaDataSet.DataSetName = "GuarderiaDataSet"
+        Me.GuarderiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'NumHijos
         '
+        Me.NumHijos.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.TutoresBindingSource, "numHijos", True))
         Me.NumHijos.Location = New System.Drawing.Point(173, 92)
         Me.NumHijos.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
         Me.NumHijos.Name = "NumHijos"
@@ -165,6 +205,7 @@ Partial Class FrmTutores
         '
         'ComboEstadoCivil
         '
+        Me.ComboEstadoCivil.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TutoresBindingSource, "estadoCivil", True))
         Me.ComboEstadoCivil.FormattingEnabled = True
         Me.ComboEstadoCivil.Items.AddRange(New Object() {"Soltero", "Casado", "Divorciado", "Viudo"})
         Me.ComboEstadoCivil.Location = New System.Drawing.Point(10, 92)
@@ -174,6 +215,7 @@ Partial Class FrmTutores
         '
         'txtTelCel
         '
+        Me.txtTelCel.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TutoresBindingSource, "telCel", True))
         Me.txtTelCel.Location = New System.Drawing.Point(424, 190)
         Me.txtTelCel.Name = "txtTelCel"
         Me.txtTelCel.Size = New System.Drawing.Size(120, 22)
@@ -181,6 +223,7 @@ Partial Class FrmTutores
         '
         'txtLugarRadica
         '
+        Me.txtLugarRadica.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TutoresBindingSource, "lugarRadica", True))
         Me.txtLugarRadica.Location = New System.Drawing.Point(424, 139)
         Me.txtLugarRadica.Name = "txtLugarRadica"
         Me.txtLugarRadica.Size = New System.Drawing.Size(242, 22)
@@ -188,6 +231,7 @@ Partial Class FrmTutores
         '
         'txtDomTrabajo
         '
+        Me.txtDomTrabajo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TutoresBindingSource, "domTabajo", True))
         Me.txtDomTrabajo.Location = New System.Drawing.Point(10, 139)
         Me.txtDomTrabajo.Name = "txtDomTrabajo"
         Me.txtDomTrabajo.Size = New System.Drawing.Size(259, 22)
@@ -195,6 +239,7 @@ Partial Class FrmTutores
         '
         'txtDomPart
         '
+        Me.txtDomPart.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TutoresBindingSource, "domParticular", True))
         Me.txtDomPart.Location = New System.Drawing.Point(9, 190)
         Me.txtDomPart.Name = "txtDomPart"
         Me.txtDomPart.Size = New System.Drawing.Size(260, 22)
@@ -202,6 +247,7 @@ Partial Class FrmTutores
         '
         'txtTelPart
         '
+        Me.txtTelPart.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TutoresBindingSource, "telFijo", True))
         Me.txtTelPart.Location = New System.Drawing.Point(275, 190)
         Me.txtTelPart.Name = "txtTelPart"
         Me.txtTelPart.Size = New System.Drawing.Size(143, 22)
@@ -209,6 +255,7 @@ Partial Class FrmTutores
         '
         'txtTelTrabajo
         '
+        Me.txtTelTrabajo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TutoresBindingSource, "telTabajo", True))
         Me.txtTelTrabajo.Location = New System.Drawing.Point(275, 139)
         Me.txtTelTrabajo.Name = "txtTelTrabajo"
         Me.txtTelTrabajo.Size = New System.Drawing.Size(143, 22)
@@ -216,6 +263,7 @@ Partial Class FrmTutores
         '
         'txtOcupacion
         '
+        Me.txtOcupacion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TutoresBindingSource, "ocupacion", True))
         Me.txtOcupacion.Location = New System.Drawing.Point(425, 41)
         Me.txtOcupacion.MaxLength = 15
         Me.txtOcupacion.Name = "txtOcupacion"
@@ -224,6 +272,7 @@ Partial Class FrmTutores
         '
         'ComboEstudios
         '
+        Me.ComboEstudios.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TutoresBindingSource, "gradoEscolar", True))
         Me.ComboEstudios.FormattingEnabled = True
         Me.ComboEstudios.Items.AddRange(New Object() {"Preescolar", "Primaria", "Secundaria", "Bachillerato", "Universidad", "Maestría", "Doctorado"})
         Me.ComboEstudios.Location = New System.Drawing.Point(672, 40)
@@ -233,6 +282,7 @@ Partial Class FrmTutores
         '
         'DateNacimiento
         '
+        Me.DateNacimiento.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.TutoresBindingSource, "fechaNac", True))
         Me.DateNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateNacimiento.Location = New System.Drawing.Point(844, 40)
         Me.DateNacimiento.Name = "DateNacimiento"
@@ -241,6 +291,7 @@ Partial Class FrmTutores
         '
         'TxtNombre
         '
+        Me.TxtNombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TutoresBindingSource, "nombre", True))
         Me.TxtNombre.Location = New System.Drawing.Point(93, 41)
         Me.TxtNombre.MaxLength = 40
         Me.TxtNombre.Name = "TxtNombre"
@@ -374,13 +425,6 @@ Partial Class FrmTutores
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "TUTORES"
         '
-        'NumId
-        '
-        Me.NumId.Location = New System.Drawing.Point(10, 42)
-        Me.NumId.Name = "NumId"
-        Me.NumId.Size = New System.Drawing.Size(74, 22)
-        Me.NumId.TabIndex = 27
-        '
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
@@ -456,24 +500,164 @@ Partial Class FrmTutores
         Me.ToolStripLabel4.Size = New System.Drawing.Size(38, 24)
         Me.ToolStripLabel4.Text = "Salir"
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdTutorDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.FechaNacDataGridViewTextBoxColumn, Me.GradoEscolarDataGridViewTextBoxColumn, Me.OcupacionDataGridViewTextBoxColumn, Me.TelTabajoDataGridViewTextBoxColumn, Me.DomTabajoDataGridViewTextBoxColumn, Me.DomParticularDataGridViewTextBoxColumn, Me.TelFijoDataGridViewTextBoxColumn, Me.TelCelDataGridViewTextBoxColumn, Me.LugarRadicaDataGridViewTextBoxColumn, Me.EstadoCivilDataGridViewTextBoxColumn, Me.NumHijosDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.TutoresBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(11, 396)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(1150, 187)
+        Me.DataGridView1.TabIndex = 18
+        '
+        'IdTutorDataGridViewTextBoxColumn
+        '
+        Me.IdTutorDataGridViewTextBoxColumn.DataPropertyName = "idTutor"
+        Me.IdTutorDataGridViewTextBoxColumn.HeaderText = "idTutor"
+        Me.IdTutorDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdTutorDataGridViewTextBoxColumn.Name = "IdTutorDataGridViewTextBoxColumn"
+        Me.IdTutorDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdTutorDataGridViewTextBoxColumn.Width = 24
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombreDataGridViewTextBoxColumn.Width = 24
+        '
+        'FechaNacDataGridViewTextBoxColumn
+        '
+        Me.FechaNacDataGridViewTextBoxColumn.DataPropertyName = "fechaNac"
+        Me.FechaNacDataGridViewTextBoxColumn.HeaderText = "fechaNac"
+        Me.FechaNacDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.FechaNacDataGridViewTextBoxColumn.Name = "FechaNacDataGridViewTextBoxColumn"
+        Me.FechaNacDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FechaNacDataGridViewTextBoxColumn.Width = 24
+        '
+        'GradoEscolarDataGridViewTextBoxColumn
+        '
+        Me.GradoEscolarDataGridViewTextBoxColumn.DataPropertyName = "gradoEscolar"
+        Me.GradoEscolarDataGridViewTextBoxColumn.HeaderText = "gradoEscolar"
+        Me.GradoEscolarDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.GradoEscolarDataGridViewTextBoxColumn.Name = "GradoEscolarDataGridViewTextBoxColumn"
+        Me.GradoEscolarDataGridViewTextBoxColumn.ReadOnly = True
+        Me.GradoEscolarDataGridViewTextBoxColumn.Width = 24
+        '
+        'OcupacionDataGridViewTextBoxColumn
+        '
+        Me.OcupacionDataGridViewTextBoxColumn.DataPropertyName = "ocupacion"
+        Me.OcupacionDataGridViewTextBoxColumn.HeaderText = "ocupacion"
+        Me.OcupacionDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.OcupacionDataGridViewTextBoxColumn.Name = "OcupacionDataGridViewTextBoxColumn"
+        Me.OcupacionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.OcupacionDataGridViewTextBoxColumn.Width = 24
+        '
+        'TelTabajoDataGridViewTextBoxColumn
+        '
+        Me.TelTabajoDataGridViewTextBoxColumn.DataPropertyName = "telTabajo"
+        Me.TelTabajoDataGridViewTextBoxColumn.HeaderText = "telTabajo"
+        Me.TelTabajoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.TelTabajoDataGridViewTextBoxColumn.Name = "TelTabajoDataGridViewTextBoxColumn"
+        Me.TelTabajoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TelTabajoDataGridViewTextBoxColumn.Width = 24
+        '
+        'DomTabajoDataGridViewTextBoxColumn
+        '
+        Me.DomTabajoDataGridViewTextBoxColumn.DataPropertyName = "domTabajo"
+        Me.DomTabajoDataGridViewTextBoxColumn.HeaderText = "domTabajo"
+        Me.DomTabajoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DomTabajoDataGridViewTextBoxColumn.Name = "DomTabajoDataGridViewTextBoxColumn"
+        Me.DomTabajoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DomTabajoDataGridViewTextBoxColumn.Width = 24
+        '
+        'DomParticularDataGridViewTextBoxColumn
+        '
+        Me.DomParticularDataGridViewTextBoxColumn.DataPropertyName = "domParticular"
+        Me.DomParticularDataGridViewTextBoxColumn.HeaderText = "domParticular"
+        Me.DomParticularDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DomParticularDataGridViewTextBoxColumn.Name = "DomParticularDataGridViewTextBoxColumn"
+        Me.DomParticularDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DomParticularDataGridViewTextBoxColumn.Width = 24
+        '
+        'TelFijoDataGridViewTextBoxColumn
+        '
+        Me.TelFijoDataGridViewTextBoxColumn.DataPropertyName = "telFijo"
+        Me.TelFijoDataGridViewTextBoxColumn.HeaderText = "telFijo"
+        Me.TelFijoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.TelFijoDataGridViewTextBoxColumn.Name = "TelFijoDataGridViewTextBoxColumn"
+        Me.TelFijoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TelFijoDataGridViewTextBoxColumn.Width = 24
+        '
+        'TelCelDataGridViewTextBoxColumn
+        '
+        Me.TelCelDataGridViewTextBoxColumn.DataPropertyName = "telCel"
+        Me.TelCelDataGridViewTextBoxColumn.HeaderText = "telCel"
+        Me.TelCelDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.TelCelDataGridViewTextBoxColumn.Name = "TelCelDataGridViewTextBoxColumn"
+        Me.TelCelDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TelCelDataGridViewTextBoxColumn.Width = 24
+        '
+        'LugarRadicaDataGridViewTextBoxColumn
+        '
+        Me.LugarRadicaDataGridViewTextBoxColumn.DataPropertyName = "lugarRadica"
+        Me.LugarRadicaDataGridViewTextBoxColumn.HeaderText = "lugarRadica"
+        Me.LugarRadicaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.LugarRadicaDataGridViewTextBoxColumn.Name = "LugarRadicaDataGridViewTextBoxColumn"
+        Me.LugarRadicaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.LugarRadicaDataGridViewTextBoxColumn.Width = 24
+        '
+        'EstadoCivilDataGridViewTextBoxColumn
+        '
+        Me.EstadoCivilDataGridViewTextBoxColumn.DataPropertyName = "estadoCivil"
+        Me.EstadoCivilDataGridViewTextBoxColumn.HeaderText = "estadoCivil"
+        Me.EstadoCivilDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.EstadoCivilDataGridViewTextBoxColumn.Name = "EstadoCivilDataGridViewTextBoxColumn"
+        Me.EstadoCivilDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EstadoCivilDataGridViewTextBoxColumn.Width = 24
+        '
+        'NumHijosDataGridViewTextBoxColumn
+        '
+        Me.NumHijosDataGridViewTextBoxColumn.DataPropertyName = "numHijos"
+        Me.NumHijosDataGridViewTextBoxColumn.HeaderText = "numHijos"
+        Me.NumHijosDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NumHijosDataGridViewTextBoxColumn.Name = "NumHijosDataGridViewTextBoxColumn"
+        Me.NumHijosDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NumHijosDataGridViewTextBoxColumn.Width = 24
+        '
+        'TutoresTableAdapter
+        '
+        Me.TutoresTableAdapter.ClearBeforeFill = True
+        '
         'FrmTutores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1173, 548)
+        Me.ClientSize = New System.Drawing.Size(1173, 595)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmTutores"
-        Me.Text = "FrmTutores"
+        Me.Text = "Tutores"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.NumHijos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumId, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TutoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GuarderiaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumHijos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -521,4 +705,21 @@ Partial Class FrmTutores
     Friend WithEvents ToolStripLabel3 As ToolStripLabel
     Friend WithEvents btnSalir As ToolStripButton
     Friend WithEvents ToolStripLabel4 As ToolStripLabel
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents GuarderiaDataSet As GuarderiaDataSet
+    Friend WithEvents TutoresBindingSource As BindingSource
+    Friend WithEvents TutoresTableAdapter As GuarderiaDataSetTableAdapters.TutoresTableAdapter
+    Friend WithEvents IdTutorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaNacDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents GradoEscolarDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents OcupacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TelTabajoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DomTabajoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DomParticularDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TelFijoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TelCelDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LugarRadicaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EstadoCivilDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NumHijosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

@@ -22,6 +22,7 @@ Partial Class FrmTipoPago
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnUltimo = New System.Windows.Forms.Button()
         Me.btnSiguiente = New System.Windows.Forms.Button()
@@ -37,17 +38,27 @@ Partial Class FrmTipoPago
         Me.btnSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.NumId = New System.Windows.Forms.NumericUpDown()
+        Me.TipoPagoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GuarderiaDataSet = New Guarderia.GuarderiaDataSet()
         Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.NumId = New System.Windows.Forms.NumericUpDown()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdTipoPagoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ConceptoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrecioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TipoPagoTableAdapter = New Guarderia.GuarderiaDataSetTableAdapters.TipoPagoTableAdapter()
         Me.GroupBox2.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumId, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TipoPagoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GuarderiaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -104,7 +115,7 @@ Partial Class FrmTipoPago
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevo, Me.ToolStripLabel1, Me.btnGuardar, Me.ToolStripLabel2, Me.btnModificar, Me.ToolStripLabel3, Me.btnSalir, Me.ToolStripLabel4})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1150, 27)
+        Me.ToolStrip1.Size = New System.Drawing.Size(485, 27)
         Me.ToolStrip1.TabIndex = 16
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -189,8 +200,27 @@ Partial Class FrmTipoPago
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ingresa los datos:"
         '
+        'NumId
+        '
+        Me.NumId.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.TipoPagoBindingSource, "idTipoPago", True))
+        Me.NumId.Location = New System.Drawing.Point(9, 53)
+        Me.NumId.Name = "NumId"
+        Me.NumId.Size = New System.Drawing.Size(74, 22)
+        Me.NumId.TabIndex = 30
+        '
+        'TipoPagoBindingSource
+        '
+        Me.TipoPagoBindingSource.DataMember = "TipoPago"
+        Me.TipoPagoBindingSource.DataSource = Me.GuarderiaDataSet
+        '
+        'GuarderiaDataSet
+        '
+        Me.GuarderiaDataSet.DataSetName = "GuarderiaDataSet"
+        Me.GuarderiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'MaskedTextBox1
         '
+        Me.MaskedTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TipoPagoBindingSource, "precio", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
         Me.MaskedTextBox1.Location = New System.Drawing.Point(286, 53)
         Me.MaskedTextBox1.Name = "MaskedTextBox1"
         Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 22)
@@ -207,6 +237,7 @@ Partial Class FrmTipoPago
         '
         'TxtNombre
         '
+        Me.TxtNombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TipoPagoBindingSource, "concepto", True))
         Me.TxtNombre.Location = New System.Drawing.Point(90, 53)
         Me.TxtNombre.MaxLength = 40
         Me.TxtNombre.Name = "TxtNombre"
@@ -241,30 +272,73 @@ Partial Class FrmTipoPago
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "TIPOS DE PAGO"
         '
-        'NumId
+        'DataGridView1
         '
-        Me.NumId.Location = New System.Drawing.Point(9, 53)
-        Me.NumId.Name = "NumId"
-        Me.NumId.Size = New System.Drawing.Size(74, 22)
-        Me.NumId.TabIndex = 30
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdTipoPagoDataGridViewTextBoxColumn, Me.ConceptoDataGridViewTextBoxColumn, Me.PrecioDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.TipoPagoBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 252)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(441, 186)
+        Me.DataGridView1.TabIndex = 18
+        '
+        'IdTipoPagoDataGridViewTextBoxColumn
+        '
+        Me.IdTipoPagoDataGridViewTextBoxColumn.DataPropertyName = "idTipoPago"
+        Me.IdTipoPagoDataGridViewTextBoxColumn.HeaderText = "idTipoPago"
+        Me.IdTipoPagoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdTipoPagoDataGridViewTextBoxColumn.Name = "IdTipoPagoDataGridViewTextBoxColumn"
+        Me.IdTipoPagoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdTipoPagoDataGridViewTextBoxColumn.Width = 109
+        '
+        'ConceptoDataGridViewTextBoxColumn
+        '
+        Me.ConceptoDataGridViewTextBoxColumn.DataPropertyName = "concepto"
+        Me.ConceptoDataGridViewTextBoxColumn.HeaderText = "concepto"
+        Me.ConceptoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ConceptoDataGridViewTextBoxColumn.Name = "ConceptoDataGridViewTextBoxColumn"
+        Me.ConceptoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ConceptoDataGridViewTextBoxColumn.Width = 95
+        '
+        'PrecioDataGridViewTextBoxColumn
+        '
+        Me.PrecioDataGridViewTextBoxColumn.DataPropertyName = "precio"
+        Me.PrecioDataGridViewTextBoxColumn.HeaderText = "precio"
+        Me.PrecioDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.PrecioDataGridViewTextBoxColumn.Name = "PrecioDataGridViewTextBoxColumn"
+        Me.PrecioDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PrecioDataGridViewTextBoxColumn.Width = 76
+        '
+        'TipoPagoTableAdapter
+        '
+        Me.TipoPagoTableAdapter.ClearBeforeFill = True
         '
         'FrmTipoPago
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1150, 450)
+        Me.ClientSize = New System.Drawing.Size(485, 450)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmTipoPago"
-        Me.Text = "FrmTipoPago"
+        Me.Text = "TipoPago"
         Me.GroupBox2.ResumeLayout(False)
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.NumId, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TipoPagoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GuarderiaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -292,4 +366,11 @@ Partial Class FrmTipoPago
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents NumId As NumericUpDown
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents GuarderiaDataSet As GuarderiaDataSet
+    Friend WithEvents TipoPagoBindingSource As BindingSource
+    Friend WithEvents TipoPagoTableAdapter As GuarderiaDataSetTableAdapters.TipoPagoTableAdapter
+    Friend WithEvents IdTipoPagoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ConceptoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PrecioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

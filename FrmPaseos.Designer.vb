@@ -22,11 +22,36 @@ Partial Class FrmPaseos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnUltimo = New System.Windows.Forms.Button()
         Me.btnSiguiente = New System.Windows.Forms.Button()
         Me.btnAnterior = New System.Windows.Forms.Button()
         Me.btnPrimero = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.NumId = New System.Windows.Forms.NumericUpDown()
+        Me.PaseosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GuarderiaDataSet = New Guarderia.GuarderiaDataSet()
+        Me.Txt_final = New System.Windows.Forms.MaskedTextBox()
+        Me.Txt_inicio = New System.Windows.Forms.MaskedTextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TxtLugar = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.DTP_Fecha = New System.Windows.Forms.DateTimePicker()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TxtDescripcion = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdPaseoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LugarDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HoraInicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HoraFinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PaseosTableAdapter = New Guarderia.GuarderiaDataSetTableAdapters.PaseosTableAdapter()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnNuevo = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
@@ -36,23 +61,13 @@ Partial Class FrmPaseos
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         Me.btnSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Txt_final = New System.Windows.Forms.MaskedTextBox()
-        Me.Txt_inicio = New System.Windows.Forms.MaskedTextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TxtLugar = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.DTP_Fecha = New System.Windows.Forms.DateTimePicker()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.IdPago = New System.Windows.Forms.TextBox()
-        Me.TxtDescripcion = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.NumId, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PaseosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GuarderiaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -103,80 +118,9 @@ Partial Class FrmPaseos
         Me.btnPrimero.Text = "Primero"
         Me.btnPrimero.UseVisualStyleBackColor = True
         '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevo, Me.ToolStripLabel1, Me.btnGuardar, Me.ToolStripLabel2, Me.btnModificar, Me.ToolStripLabel3, Me.btnSalir, Me.ToolStripLabel4})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1160, 27)
-        Me.ToolStrip1.TabIndex = 15
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'btnNuevo
-        '
-        Me.btnNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnNuevo.Image = Global.Guarderia.My.Resources.Resources.copy
-        Me.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(29, 24)
-        Me.btnNuevo.Text = "ToolStripButton1"
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(52, 24)
-        Me.ToolStripLabel1.Text = "Nuevo"
-        '
-        'btnGuardar
-        '
-        Me.btnGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnGuardar.Enabled = False
-        Me.btnGuardar.Image = Global.Guarderia.My.Resources.Resources.plus
-        Me.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(29, 24)
-        Me.btnGuardar.Text = "ToolStripButton2"
-        '
-        'ToolStripLabel2
-        '
-        Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(62, 24)
-        Me.ToolStripLabel2.Text = "Guardar"
-        '
-        'btnModificar
-        '
-        Me.btnModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnModificar.Image = Global.Guarderia.My.Resources.Resources.rotate
-        Me.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(29, 24)
-        Me.btnModificar.Text = "ToolStripButton3"
-        '
-        'ToolStripLabel3
-        '
-        Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(73, 24)
-        Me.ToolStripLabel3.Text = "Modificar"
-        '
-        'btnSalir
-        '
-        Me.btnSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnSalir.Image = Global.Guarderia.My.Resources.Resources.cancel_2
-        Me.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(29, 24)
-        Me.btnSalir.Text = "ToolStripButton4"
-        Me.btnSalir.ToolTipText = "Abandonar Formulario"
-        '
-        'ToolStripLabel4
-        '
-        Me.ToolStripLabel4.Name = "ToolStripLabel4"
-        Me.ToolStripLabel4.Size = New System.Drawing.Size(38, 24)
-        Me.ToolStripLabel4.Text = "Salir"
-        '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.NumId)
         Me.GroupBox1.Controls.Add(Me.Txt_final)
         Me.GroupBox1.Controls.Add(Me.Txt_inicio)
         Me.GroupBox1.Controls.Add(Me.Label7)
@@ -185,7 +129,6 @@ Partial Class FrmPaseos
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.DTP_Fecha)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.IdPago)
         Me.GroupBox1.Controls.Add(Me.TxtDescripcion)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -197,8 +140,27 @@ Partial Class FrmPaseos
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ingresa los datos:"
         '
+        'NumId
+        '
+        Me.NumId.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PaseosBindingSource, "idPaseo", True))
+        Me.NumId.Location = New System.Drawing.Point(9, 56)
+        Me.NumId.Name = "NumId"
+        Me.NumId.Size = New System.Drawing.Size(66, 22)
+        Me.NumId.TabIndex = 37
+        '
+        'PaseosBindingSource
+        '
+        Me.PaseosBindingSource.DataMember = "Paseos"
+        Me.PaseosBindingSource.DataSource = Me.GuarderiaDataSet
+        '
+        'GuarderiaDataSet
+        '
+        Me.GuarderiaDataSet.DataSetName = "GuarderiaDataSet"
+        Me.GuarderiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Txt_final
         '
+        Me.Txt_final.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PaseosBindingSource, "horaFin", True))
         Me.Txt_final.Location = New System.Drawing.Point(91, 113)
         Me.Txt_final.Mask = "00:00"
         Me.Txt_final.Name = "Txt_final"
@@ -207,6 +169,7 @@ Partial Class FrmPaseos
         '
         'Txt_inicio
         '
+        Me.Txt_inicio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PaseosBindingSource, "horaInicio", True))
         Me.Txt_inicio.Location = New System.Drawing.Point(6, 113)
         Me.Txt_inicio.Mask = "00:00"
         Me.Txt_inicio.Name = "Txt_inicio"
@@ -233,6 +196,7 @@ Partial Class FrmPaseos
         '
         'TxtLugar
         '
+        Me.TxtLugar.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PaseosBindingSource, "lugar", True))
         Me.TxtLugar.Location = New System.Drawing.Point(469, 56)
         Me.TxtLugar.MaxLength = 40
         Me.TxtLugar.Name = "TxtLugar"
@@ -250,6 +214,7 @@ Partial Class FrmPaseos
         '
         'DTP_Fecha
         '
+        Me.DTP_Fecha.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PaseosBindingSource, "fecha", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "d"))
         Me.DTP_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DTP_Fecha.Location = New System.Drawing.Point(851, 56)
         Me.DTP_Fecha.Name = "DTP_Fecha"
@@ -265,17 +230,9 @@ Partial Class FrmPaseos
         Me.Label4.TabIndex = 28
         Me.Label4.Text = "Fecha:"
         '
-        'IdPago
-        '
-        Me.IdPago.Enabled = False
-        Me.IdPago.Location = New System.Drawing.Point(6, 56)
-        Me.IdPago.Name = "IdPago"
-        Me.IdPago.Size = New System.Drawing.Size(45, 22)
-        Me.IdPago.TabIndex = 27
-        Me.IdPago.Text = "0000"
-        '
         'TxtDescripcion
         '
+        Me.TxtDescripcion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PaseosBindingSource, "descripcion", True))
         Me.TxtDescripcion.Location = New System.Drawing.Point(87, 56)
         Me.TxtDescripcion.MaxLength = 40
         Me.TxtDescripcion.Name = "TxtDescripcion"
@@ -310,22 +267,175 @@ Partial Class FrmPaseos
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "PASEOS"
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPaseoDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.LugarDataGridViewTextBoxColumn, Me.HoraInicioDataGridViewTextBoxColumn, Me.HoraFinDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.PaseosBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 303)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(987, 238)
+        Me.DataGridView1.TabIndex = 17
+        '
+        'IdPaseoDataGridViewTextBoxColumn
+        '
+        Me.IdPaseoDataGridViewTextBoxColumn.DataPropertyName = "idPaseo"
+        Me.IdPaseoDataGridViewTextBoxColumn.HeaderText = "idPaseo"
+        Me.IdPaseoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdPaseoDataGridViewTextBoxColumn.Name = "IdPaseoDataGridViewTextBoxColumn"
+        Me.IdPaseoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdPaseoDataGridViewTextBoxColumn.Width = 88
+        '
+        'DescripcionDataGridViewTextBoxColumn
+        '
+        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
+        Me.DescripcionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DescripcionDataGridViewTextBoxColumn.Width = 109
+        '
+        'FechaDataGridViewTextBoxColumn
+        '
+        Me.FechaDataGridViewTextBoxColumn.DataPropertyName = "fecha"
+        Me.FechaDataGridViewTextBoxColumn.HeaderText = "fecha"
+        Me.FechaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.FechaDataGridViewTextBoxColumn.Name = "FechaDataGridViewTextBoxColumn"
+        Me.FechaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FechaDataGridViewTextBoxColumn.Width = 72
+        '
+        'LugarDataGridViewTextBoxColumn
+        '
+        Me.LugarDataGridViewTextBoxColumn.DataPropertyName = "lugar"
+        Me.LugarDataGridViewTextBoxColumn.HeaderText = "lugar"
+        Me.LugarDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.LugarDataGridViewTextBoxColumn.Name = "LugarDataGridViewTextBoxColumn"
+        Me.LugarDataGridViewTextBoxColumn.ReadOnly = True
+        Me.LugarDataGridViewTextBoxColumn.Width = 69
+        '
+        'HoraInicioDataGridViewTextBoxColumn
+        '
+        Me.HoraInicioDataGridViewTextBoxColumn.DataPropertyName = "horaInicio"
+        Me.HoraInicioDataGridViewTextBoxColumn.HeaderText = "horaInicio"
+        Me.HoraInicioDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.HoraInicioDataGridViewTextBoxColumn.Name = "HoraInicioDataGridViewTextBoxColumn"
+        Me.HoraInicioDataGridViewTextBoxColumn.ReadOnly = True
+        Me.HoraInicioDataGridViewTextBoxColumn.Width = 98
+        '
+        'HoraFinDataGridViewTextBoxColumn
+        '
+        Me.HoraFinDataGridViewTextBoxColumn.DataPropertyName = "horaFin"
+        Me.HoraFinDataGridViewTextBoxColumn.HeaderText = "horaFin"
+        Me.HoraFinDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.HoraFinDataGridViewTextBoxColumn.Name = "HoraFinDataGridViewTextBoxColumn"
+        Me.HoraFinDataGridViewTextBoxColumn.ReadOnly = True
+        Me.HoraFinDataGridViewTextBoxColumn.Width = 85
+        '
+        'PaseosTableAdapter
+        '
+        Me.PaseosTableAdapter.ClearBeforeFill = True
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnNuevo, Me.ToolStripLabel1, Me.btnGuardar, Me.ToolStripLabel2, Me.btnModificar, Me.ToolStripLabel3, Me.btnSalir, Me.ToolStripLabel4})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(1020, 27)
+        Me.ToolStrip1.TabIndex = 26
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'btnNuevo
+        '
+        Me.btnNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnNuevo.Image = Global.Guarderia.My.Resources.Resources.copy
+        Me.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(29, 24)
+        Me.btnNuevo.Text = "ToolStripButton1"
+        Me.btnNuevo.ToolTipText = "Crear un nuevo Tipo de Pago"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(52, 24)
+        Me.ToolStripLabel1.Text = "Nuevo"
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnGuardar.Enabled = False
+        Me.btnGuardar.Image = Global.Guarderia.My.Resources.Resources.plus
+        Me.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(29, 24)
+        Me.btnGuardar.Text = "ToolStripButton2"
+        Me.btnGuardar.ToolTipText = "Guardar los cambios"
+        '
+        'ToolStripLabel2
+        '
+        Me.ToolStripLabel2.Name = "ToolStripLabel2"
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(62, 24)
+        Me.ToolStripLabel2.Text = "Guardar"
+        '
+        'btnModificar
+        '
+        Me.btnModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnModificar.Image = Global.Guarderia.My.Resources.Resources.rotate
+        Me.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(29, 24)
+        Me.btnModificar.Text = "ToolStripButton3"
+        Me.btnModificar.ToolTipText = "Modificar un tipo de pago existente"
+        '
+        'ToolStripLabel3
+        '
+        Me.ToolStripLabel3.Name = "ToolStripLabel3"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(73, 24)
+        Me.ToolStripLabel3.Text = "Modificar"
+        '
+        'btnSalir
+        '
+        Me.btnSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnSalir.Image = Global.Guarderia.My.Resources.Resources.cancel_2
+        Me.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(29, 24)
+        Me.btnSalir.Text = "ToolStripButton4"
+        Me.btnSalir.ToolTipText = "Cerrar ventana"
+        '
+        'ToolStripLabel4
+        '
+        Me.ToolStripLabel4.Name = "ToolStripLabel4"
+        Me.ToolStripLabel4.Size = New System.Drawing.Size(38, 24)
+        Me.ToolStripLabel4.Text = "Salir"
+        '
         'FrmPaseos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1160, 553)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.ClientSize = New System.Drawing.Size(1020, 553)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmPaseos"
         Me.Text = "Paseos"
         Me.GroupBox2.ResumeLayout(False)
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.NumId, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PaseosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GuarderiaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -336,15 +446,6 @@ Partial Class FrmPaseos
     Friend WithEvents btnSiguiente As Button
     Friend WithEvents btnAnterior As Button
     Friend WithEvents btnPrimero As Button
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents btnNuevo As ToolStripButton
-    Friend WithEvents ToolStripLabel1 As ToolStripLabel
-    Friend WithEvents btnGuardar As ToolStripButton
-    Friend WithEvents ToolStripLabel2 As ToolStripLabel
-    Friend WithEvents btnModificar As ToolStripButton
-    Friend WithEvents ToolStripLabel3 As ToolStripLabel
-    Friend WithEvents btnSalir As ToolStripButton
-    Friend WithEvents ToolStripLabel4 As ToolStripLabel
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Txt_final As MaskedTextBox
     Friend WithEvents Txt_inicio As MaskedTextBox
@@ -354,9 +455,28 @@ Partial Class FrmPaseos
     Friend WithEvents Label5 As Label
     Friend WithEvents DTP_Fecha As DateTimePicker
     Friend WithEvents Label4 As Label
-    Friend WithEvents IdPago As TextBox
     Friend WithEvents TxtDescripcion As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents GuarderiaDataSet As GuarderiaDataSet
+    Friend WithEvents PaseosBindingSource As BindingSource
+    Friend WithEvents PaseosTableAdapter As GuarderiaDataSetTableAdapters.PaseosTableAdapter
+    Friend WithEvents IdPaseoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LugarDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents HoraInicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents HoraFinDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NumId As NumericUpDown
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents btnNuevo As ToolStripButton
+    Friend WithEvents ToolStripLabel1 As ToolStripLabel
+    Friend WithEvents btnGuardar As ToolStripButton
+    Friend WithEvents ToolStripLabel2 As ToolStripLabel
+    Friend WithEvents btnModificar As ToolStripButton
+    Friend WithEvents ToolStripLabel3 As ToolStripLabel
+    Friend WithEvents btnSalir As ToolStripButton
+    Friend WithEvents ToolStripLabel4 As ToolStripLabel
 End Class
