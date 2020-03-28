@@ -33,6 +33,7 @@ Partial Class FrmMenu
         Me.PaseosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GruposToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,47 +58,48 @@ Partial Class FrmMenu
         'TutoresToolStripMenuItem
         '
         Me.TutoresToolStripMenuItem.Name = "TutoresToolStripMenuItem"
-        Me.TutoresToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.TutoresToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
         Me.TutoresToolStripMenuItem.Text = "Tutores"
         '
         'PersonasToolStripMenuItem
         '
         Me.PersonasToolStripMenuItem.Name = "PersonasToolStripMenuItem"
-        Me.PersonasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.PersonasToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
         Me.PersonasToolStripMenuItem.Text = "Personas"
         '
         'PersonalToolStripMenuItem
         '
         Me.PersonalToolStripMenuItem.Name = "PersonalToolStripMenuItem"
-        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
         Me.PersonalToolStripMenuItem.Text = "Personal"
         '
         'HorariosToolStripMenuItem
         '
         Me.HorariosToolStripMenuItem.Name = "HorariosToolStripMenuItem"
-        Me.HorariosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.HorariosToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
         Me.HorariosToolStripMenuItem.Text = "Horarios"
         '
         'SalasToolStripMenuItem
         '
         Me.SalasToolStripMenuItem.Name = "SalasToolStripMenuItem"
-        Me.SalasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SalasToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
         Me.SalasToolStripMenuItem.Text = "Salas"
         '
         'TiposDePagoToolStripMenuItem
         '
         Me.TiposDePagoToolStripMenuItem.Name = "TiposDePagoToolStripMenuItem"
-        Me.TiposDePagoToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.TiposDePagoToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
         Me.TiposDePagoToolStripMenuItem.Text = "Tipos de Pago"
         '
         'PaseosToolStripMenuItem
         '
         Me.PaseosToolStripMenuItem.Name = "PaseosToolStripMenuItem"
-        Me.PaseosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.PaseosToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
         Me.PaseosToolStripMenuItem.Text = "Paseos"
         '
         'MovimientosToolStripMenuItem
         '
+        Me.MovimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GruposToolStripMenuItem})
         Me.MovimientosToolStripMenuItem.Image = Global.Guarderia.My.Resources.Resources.refresh
         Me.MovimientosToolStripMenuItem.Name = "MovimientosToolStripMenuItem"
         Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(129, 24)
@@ -109,6 +111,12 @@ Partial Class FrmMenu
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(102, 24)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
+        '
+        'GruposToolStripMenuItem
+        '
+        Me.GruposToolStripMenuItem.Name = "GruposToolStripMenuItem"
+        Me.GruposToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.GruposToolStripMenuItem.Text = "Grupos"
         '
         'FrmMenu
         '
@@ -136,4 +144,5 @@ Partial Class FrmMenu
     Friend WithEvents PaseosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MovimientosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GruposToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -26,4 +26,8 @@
     Private Sub PaseosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PaseosToolStripMenuItem.Click
         FrmPaseos.Show()
     End Sub
+
+    Private Sub GruposToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GruposToolStripMenuItem.Click
+        FrmGrupos.Show()
+    End Sub
 End Class
