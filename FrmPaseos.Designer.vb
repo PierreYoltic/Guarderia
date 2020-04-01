@@ -214,7 +214,7 @@ Partial Class FrmPaseos
         '
         'DTP_Fecha
         '
-        Me.DTP_Fecha.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PaseosBindingSource, "fecha", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "d"))
+        Me.DTP_Fecha.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PaseosBindingSource, "fecha", True))
         Me.DTP_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DTP_Fecha.Location = New System.Drawing.Point(851, 56)
         Me.DTP_Fecha.Name = "DTP_Fecha"
