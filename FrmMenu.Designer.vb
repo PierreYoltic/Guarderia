@@ -32,8 +32,15 @@ Partial Class FrmMenu
         Me.TiposDePagoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PaseosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GruposToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PermisosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InasistenciasJustificadasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SuspensionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CambioDeHorarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -99,11 +106,56 @@ Partial Class FrmMenu
         '
         'MovimientosToolStripMenuItem
         '
-        Me.MovimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GruposToolStripMenuItem})
+        Me.MovimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GruposToolStripMenuItem, Me.PermisosToolStripMenuItem, Me.InasistenciasJustificadasToolStripMenuItem, Me.SuspensionesToolStripMenuItem, Me.CambioDeHorarioToolStripMenuItem})
         Me.MovimientosToolStripMenuItem.Image = Global.Guarderia.My.Resources.Resources.refresh
         Me.MovimientosToolStripMenuItem.Name = "MovimientosToolStripMenuItem"
         Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(129, 24)
         Me.MovimientosToolStripMenuItem.Text = "Movimientos"
+        '
+        'GruposToolStripMenuItem
+        '
+        Me.GruposToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsultarToolStripMenuItem1})
+        Me.GruposToolStripMenuItem.Name = "GruposToolStripMenuItem"
+        Me.GruposToolStripMenuItem.Size = New System.Drawing.Size(253, 26)
+        Me.GruposToolStripMenuItem.Text = "Grupos"
+        '
+        'ConsultarToolStripMenuItem1
+        '
+        Me.ConsultarToolStripMenuItem1.Name = "ConsultarToolStripMenuItem1"
+        Me.ConsultarToolStripMenuItem1.Size = New System.Drawing.Size(154, 26)
+        Me.ConsultarToolStripMenuItem1.Text = "Consultar"
+        '
+        'PermisosToolStripMenuItem
+        '
+        Me.PermisosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsultarToolStripMenuItem})
+        Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
+        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(253, 26)
+        Me.PermisosToolStripMenuItem.Text = "Permisos"
+        '
+        'ConsultarToolStripMenuItem
+        '
+        Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
+        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(154, 26)
+        Me.ConsultarToolStripMenuItem.Text = "Consultar"
+        '
+        'InasistenciasJustificadasToolStripMenuItem
+        '
+        Me.InasistenciasJustificadasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsultarToolStripMenuItem2})
+        Me.InasistenciasJustificadasToolStripMenuItem.Name = "InasistenciasJustificadasToolStripMenuItem"
+        Me.InasistenciasJustificadasToolStripMenuItem.Size = New System.Drawing.Size(253, 26)
+        Me.InasistenciasJustificadasToolStripMenuItem.Text = "Inasistencias Justificadas"
+        '
+        'ConsultarToolStripMenuItem2
+        '
+        Me.ConsultarToolStripMenuItem2.Name = "ConsultarToolStripMenuItem2"
+        Me.ConsultarToolStripMenuItem2.Size = New System.Drawing.Size(154, 26)
+        Me.ConsultarToolStripMenuItem2.Text = "Consultar"
+        '
+        'SuspensionesToolStripMenuItem
+        '
+        Me.SuspensionesToolStripMenuItem.Name = "SuspensionesToolStripMenuItem"
+        Me.SuspensionesToolStripMenuItem.Size = New System.Drawing.Size(253, 26)
+        Me.SuspensionesToolStripMenuItem.Text = "Suspensiones"
         '
         'ReportesToolStripMenuItem
         '
@@ -112,11 +164,11 @@ Partial Class FrmMenu
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(102, 24)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
-        'GruposToolStripMenuItem
+        'CambioDeHorarioToolStripMenuItem
         '
-        Me.GruposToolStripMenuItem.Name = "GruposToolStripMenuItem"
-        Me.GruposToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.GruposToolStripMenuItem.Text = "Grupos"
+        Me.CambioDeHorarioToolStripMenuItem.Name = "CambioDeHorarioToolStripMenuItem"
+        Me.CambioDeHorarioToolStripMenuItem.Size = New System.Drawing.Size(253, 26)
+        Me.CambioDeHorarioToolStripMenuItem.Text = "Cambio de Horario"
         '
         'FrmMenu
         '
@@ -145,4 +197,11 @@ Partial Class FrmMenu
     Friend WithEvents MovimientosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GruposToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PermisosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConsultarToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ConsultarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InasistenciasJustificadasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConsultarToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents SuspensionesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CambioDeHorarioToolStripMenuItem As ToolStripMenuItem
 End Class

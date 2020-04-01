@@ -1,33 +1,74 @@
 ﻿Public Class FrmMenu
+
     Private Sub TutoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TutoresToolStripMenuItem.Click
-        FrmTutores.Show()
+        FrmTutores.StartPosition = FormStartPosition.CenterScreen
+        FrmTutores.ShowDialog()
     End Sub
 
     Private Sub PersonasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PersonasToolStripMenuItem.Click
-        FrmPersonas.Show()
+        FrmPersonas.StartPosition = FormStartPosition.CenterScreen
+        FrmPersonas.ShowDialog()
     End Sub
 
     Private Sub PersonalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PersonalToolStripMenuItem.Click
-        FrmPersonal.Show()
+        FrmPersonal.StartPosition = FormStartPosition.CenterScreen
+        FrmPersonal.ShowDialog()
     End Sub
 
     Private Sub HorariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HorariosToolStripMenuItem.Click
-        FrmHorarios.Show()
+        FrmHorarios.StartPosition = FormStartPosition.CenterScreen
+        FrmHorarios.ShowDialog()
     End Sub
 
     Private Sub SalasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalasToolStripMenuItem.Click
-        FrmSalas.Show()
+        FrmSalas.StartPosition = FormStartPosition.CenterScreen
+        FrmSalas.ShowDialog()
     End Sub
 
     Private Sub TiposDePagoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TiposDePagoToolStripMenuItem.Click
-        FrmTipoPago.Show()
+        FrmTipoPago.StartPosition = FormStartPosition.CenterScreen
+        FrmTipoPago.ShowDialog()
     End Sub
 
     Private Sub PaseosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PaseosToolStripMenuItem.Click
-        FrmPaseos.Show()
+        FrmPaseos.StartPosition = FormStartPosition.CenterScreen
+        FrmPaseos.ShowDialog()
     End Sub
 
     Private Sub GruposToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GruposToolStripMenuItem.Click
-        FrmGrupos.Show()
+        FrmGrupos.StartPosition = FormStartPosition.CenterScreen
+        FrmGrupos.ShowDialog()
+    End Sub
+
+    Private Sub PermisosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PermisosToolStripMenuItem.Click
+        FrmPermisos.StartPosition = FormStartPosition.CenterScreen
+        FrmPermisos.ShowDialog()
+    End Sub
+
+    Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
+        FrmConsultaPermisos.Show()
+    End Sub
+
+    Private Sub InasistenciasJustificadasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InasistenciasJustificadasToolStripMenuItem.Click
+        FrmInasistenciasJustificadas.StartPosition = FormStartPosition.CenterScreen
+        FrmInasistenciasJustificadas.ShowDialog()
+    End Sub
+
+    Private Sub ConsultarToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem2.Click
+        FrmConsultaInasistenciasJustificadas.Show()
+    End Sub
+
+    Private Sub SuspensionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SuspensionesToolStripMenuItem.Click
+        FrmSuspensiones.StartPosition = FormStartPosition.CenterScreen
+        FrmSuspensiones.ShowDialog()
+    End Sub
+
+    Private Sub CambioDeHorarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CambioDeHorarioToolStripMenuItem.Click
+        FrmCambioHorario.StartPosition = FormStartPosition.CenterScreen
+        FrmCambioHorario.ShowDialog()
+    End Sub
+
+    Private Sub FrmMenu_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 End Class

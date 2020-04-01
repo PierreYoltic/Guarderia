@@ -73,16 +73,52 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCambioHorario.Designer.vb">
+      <DependentUpon>FrmCambioHorario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCambioHorario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaCambioHorario.Designer.vb">
+      <DependentUpon>FrmConsultaCambioHorario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaCambioHorario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmConsultaGrupos.Designer.vb">
       <DependentUpon>FrmConsultaGrupos.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmConsultaGrupos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmConsultaInasistenciasJustificadas.Designer.vb">
+      <DependentUpon>FrmConsultaInasistenciasJustificadas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaInasistenciasJustificadas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaPermisos.Designer.vb">
+      <DependentUpon>FrmConsultaPermisos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaPermisos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaSuspensiones.Designer.vb">
+      <DependentUpon>FrmConsultaSuspensiones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaSuspensiones.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmGrupos.Designer.vb">
       <DependentUpon>FrmGrupos.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmGrupos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInasistenciasJustificadas.Designer.vb">
+      <DependentUpon>FrmInasistenciasJustificadas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInasistenciasJustificadas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMenu.vb">
@@ -104,6 +140,12 @@
     <Compile Include="FrmPaseos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmPermisos.Designer.vb">
+      <DependentUpon>FrmPermisos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPermisos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmPersonal.Designer.vb">
       <DependentUpon>FrmPersonal.vb</DependentUpon>
     </Compile>
@@ -120,6 +162,12 @@
       <DependentUpon>FrmSalas.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmSalas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSuspensiones.Designer.vb">
+      <DependentUpon>FrmSuspensiones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSuspensiones.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmTipoPago.Designer.vb">
@@ -156,11 +204,29 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmCambioHorario.resx">
+      <DependentUpon>FrmCambioHorario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaCambioHorario.resx">
+      <DependentUpon>FrmConsultaCambioHorario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultaGrupos.resx">
       <DependentUpon>FrmConsultaGrupos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaInasistenciasJustificadas.resx">
+      <DependentUpon>FrmConsultaInasistenciasJustificadas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaPermisos.resx">
+      <DependentUpon>FrmConsultaPermisos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaSuspensiones.resx">
+      <DependentUpon>FrmConsultaSuspensiones.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGrupos.resx">
       <DependentUpon>FrmGrupos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInasistenciasJustificadas.resx">
+      <DependentUpon>FrmInasistenciasJustificadas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.vb</DependentUpon>
@@ -171,6 +237,9 @@
     <EmbeddedResource Include="FrmPaseos.resx">
       <DependentUpon>FrmPaseos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPermisos.resx">
+      <DependentUpon>FrmPermisos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPersonal.resx">
       <DependentUpon>FrmPersonal.vb</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSalas.resx">
       <DependentUpon>FrmSalas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuspensiones.resx">
+      <DependentUpon>FrmSuspensiones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTipoPago.resx">
       <DependentUpon>FrmTipoPago.vb</DependentUpon>
