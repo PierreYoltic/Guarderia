@@ -121,6 +121,12 @@
     <Compile Include="FrmInasistenciasJustificadas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmInscripciones.Designer.vb">
+      <DependentUpon>FrmInscripciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInscripciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GuarderiaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GuarderiaDataSet.vb">
+      <DependentUpon>GuarderiaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -227,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInasistenciasJustificadas.resx">
       <DependentUpon>FrmInasistenciasJustificadas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInscripciones.resx">
+      <DependentUpon>FrmInscripciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.vb</DependentUpon>
