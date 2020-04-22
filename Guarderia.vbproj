@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmBitacora.Designer.vb">
+      <DependentUpon>FrmBitacora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBitacora.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmCambioHorario.Designer.vb">
       <DependentUpon>FrmCambioHorario.vb</DependentUpon>
     </Compile>
@@ -138,6 +144,12 @@
       <DependentUpon>FrmHorarios.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmHorarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPagos.Designer.vb">
+      <DependentUpon>FrmPagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPagos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPaseos.Designer.vb">
@@ -213,6 +225,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmBitacora.resx">
+      <DependentUpon>FrmBitacora.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCambioHorario.resx">
       <DependentUpon>FrmCambioHorario.vb</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHorarios.resx">
       <DependentUpon>FrmHorarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPagos.resx">
+      <DependentUpon>FrmPagos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPaseos.resx">
       <DependentUpon>FrmPaseos.vb</DependentUpon>
