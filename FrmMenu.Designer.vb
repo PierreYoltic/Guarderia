@@ -40,8 +40,11 @@ Partial Class FrmMenu
         Me.ConsultarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SuspensionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CambioDeHorarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InscripcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IngresoEgresoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PagosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BitácoraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -107,7 +110,7 @@ Partial Class FrmMenu
         '
         'MovimientosToolStripMenuItem
         '
-        Me.MovimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GruposToolStripMenuItem, Me.PermisosToolStripMenuItem, Me.InasistenciasJustificadasToolStripMenuItem, Me.SuspensionesToolStripMenuItem, Me.CambioDeHorarioToolStripMenuItem, Me.InscripcionesToolStripMenuItem})
+        Me.MovimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GruposToolStripMenuItem, Me.PermisosToolStripMenuItem, Me.InasistenciasJustificadasToolStripMenuItem, Me.SuspensionesToolStripMenuItem, Me.CambioDeHorarioToolStripMenuItem, Me.InscripcionesToolStripMenuItem, Me.IngresoEgresoToolStripMenuItem, Me.PagosToolStripMenuItem, Me.BitácoraToolStripMenuItem})
         Me.MovimientosToolStripMenuItem.Image = Global.Guarderia.My.Resources.Resources.refresh
         Me.MovimientosToolStripMenuItem.Name = "MovimientosToolStripMenuItem"
         Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(129, 24)
@@ -164,6 +167,24 @@ Partial Class FrmMenu
         Me.CambioDeHorarioToolStripMenuItem.Size = New System.Drawing.Size(253, 26)
         Me.CambioDeHorarioToolStripMenuItem.Text = "Cambio de Horario"
         '
+        'InscripcionesToolStripMenuItem
+        '
+        Me.InscripcionesToolStripMenuItem.Name = "InscripcionesToolStripMenuItem"
+        Me.InscripcionesToolStripMenuItem.Size = New System.Drawing.Size(253, 26)
+        Me.InscripcionesToolStripMenuItem.Text = "Inscripciones"
+        '
+        'IngresoEgresoToolStripMenuItem
+        '
+        Me.IngresoEgresoToolStripMenuItem.Name = "IngresoEgresoToolStripMenuItem"
+        Me.IngresoEgresoToolStripMenuItem.Size = New System.Drawing.Size(253, 26)
+        Me.IngresoEgresoToolStripMenuItem.Text = "Ingreso/Egreso"
+        '
+        'PagosToolStripMenuItem
+        '
+        Me.PagosToolStripMenuItem.Name = "PagosToolStripMenuItem"
+        Me.PagosToolStripMenuItem.Size = New System.Drawing.Size(253, 26)
+        Me.PagosToolStripMenuItem.Text = "Pagos"
+        '
         'ReportesToolStripMenuItem
         '
         Me.ReportesToolStripMenuItem.Image = Global.Guarderia.My.Resources.Resources.printer_1
@@ -171,11 +192,11 @@ Partial Class FrmMenu
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(102, 24)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
-        'InscripcionesToolStripMenuItem
+        'BitácoraToolStripMenuItem
         '
-        Me.InscripcionesToolStripMenuItem.Name = "InscripcionesToolStripMenuItem"
-        Me.InscripcionesToolStripMenuItem.Size = New System.Drawing.Size(253, 26)
-        Me.InscripcionesToolStripMenuItem.Text = "Inscripciones"
+        Me.BitácoraToolStripMenuItem.Name = "BitácoraToolStripMenuItem"
+        Me.BitácoraToolStripMenuItem.Size = New System.Drawing.Size(253, 26)
+        Me.BitácoraToolStripMenuItem.Text = "Bitácora"
         '
         'FrmMenu
         '
@@ -212,4 +233,7 @@ Partial Class FrmMenu
     Friend WithEvents SuspensionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CambioDeHorarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InscripcionesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents IngresoEgresoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PagosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BitácoraToolStripMenuItem As ToolStripMenuItem
 End Class

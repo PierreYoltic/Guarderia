@@ -92,6 +92,12 @@ Partial Class FrmInscripciones
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.GroupBoxMenor = New System.Windows.Forms.GroupBox()
+        Me.Label92 = New System.Windows.Forms.Label()
+        Me.TxtHoraSalida = New System.Windows.Forms.TextBox()
+        Me.Label89 = New System.Windows.Forms.Label()
+        Me.TxtHoraEntrada = New System.Windows.Forms.TextBox()
+        Me.CboGrupo = New System.Windows.Forms.ComboBox()
+        Me.Label87 = New System.Windows.Forms.Label()
         Me.AA = New System.Windows.Forms.NumericUpDown()
         Me.MM = New System.Windows.Forms.NumericUpDown()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -233,42 +239,65 @@ Partial Class FrmInscripciones
         Me.Label78 = New System.Windows.Forms.Label()
         Me.FichaIdentificacion = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.GroupBoxEstructuraFamiliar = New System.Windows.Forms.GroupBox()
-        Me.Label88 = New System.Windows.Forms.Label()
-        Me.TxtConQuienConvive = New System.Windows.Forms.TextBox()
-        Me.Label130 = New System.Windows.Forms.Label()
-        Me.TxtOrdenNacimiento = New System.Windows.Forms.MaskedTextBox()
-        Me.GroupBoxVivienda = New System.Windows.Forms.GroupBox()
-        Me.TxtPersonasCasa = New System.Windows.Forms.NumericUpDown()
-        Me.GroupBoxCuarto = New System.Windows.Forms.GroupBox()
-        Me.RadioButtonCompartido = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonIndependiente = New System.Windows.Forms.RadioButton()
-        Me.Label91 = New System.Windows.Forms.Label()
-        Me.TxtTipoConstruccion = New System.Windows.Forms.TextBox()
-        Me.Label90 = New System.Windows.Forms.Label()
-        Me.GroupBoxCasa = New System.Windows.Forms.GroupBox()
-        Me.RadioButtonPrestada = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonRentada = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonPropia = New System.Windows.Forms.RadioButton()
-        Me.GroupBoxAntecedentes = New System.Windows.Forms.GroupBox()
-        Me.TxtEdadControlBanio = New System.Windows.Forms.TextBox()
-        Me.Label96 = New System.Windows.Forms.Label()
-        Me.TxtTiempoLeche = New System.Windows.Forms.TextBox()
-        Me.Label95 = New System.Windows.Forms.Label()
-        Me.GroupBoxLeche = New System.Windows.Forms.GroupBox()
-        Me.RadioButtonBiberon = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonMaterna = New System.Windows.Forms.RadioButton()
-        Me.TxtComplicaciones = New System.Windows.Forms.TextBox()
-        Me.Label94 = New System.Windows.Forms.Label()
-        Me.GroupBoxParto = New System.Windows.Forms.GroupBox()
-        Me.RadioButtonCesarea = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonNormal = New System.Windows.Forms.RadioButton()
-        Me.GroupBoxEmbarazo = New System.Windows.Forms.GroupBox()
-        Me.RadioButtonNO = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonSI = New System.Windows.Forms.RadioButton()
-        Me.TxtNacimiento = New System.Windows.Forms.TextBox()
-        Me.Label93 = New System.Windows.Forms.Label()
+        Me.TxtIdFichaIdentificacion = New System.Windows.Forms.TextBox()
+        Me.Label97 = New System.Windows.Forms.Label()
+        Me.GroupBoxConducta = New System.Windows.Forms.GroupBox()
+        Me.GroupBoxBerrinche = New System.Windows.Forms.GroupBox()
+        Me.RadioButtonBerrincheNo = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonBerrincheSi = New System.Windows.Forms.RadioButton()
+        Me.TxtActividadesConPadre = New System.Windows.Forms.TextBox()
+        Me.Label129 = New System.Windows.Forms.Label()
+        Me.TxtTemorMenor = New System.Windows.Forms.TextBox()
+        Me.Label128 = New System.Windows.Forms.Label()
+        Me.TxtFuncionaEstrategia = New System.Windows.Forms.TextBox()
+        Me.Label127 = New System.Windows.Forms.Label()
+        Me.TxtReaccionBerrinche = New System.Windows.Forms.TextBox()
+        Me.Label126 = New System.Windows.Forms.Label()
+        Me.TxtQueBerrinche = New System.Windows.Forms.TextBox()
+        Me.Label119 = New System.Windows.Forms.Label()
+        Me.TxtApodo = New System.Windows.Forms.TextBox()
+        Me.Label118 = New System.Windows.Forms.Label()
+        Me.GroupBoxAlimentacion = New System.Windows.Forms.GroupBox()
+        Me.TxtVerduras = New System.Windows.Forms.TextBox()
+        Me.Label114 = New System.Windows.Forms.Label()
+        Me.TxtFrutas = New System.Windows.Forms.TextBox()
+        Me.Label112 = New System.Windows.Forms.Label()
+        Me.Label136 = New System.Windows.Forms.Label()
+        Me.TxtHoraCena = New System.Windows.Forms.MaskedTextBox()
+        Me.Label135 = New System.Windows.Forms.Label()
+        Me.TxtHoraCome = New System.Windows.Forms.MaskedTextBox()
+        Me.Label134 = New System.Windows.Forms.Label()
+        Me.TxtHoraDesayuno = New System.Windows.Forms.MaskedTextBox()
+        Me.TxtHoraDulces = New System.Windows.Forms.TextBox()
+        Me.Label115 = New System.Windows.Forms.Label()
+        Me.TxtQueDulces = New System.Windows.Forms.TextBox()
+        Me.Label116 = New System.Windows.Forms.Label()
+        Me.TxtQueCena = New System.Windows.Forms.TextBox()
+        Me.Label122 = New System.Windows.Forms.Label()
+        Me.Label125 = New System.Windows.Forms.Label()
+        Me.TxtQueCome = New System.Windows.Forms.TextBox()
+        Me.Label120 = New System.Windows.Forms.Label()
+        Me.Label121 = New System.Windows.Forms.Label()
+        Me.TxtQueDesayuna = New System.Windows.Forms.TextBox()
+        Me.Label123 = New System.Windows.Forms.Label()
+        Me.Label124 = New System.Windows.Forms.Label()
+        Me.GroupBoxHigiene = New System.Windows.Forms.GroupBox()
+        Me.TxtMomentoLavaManos = New System.Windows.Forms.TextBox()
+        Me.Label117 = New System.Windows.Forms.Label()
+        Me.GroupBoxBaniarse = New System.Windows.Forms.GroupBox()
+        Me.RadioButtonBaniarseNo = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonBaniarseSi = New System.Windows.Forms.RadioButton()
+        Me.GroupBoxBanio = New System.Windows.Forms.GroupBox()
+        Me.RadioButtonBanioNo = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonBanioSi = New System.Windows.Forms.RadioButton()
+        Me.TxtMomentoLavaDientes = New System.Windows.Forms.TextBox()
+        Me.Label113 = New System.Windows.Forms.Label()
+        Me.GroupBoxLavaDientes = New System.Windows.Forms.GroupBox()
+        Me.RadioButtonDientesNo = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonDientesSi = New System.Windows.Forms.RadioButton()
+        Me.GroupBoxSeLavaManos = New System.Windows.Forms.GroupBox()
+        Me.RadioButtonLavaNo = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonLavaSi = New System.Windows.Forms.RadioButton()
         Me.GroupBoxCaracteristicasDesarrollo = New System.Windows.Forms.GroupBox()
         Me.Label133 = New System.Windows.Forms.Label()
         Me.Label132 = New System.Windows.Forms.Label()
@@ -305,57 +334,44 @@ Partial Class FrmInscripciones
         Me.Label100 = New System.Windows.Forms.Label()
         Me.Label99 = New System.Windows.Forms.Label()
         Me.Label98 = New System.Windows.Forms.Label()
-        Me.GroupBoxHigiene = New System.Windows.Forms.GroupBox()
-        Me.GroupBoxBaniarse = New System.Windows.Forms.GroupBox()
-        Me.RadioButtonBaniarseNo = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonBaniarseSi = New System.Windows.Forms.RadioButton()
-        Me.GroupBoxBanio = New System.Windows.Forms.GroupBox()
-        Me.RadioButtonBanioNo = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonBanioSi = New System.Windows.Forms.RadioButton()
-        Me.TxtMomentoLavaDientes = New System.Windows.Forms.TextBox()
-        Me.Label113 = New System.Windows.Forms.Label()
-        Me.GroupBoxLavaDientes = New System.Windows.Forms.GroupBox()
-        Me.RadioButtonDientesNo = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonDientesSi = New System.Windows.Forms.RadioButton()
-        Me.GroupBoxSeLavaManos = New System.Windows.Forms.GroupBox()
-        Me.RadioButtonLavaNo = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonLavaSi = New System.Windows.Forms.RadioButton()
-        Me.GroupBoxAlimentacion = New System.Windows.Forms.GroupBox()
-        Me.Label136 = New System.Windows.Forms.Label()
-        Me.TxtHoraCena = New System.Windows.Forms.MaskedTextBox()
-        Me.Label135 = New System.Windows.Forms.Label()
-        Me.TxtHoraCome = New System.Windows.Forms.MaskedTextBox()
-        Me.Label134 = New System.Windows.Forms.Label()
-        Me.TxtHoraDesayuno = New System.Windows.Forms.MaskedTextBox()
-        Me.TxtHoraDulces = New System.Windows.Forms.TextBox()
-        Me.Label115 = New System.Windows.Forms.Label()
-        Me.TxtQueDulces = New System.Windows.Forms.TextBox()
-        Me.Label116 = New System.Windows.Forms.Label()
-        Me.TxtQueCena = New System.Windows.Forms.TextBox()
-        Me.Label122 = New System.Windows.Forms.Label()
-        Me.Label125 = New System.Windows.Forms.Label()
-        Me.TxtQueCome = New System.Windows.Forms.TextBox()
-        Me.Label120 = New System.Windows.Forms.Label()
-        Me.Label121 = New System.Windows.Forms.Label()
-        Me.TxtQueDesayuna = New System.Windows.Forms.TextBox()
-        Me.Label123 = New System.Windows.Forms.Label()
-        Me.Label124 = New System.Windows.Forms.Label()
-        Me.GroupBoxConducta = New System.Windows.Forms.GroupBox()
-        Me.GroupBoxBerrinche = New System.Windows.Forms.GroupBox()
-        Me.RadioButtonBerrincheNo = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonBerrincheSi = New System.Windows.Forms.RadioButton()
-        Me.TxtActividadesConPadre = New System.Windows.Forms.TextBox()
-        Me.Label129 = New System.Windows.Forms.Label()
-        Me.TxtTemorMenor = New System.Windows.Forms.TextBox()
-        Me.Label128 = New System.Windows.Forms.Label()
-        Me.TxtFuncionaEstrategia = New System.Windows.Forms.TextBox()
-        Me.Label127 = New System.Windows.Forms.Label()
-        Me.TxtReaccionBerrinche = New System.Windows.Forms.TextBox()
-        Me.Label126 = New System.Windows.Forms.Label()
-        Me.TxtQueBerrinche = New System.Windows.Forms.TextBox()
-        Me.Label119 = New System.Windows.Forms.Label()
-        Me.TxtApodo = New System.Windows.Forms.TextBox()
-        Me.Label118 = New System.Windows.Forms.Label()
+        Me.GroupBoxAntecedentes = New System.Windows.Forms.GroupBox()
+        Me.TxtEdadControlBanio = New System.Windows.Forms.TextBox()
+        Me.Label96 = New System.Windows.Forms.Label()
+        Me.TxtTiempoLeche = New System.Windows.Forms.TextBox()
+        Me.Label95 = New System.Windows.Forms.Label()
+        Me.GroupBoxLeche = New System.Windows.Forms.GroupBox()
+        Me.RadioButtonBiberon = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonMaterna = New System.Windows.Forms.RadioButton()
+        Me.TxtComplicaciones = New System.Windows.Forms.TextBox()
+        Me.Label94 = New System.Windows.Forms.Label()
+        Me.GroupBoxParto = New System.Windows.Forms.GroupBox()
+        Me.RadioButtonCesarea = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonNormal = New System.Windows.Forms.RadioButton()
+        Me.GroupBoxEmbarazo = New System.Windows.Forms.GroupBox()
+        Me.RadioButtonNO = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonSI = New System.Windows.Forms.RadioButton()
+        Me.TxtNacimiento = New System.Windows.Forms.TextBox()
+        Me.Label93 = New System.Windows.Forms.Label()
+        Me.GroupBoxVivienda = New System.Windows.Forms.GroupBox()
+        Me.TxtPersonasCasa = New System.Windows.Forms.NumericUpDown()
+        Me.GroupBoxCuarto = New System.Windows.Forms.GroupBox()
+        Me.RadioButtonCompartido = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonIndependiente = New System.Windows.Forms.RadioButton()
+        Me.Label91 = New System.Windows.Forms.Label()
+        Me.TxtTipoConstruccion = New System.Windows.Forms.TextBox()
+        Me.Label90 = New System.Windows.Forms.Label()
+        Me.GroupBoxCasa = New System.Windows.Forms.GroupBox()
+        Me.RadioButtonPrestada = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonRentada = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonPropia = New System.Windows.Forms.RadioButton()
+        Me.GroupBoxEstructuraFamiliar = New System.Windows.Forms.GroupBox()
+        Me.TxtConQuienConvive = New System.Windows.Forms.TextBox()
+        Me.Label88 = New System.Windows.Forms.Label()
+        Me.Label130 = New System.Windows.Forms.Label()
+        Me.TxtOrdenNacimiento = New System.Windows.Forms.MaskedTextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel.SuspendLayout()
         Me.TabControlInscripcion.SuspendLayout()
@@ -388,32 +404,32 @@ Partial Class FrmInscripciones
         Me.GroupBox8.SuspendLayout()
         Me.FichaIdentificacion.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.GroupBoxEstructuraFamiliar.SuspendLayout()
-        Me.GroupBoxVivienda.SuspendLayout()
-        CType(Me.TxtPersonasCasa, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBoxCuarto.SuspendLayout()
-        Me.GroupBoxCasa.SuspendLayout()
-        Me.GroupBoxAntecedentes.SuspendLayout()
-        Me.GroupBoxLeche.SuspendLayout()
-        Me.GroupBoxParto.SuspendLayout()
-        Me.GroupBoxEmbarazo.SuspendLayout()
-        Me.GroupBoxCaracteristicasDesarrollo.SuspendLayout()
-        Me.GroupBoxTiempoCalle.SuspendLayout()
-        Me.GroupBoxComparteJuguetes.SuspendLayout()
+        Me.GroupBoxConducta.SuspendLayout()
+        Me.GroupBoxBerrinche.SuspendLayout()
+        Me.GroupBoxAlimentacion.SuspendLayout()
         Me.GroupBoxHigiene.SuspendLayout()
         Me.GroupBoxBaniarse.SuspendLayout()
         Me.GroupBoxBanio.SuspendLayout()
         Me.GroupBoxLavaDientes.SuspendLayout()
         Me.GroupBoxSeLavaManos.SuspendLayout()
-        Me.GroupBoxAlimentacion.SuspendLayout()
-        Me.GroupBoxConducta.SuspendLayout()
-        Me.GroupBoxBerrinche.SuspendLayout()
+        Me.GroupBoxCaracteristicasDesarrollo.SuspendLayout()
+        Me.GroupBoxTiempoCalle.SuspendLayout()
+        Me.GroupBoxComparteJuguetes.SuspendLayout()
+        Me.GroupBoxAntecedentes.SuspendLayout()
+        Me.GroupBoxLeche.SuspendLayout()
+        Me.GroupBoxParto.SuspendLayout()
+        Me.GroupBoxEmbarazo.SuspendLayout()
+        Me.GroupBoxVivienda.SuspendLayout()
+        CType(Me.TxtPersonasCasa, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBoxCuarto.SuspendLayout()
+        Me.GroupBoxCasa.SuspendLayout()
+        Me.GroupBoxEstructuraFamiliar.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevo, Me.ToolStripLabel1, Me.BtnGuardar, Me.ToolStripLabel2, Me.BtnSalir, Me.ToolStripLabel4})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevo, Me.ToolStripLabel1, Me.BtnGuardar, Me.ToolStripLabel2, Me.ToolStripButton1, Me.ToolStripLabel3, Me.BtnSalir, Me.ToolStripLabel4})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1193, 27)
@@ -476,7 +492,7 @@ Partial Class FrmInscripciones
         Me.Panel.Enabled = False
         Me.Panel.Location = New System.Drawing.Point(12, 89)
         Me.Panel.Name = "Panel"
-        Me.Panel.Size = New System.Drawing.Size(1181, 526)
+        Me.Panel.Size = New System.Drawing.Size(1181, 593)
         Me.Panel.TabIndex = 49
         '
         'TabControlInscripcion
@@ -487,7 +503,7 @@ Partial Class FrmInscripciones
         Me.TabControlInscripcion.Location = New System.Drawing.Point(3, 3)
         Me.TabControlInscripcion.Name = "TabControlInscripcion"
         Me.TabControlInscripcion.SelectedIndex = 0
-        Me.TabControlInscripcion.Size = New System.Drawing.Size(1175, 519)
+        Me.TabControlInscripcion.Size = New System.Drawing.Size(1175, 587)
         Me.TabControlInscripcion.TabIndex = 0
         '
         'FichaTecnica
@@ -497,7 +513,7 @@ Partial Class FrmInscripciones
         Me.FichaTecnica.Location = New System.Drawing.Point(4, 25)
         Me.FichaTecnica.Name = "FichaTecnica"
         Me.FichaTecnica.Padding = New System.Windows.Forms.Padding(3)
-        Me.FichaTecnica.Size = New System.Drawing.Size(1134, 490)
+        Me.FichaTecnica.Size = New System.Drawing.Size(1167, 558)
         Me.FichaTecnica.TabIndex = 0
         Me.FichaTecnica.Text = "Ficha Técnica"
         Me.FichaTecnica.UseVisualStyleBackColor = True
@@ -1072,6 +1088,12 @@ Partial Class FrmInscripciones
         '
         'GroupBoxMenor
         '
+        Me.GroupBoxMenor.Controls.Add(Me.Label92)
+        Me.GroupBoxMenor.Controls.Add(Me.TxtHoraSalida)
+        Me.GroupBoxMenor.Controls.Add(Me.Label89)
+        Me.GroupBoxMenor.Controls.Add(Me.TxtHoraEntrada)
+        Me.GroupBoxMenor.Controls.Add(Me.CboGrupo)
+        Me.GroupBoxMenor.Controls.Add(Me.Label87)
         Me.GroupBoxMenor.Controls.Add(Me.AA)
         Me.GroupBoxMenor.Controls.Add(Me.MM)
         Me.GroupBoxMenor.Controls.Add(Me.Label10)
@@ -1101,9 +1123,60 @@ Partial Class FrmInscripciones
         Me.GroupBoxMenor.TabStop = False
         Me.GroupBoxMenor.Text = "Ingresa los datos del menor:"
         '
+        'Label92
+        '
+        Me.Label92.AutoSize = True
+        Me.Label92.Location = New System.Drawing.Point(422, 71)
+        Me.Label92.Name = "Label92"
+        Me.Label92.Size = New System.Drawing.Size(86, 17)
+        Me.Label92.TabIndex = 40
+        Me.Label92.Text = "Hora Salida:"
+        '
+        'TxtHoraSalida
+        '
+        Me.TxtHoraSalida.Location = New System.Drawing.Point(425, 95)
+        Me.TxtHoraSalida.Name = "TxtHoraSalida"
+        Me.TxtHoraSalida.ReadOnly = True
+        Me.TxtHoraSalida.Size = New System.Drawing.Size(113, 22)
+        Me.TxtHoraSalida.TabIndex = 39
+        '
+        'Label89
+        '
+        Me.Label89.AutoSize = True
+        Me.Label89.Location = New System.Drawing.Point(322, 72)
+        Me.Label89.Name = "Label89"
+        Me.Label89.Size = New System.Drawing.Size(97, 17)
+        Me.Label89.TabIndex = 38
+        Me.Label89.Text = "Hora Entrada:"
+        '
+        'TxtHoraEntrada
+        '
+        Me.TxtHoraEntrada.Location = New System.Drawing.Point(325, 96)
+        Me.TxtHoraEntrada.Name = "TxtHoraEntrada"
+        Me.TxtHoraEntrada.ReadOnly = True
+        Me.TxtHoraEntrada.Size = New System.Drawing.Size(94, 22)
+        Me.TxtHoraEntrada.TabIndex = 34
+        '
+        'CboGrupo
+        '
+        Me.CboGrupo.FormattingEnabled = True
+        Me.CboGrupo.Location = New System.Drawing.Point(140, 94)
+        Me.CboGrupo.Name = "CboGrupo"
+        Me.CboGrupo.Size = New System.Drawing.Size(179, 24)
+        Me.CboGrupo.TabIndex = 37
+        '
+        'Label87
+        '
+        Me.Label87.AutoSize = True
+        Me.Label87.Location = New System.Drawing.Point(140, 72)
+        Me.Label87.Name = "Label87"
+        Me.Label87.Size = New System.Drawing.Size(52, 17)
+        Me.Label87.TabIndex = 36
+        Me.Label87.Text = "Grupo:"
+        '
         'AA
         '
-        Me.AA.Location = New System.Drawing.Point(943, 96)
+        Me.AA.Location = New System.Drawing.Point(967, 96)
         Me.AA.Maximum = New Decimal(New Integer() {3000, 0, 0, 0})
         Me.AA.Minimum = New Decimal(New Integer() {2020, 0, 0, 0})
         Me.AA.Name = "AA"
@@ -1113,7 +1186,7 @@ Partial Class FrmInscripciones
         '
         'MM
         '
-        Me.MM.Location = New System.Drawing.Point(796, 96)
+        Me.MM.Location = New System.Drawing.Point(820, 96)
         Me.MM.Maximum = New Decimal(New Integer() {12, 0, 0, 0})
         Me.MM.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.MM.Name = "MM"
@@ -1124,7 +1197,7 @@ Partial Class FrmInscripciones
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(940, 72)
+        Me.Label10.Location = New System.Drawing.Point(964, 72)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(137, 17)
         Me.Label10.TabIndex = 34
@@ -1133,7 +1206,7 @@ Partial Class FrmInscripciones
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(793, 74)
+        Me.Label8.Location = New System.Drawing.Point(817, 74)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(138, 17)
         Me.Label8.TabIndex = 32
@@ -1141,15 +1214,15 @@ Partial Class FrmInscripciones
         '
         'TxtCURP
         '
-        Me.TxtCURP.Location = New System.Drawing.Point(388, 96)
+        Me.TxtCURP.Location = New System.Drawing.Point(820, 41)
         Me.TxtCURP.Name = "TxtCURP"
-        Me.TxtCURP.Size = New System.Drawing.Size(278, 22)
+        Me.TxtCURP.Size = New System.Drawing.Size(180, 22)
         Me.TxtCURP.TabIndex = 31
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(388, 74)
+        Me.Label9.Location = New System.Drawing.Point(817, 21)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(50, 17)
         Me.Label9.TabIndex = 30
@@ -1157,16 +1230,16 @@ Partial Class FrmInscripciones
         '
         'TxtApellidoMat
         '
-        Me.TxtApellidoMat.Location = New System.Drawing.Point(672, 40)
+        Me.TxtApellidoMat.Location = New System.Drawing.Point(544, 41)
         Me.TxtApellidoMat.MaxLength = 15
         Me.TxtApellidoMat.Name = "TxtApellidoMat"
-        Me.TxtApellidoMat.Size = New System.Drawing.Size(241, 22)
+        Me.TxtApellidoMat.Size = New System.Drawing.Size(122, 22)
         Me.TxtApellidoMat.TabIndex = 29
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(669, 20)
+        Me.Label5.Location = New System.Drawing.Point(541, 21)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(118, 17)
         Me.Label5.TabIndex = 28
@@ -1192,16 +1265,16 @@ Partial Class FrmInscripciones
         '
         'TxtLugarNacimiento
         '
-        Me.TxtLugarNacimiento.Location = New System.Drawing.Point(140, 96)
+        Me.TxtLugarNacimiento.Location = New System.Drawing.Point(544, 94)
         Me.TxtLugarNacimiento.Name = "TxtLugarNacimiento"
-        Me.TxtLugarNacimiento.Size = New System.Drawing.Size(242, 22)
+        Me.TxtLugarNacimiento.Size = New System.Drawing.Size(270, 22)
         Me.TxtLugarNacimiento.TabIndex = 23
         '
         'TxtTipoSangre
         '
-        Me.TxtTipoSangre.Location = New System.Drawing.Point(672, 96)
+        Me.TxtTipoSangre.Location = New System.Drawing.Point(1006, 41)
         Me.TxtTipoSangre.Name = "TxtTipoSangre"
-        Me.TxtTipoSangre.Size = New System.Drawing.Size(115, 22)
+        Me.TxtTipoSangre.Size = New System.Drawing.Size(110, 22)
         Me.TxtTipoSangre.TabIndex = 18
         '
         'TxtApellidoPat
@@ -1209,13 +1282,13 @@ Partial Class FrmInscripciones
         Me.TxtApellidoPat.Location = New System.Drawing.Point(425, 41)
         Me.TxtApellidoPat.MaxLength = 15
         Me.TxtApellidoPat.Name = "TxtApellidoPat"
-        Me.TxtApellidoPat.Size = New System.Drawing.Size(241, 22)
+        Me.TxtApellidoPat.Size = New System.Drawing.Size(113, 22)
         Me.TxtApellidoPat.TabIndex = 17
         '
         'DateNacimiento
         '
         Me.DateNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateNacimiento.Location = New System.Drawing.Point(932, 41)
+        Me.DateNacimiento.Location = New System.Drawing.Point(672, 41)
         Me.DateNacimiento.Name = "DateNacimiento"
         Me.DateNacimiento.Size = New System.Drawing.Size(142, 22)
         Me.DateNacimiento.TabIndex = 15
@@ -1240,7 +1313,7 @@ Partial Class FrmInscripciones
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(140, 74)
+        Me.Label12.Location = New System.Drawing.Point(541, 74)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(143, 17)
         Me.Label12.TabIndex = 10
@@ -1249,7 +1322,7 @@ Partial Class FrmInscripciones
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(672, 74)
+        Me.Label7.Location = New System.Drawing.Point(1006, 19)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(110, 17)
         Me.Label7.TabIndex = 5
@@ -1267,7 +1340,7 @@ Partial Class FrmInscripciones
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(932, 21)
+        Me.Label4.Location = New System.Drawing.Point(669, 21)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(145, 17)
         Me.Label4.TabIndex = 2
@@ -1298,7 +1371,7 @@ Partial Class FrmInscripciones
         Me.Personas.Location = New System.Drawing.Point(4, 25)
         Me.Personas.Name = "Personas"
         Me.Personas.Padding = New System.Windows.Forms.Padding(3)
-        Me.Personas.Size = New System.Drawing.Size(1134, 460)
+        Me.Personas.Size = New System.Drawing.Size(1167, 558)
         Me.Personas.TabIndex = 1
         Me.Personas.Text = "Personas"
         Me.Personas.UseVisualStyleBackColor = True
@@ -2440,7 +2513,7 @@ Partial Class FrmInscripciones
         Me.FichaIdentificacion.Controls.Add(Me.Panel1)
         Me.FichaIdentificacion.Location = New System.Drawing.Point(4, 25)
         Me.FichaIdentificacion.Name = "FichaIdentificacion"
-        Me.FichaIdentificacion.Size = New System.Drawing.Size(1167, 490)
+        Me.FichaIdentificacion.Size = New System.Drawing.Size(1167, 558)
         Me.FichaIdentificacion.TabIndex = 2
         Me.FichaIdentificacion.Text = "Ficha de Identifiación"
         Me.FichaIdentificacion.UseVisualStyleBackColor = True
@@ -2448,6 +2521,8 @@ Partial Class FrmInscripciones
         'Panel1
         '
         Me.Panel1.AutoScroll = True
+        Me.Panel1.Controls.Add(Me.TxtIdFichaIdentificacion)
+        Me.Panel1.Controls.Add(Me.Label97)
         Me.Panel1.Controls.Add(Me.GroupBoxConducta)
         Me.Panel1.Controls.Add(Me.GroupBoxAlimentacion)
         Me.Panel1.Controls.Add(Me.GroupBoxHigiene)
@@ -2457,384 +2532,606 @@ Partial Class FrmInscripciones
         Me.Panel1.Controls.Add(Me.GroupBoxEstructuraFamiliar)
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1159, 474)
+        Me.Panel1.Size = New System.Drawing.Size(1159, 552)
         Me.Panel1.TabIndex = 0
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(4, 40)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(334, 46)
-        Me.Label1.TabIndex = 50
-        Me.Label1.Text = "INSCRIPCIONES"
-        '
-        'GroupBoxEstructuraFamiliar
-        '
-        Me.GroupBoxEstructuraFamiliar.Controls.Add(Me.TxtConQuienConvive)
-        Me.GroupBoxEstructuraFamiliar.Controls.Add(Me.Label88)
-        Me.GroupBoxEstructuraFamiliar.Controls.Add(Me.Label130)
-        Me.GroupBoxEstructuraFamiliar.Controls.Add(Me.TxtOrdenNacimiento)
-        Me.GroupBoxEstructuraFamiliar.Location = New System.Drawing.Point(5, 12)
-        Me.GroupBoxEstructuraFamiliar.Name = "GroupBoxEstructuraFamiliar"
-        Me.GroupBoxEstructuraFamiliar.Size = New System.Drawing.Size(454, 63)
-        Me.GroupBoxEstructuraFamiliar.TabIndex = 119
-        Me.GroupBoxEstructuraFamiliar.TabStop = False
-        Me.GroupBoxEstructuraFamiliar.Text = "ESTRUCTURA FAMILIAR"
-        '
-        'Label88
-        '
-        Me.Label88.AutoSize = True
-        Me.Label88.Location = New System.Drawing.Point(3, 16)
-        Me.Label88.Name = "Label88"
-        Me.Label88.Size = New System.Drawing.Size(212, 17)
-        Me.Label88.TabIndex = 4
-        Me.Label88.Text = "Con quién convive más en casa:"
-        '
-        'TxtConQuienConvive
-        '
-        Me.TxtConQuienConvive.Location = New System.Drawing.Point(6, 36)
-        Me.TxtConQuienConvive.Name = "TxtConQuienConvive"
-        Me.TxtConQuienConvive.Size = New System.Drawing.Size(209, 22)
-        Me.TxtConQuienConvive.TabIndex = 6
-        '
-        'Label130
-        '
-        Me.Label130.AutoSize = True
-        Me.Label130.Location = New System.Drawing.Point(219, 16)
-        Me.Label130.Name = "Label130"
-        Me.Label130.Size = New System.Drawing.Size(211, 17)
-        Me.Label130.TabIndex = 99
-        Me.Label130.Text = "Orden de nacimiento del menor:"
-        '
-        'TxtOrdenNacimiento
-        '
-        Me.TxtOrdenNacimiento.Location = New System.Drawing.Point(221, 36)
-        Me.TxtOrdenNacimiento.Mask = "00"
-        Me.TxtOrdenNacimiento.Name = "TxtOrdenNacimiento"
-        Me.TxtOrdenNacimiento.Size = New System.Drawing.Size(63, 22)
-        Me.TxtOrdenNacimiento.TabIndex = 102
-        Me.TxtOrdenNacimiento.ValidatingType = GetType(Integer)
-        '
-        'GroupBoxVivienda
-        '
-        Me.GroupBoxVivienda.Controls.Add(Me.TxtPersonasCasa)
-        Me.GroupBoxVivienda.Controls.Add(Me.GroupBoxCuarto)
-        Me.GroupBoxVivienda.Controls.Add(Me.Label91)
-        Me.GroupBoxVivienda.Controls.Add(Me.TxtTipoConstruccion)
-        Me.GroupBoxVivienda.Controls.Add(Me.Label90)
-        Me.GroupBoxVivienda.Controls.Add(Me.GroupBoxCasa)
-        Me.GroupBoxVivienda.Location = New System.Drawing.Point(3, 81)
-        Me.GroupBoxVivienda.Name = "GroupBoxVivienda"
-        Me.GroupBoxVivienda.Size = New System.Drawing.Size(1099, 78)
-        Me.GroupBoxVivienda.TabIndex = 120
-        Me.GroupBoxVivienda.TabStop = False
-        Me.GroupBoxVivienda.Text = "CARACTERÍSTICAS DE LA VIVIENDA"
-        '
-        'TxtPersonasCasa
-        '
-        Me.TxtPersonasCasa.Location = New System.Drawing.Point(548, 47)
-        Me.TxtPersonasCasa.Name = "TxtPersonasCasa"
-        Me.TxtPersonasCasa.Size = New System.Drawing.Size(62, 22)
-        Me.TxtPersonasCasa.TabIndex = 107
-        '
-        'GroupBoxCuarto
-        '
-        Me.GroupBoxCuarto.Controls.Add(Me.RadioButtonCompartido)
-        Me.GroupBoxCuarto.Controls.Add(Me.RadioButtonIndependiente)
-        Me.GroupBoxCuarto.Location = New System.Drawing.Point(768, 21)
-        Me.GroupBoxCuarto.Name = "GroupBoxCuarto"
-        Me.GroupBoxCuarto.Size = New System.Drawing.Size(256, 47)
-        Me.GroupBoxCuarto.TabIndex = 103
-        Me.GroupBoxCuarto.TabStop = False
-        Me.GroupBoxCuarto.Text = "El niño duerme en cuarto:"
-        '
-        'RadioButtonCompartido
-        '
-        Me.RadioButtonCompartido.AutoSize = True
-        Me.RadioButtonCompartido.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonCompartido.Location = New System.Drawing.Point(145, 20)
-        Me.RadioButtonCompartido.Name = "RadioButtonCompartido"
-        Me.RadioButtonCompartido.Size = New System.Drawing.Size(111, 21)
-        Me.RadioButtonCompartido.TabIndex = 2
-        Me.RadioButtonCompartido.TabStop = True
-        Me.RadioButtonCompartido.Text = "Compartido"
-        Me.RadioButtonCompartido.UseVisualStyleBackColor = True
-        '
-        'RadioButtonIndependiente
-        '
-        Me.RadioButtonIndependiente.AutoSize = True
-        Me.RadioButtonIndependiente.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonIndependiente.Location = New System.Drawing.Point(6, 21)
-        Me.RadioButtonIndependiente.Name = "RadioButtonIndependiente"
-        Me.RadioButtonIndependiente.Size = New System.Drawing.Size(132, 21)
-        Me.RadioButtonIndependiente.TabIndex = 0
-        Me.RadioButtonIndependiente.TabStop = True
-        Me.RadioButtonIndependiente.Text = "Independiente"
-        Me.RadioButtonIndependiente.UseVisualStyleBackColor = True
-        '
-        'Label91
-        '
-        Me.Label91.AutoSize = True
-        Me.Label91.Location = New System.Drawing.Point(544, 26)
-        Me.Label91.Name = "Label91"
-        Me.Label91.Size = New System.Drawing.Size(218, 17)
-        Me.Label91.TabIndex = 106
-        Me.Label91.Text = "Cuantas personas viven en casa:"
-        '
-        'TxtTipoConstruccion
-        '
-        Me.TxtTipoConstruccion.Location = New System.Drawing.Point(291, 46)
-        Me.TxtTipoConstruccion.Name = "TxtTipoConstruccion"
-        Me.TxtTipoConstruccion.Size = New System.Drawing.Size(250, 22)
-        Me.TxtTipoConstruccion.TabIndex = 105
-        '
-        'Label90
-        '
-        Me.Label90.AutoSize = True
-        Me.Label90.Location = New System.Drawing.Point(288, 26)
-        Me.Label90.Name = "Label90"
-        Me.Label90.Size = New System.Drawing.Size(144, 17)
-        Me.Label90.TabIndex = 104
-        Me.Label90.Text = "Tipo de construccion:"
-        '
-        'GroupBoxCasa
-        '
-        Me.GroupBoxCasa.Controls.Add(Me.RadioButtonPrestada)
-        Me.GroupBoxCasa.Controls.Add(Me.RadioButtonRentada)
-        Me.GroupBoxCasa.Controls.Add(Me.RadioButtonPropia)
-        Me.GroupBoxCasa.Location = New System.Drawing.Point(8, 21)
-        Me.GroupBoxCasa.Name = "GroupBoxCasa"
-        Me.GroupBoxCasa.Size = New System.Drawing.Size(279, 47)
-        Me.GroupBoxCasa.TabIndex = 102
-        Me.GroupBoxCasa.TabStop = False
-        Me.GroupBoxCasa.Text = "Su casa es:"
-        '
-        'RadioButtonPrestada
-        '
-        Me.RadioButtonPrestada.AutoSize = True
-        Me.RadioButtonPrestada.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonPrestada.Location = New System.Drawing.Point(179, 21)
-        Me.RadioButtonPrestada.Name = "RadioButtonPrestada"
-        Me.RadioButtonPrestada.Size = New System.Drawing.Size(94, 21)
-        Me.RadioButtonPrestada.TabIndex = 2
-        Me.RadioButtonPrestada.TabStop = True
-        Me.RadioButtonPrestada.Text = "Prestada"
-        Me.RadioButtonPrestada.UseVisualStyleBackColor = True
-        '
-        'RadioButtonRentada
-        '
-        Me.RadioButtonRentada.AutoSize = True
-        Me.RadioButtonRentada.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonRentada.Location = New System.Drawing.Point(82, 21)
-        Me.RadioButtonRentada.Name = "RadioButtonRentada"
-        Me.RadioButtonRentada.Size = New System.Drawing.Size(90, 21)
-        Me.RadioButtonRentada.TabIndex = 1
-        Me.RadioButtonRentada.TabStop = True
-        Me.RadioButtonRentada.Text = "Rentada"
-        Me.RadioButtonRentada.UseVisualStyleBackColor = True
-        '
-        'RadioButtonPropia
-        '
-        Me.RadioButtonPropia.AutoSize = True
-        Me.RadioButtonPropia.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonPropia.Location = New System.Drawing.Point(6, 21)
-        Me.RadioButtonPropia.Name = "RadioButtonPropia"
-        Me.RadioButtonPropia.Size = New System.Drawing.Size(76, 21)
-        Me.RadioButtonPropia.TabIndex = 0
-        Me.RadioButtonPropia.TabStop = True
-        Me.RadioButtonPropia.Text = "Propia"
-        Me.RadioButtonPropia.UseVisualStyleBackColor = True
-        '
-        'GroupBoxAntecedentes
-        '
-        Me.GroupBoxAntecedentes.Controls.Add(Me.TxtEdadControlBanio)
-        Me.GroupBoxAntecedentes.Controls.Add(Me.Label96)
-        Me.GroupBoxAntecedentes.Controls.Add(Me.TxtTiempoLeche)
-        Me.GroupBoxAntecedentes.Controls.Add(Me.Label95)
-        Me.GroupBoxAntecedentes.Controls.Add(Me.GroupBoxLeche)
-        Me.GroupBoxAntecedentes.Controls.Add(Me.TxtComplicaciones)
-        Me.GroupBoxAntecedentes.Controls.Add(Me.Label94)
-        Me.GroupBoxAntecedentes.Controls.Add(Me.GroupBoxParto)
-        Me.GroupBoxAntecedentes.Controls.Add(Me.GroupBoxEmbarazo)
-        Me.GroupBoxAntecedentes.Controls.Add(Me.TxtNacimiento)
-        Me.GroupBoxAntecedentes.Controls.Add(Me.Label93)
-        Me.GroupBoxAntecedentes.Location = New System.Drawing.Point(3, 165)
-        Me.GroupBoxAntecedentes.Name = "GroupBoxAntecedentes"
-        Me.GroupBoxAntecedentes.Size = New System.Drawing.Size(1099, 124)
-        Me.GroupBoxAntecedentes.TabIndex = 121
-        Me.GroupBoxAntecedentes.TabStop = False
-        Me.GroupBoxAntecedentes.Text = "ANTECEDENTES DEL DESARROLLO"
-        '
-        'TxtEdadControlBanio
-        '
-        Me.TxtEdadControlBanio.Location = New System.Drawing.Point(415, 92)
-        Me.TxtEdadControlBanio.Name = "TxtEdadControlBanio"
-        Me.TxtEdadControlBanio.Size = New System.Drawing.Size(255, 22)
-        Me.TxtEdadControlBanio.TabIndex = 31
-        '
-        'Label96
-        '
-        Me.Label96.AutoSize = True
-        Me.Label96.Location = New System.Drawing.Point(413, 72)
-        Me.Label96.Name = "Label96"
-        Me.Label96.Size = New System.Drawing.Size(257, 17)
-        Me.Label96.TabIndex = 30
-        Me.Label96.Text = "A qué edad logró el control del esfínter:"
-        '
-        'TxtTiempoLeche
-        '
-        Me.TxtTiempoLeche.Location = New System.Drawing.Point(284, 92)
-        Me.TxtTiempoLeche.Name = "TxtTiempoLeche"
-        Me.TxtTiempoLeche.Size = New System.Drawing.Size(125, 22)
-        Me.TxtTiempoLeche.TabIndex = 29
-        '
-        'Label95
-        '
-        Me.Label95.AutoSize = True
-        Me.Label95.Location = New System.Drawing.Point(282, 72)
-        Me.Label95.Name = "Label95"
-        Me.Label95.Size = New System.Drawing.Size(127, 17)
-        Me.Label95.TabIndex = 28
-        Me.Label95.Text = "Por cuánto tiempo:"
-        '
-        'GroupBoxLeche
-        '
-        Me.GroupBoxLeche.Controls.Add(Me.RadioButtonBiberon)
-        Me.GroupBoxLeche.Controls.Add(Me.RadioButtonMaterna)
-        Me.GroupBoxLeche.Location = New System.Drawing.Point(8, 66)
-        Me.GroupBoxLeche.Name = "GroupBoxLeche"
-        Me.GroupBoxLeche.Size = New System.Drawing.Size(274, 48)
-        Me.GroupBoxLeche.TabIndex = 22
-        Me.GroupBoxLeche.TabStop = False
-        Me.GroupBoxLeche.Text = "De bebé fué alimentado con leche:"
-        '
-        'RadioButtonBiberon
-        '
-        Me.RadioButtonBiberon.AutoSize = True
-        Me.RadioButtonBiberon.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonBiberon.Location = New System.Drawing.Point(93, 21)
-        Me.RadioButtonBiberon.Name = "RadioButtonBiberon"
-        Me.RadioButtonBiberon.Size = New System.Drawing.Size(85, 21)
-        Me.RadioButtonBiberon.TabIndex = 2
-        Me.RadioButtonBiberon.TabStop = True
-        Me.RadioButtonBiberon.Text = "Biberón"
-        Me.RadioButtonBiberon.UseVisualStyleBackColor = True
-        '
-        'RadioButtonMaterna
-        '
-        Me.RadioButtonMaterna.AutoSize = True
-        Me.RadioButtonMaterna.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonMaterna.Location = New System.Drawing.Point(6, 21)
-        Me.RadioButtonMaterna.Name = "RadioButtonMaterna"
-        Me.RadioButtonMaterna.Size = New System.Drawing.Size(88, 21)
-        Me.RadioButtonMaterna.TabIndex = 0
-        Me.RadioButtonMaterna.TabStop = True
-        Me.RadioButtonMaterna.Text = "Materna"
-        Me.RadioButtonMaterna.UseVisualStyleBackColor = True
-        '
-        'TxtComplicaciones
-        '
-        Me.TxtComplicaciones.Location = New System.Drawing.Point(729, 38)
-        Me.TxtComplicaciones.Name = "TxtComplicaciones"
-        Me.TxtComplicaciones.Size = New System.Drawing.Size(296, 22)
-        Me.TxtComplicaciones.TabIndex = 27
-        '
-        'Label94
-        '
-        Me.Label94.AutoSize = True
-        Me.Label94.Location = New System.Drawing.Point(727, 18)
-        Me.Label94.Name = "Label94"
-        Me.Label94.Size = New System.Drawing.Size(298, 17)
-        Me.Label94.TabIndex = 26
-        Me.Label94.Text = "Con complicaciones (especifique de que tipo):"
-        '
-        'GroupBoxParto
-        '
-        Me.GroupBoxParto.Controls.Add(Me.RadioButtonCesarea)
-        Me.GroupBoxParto.Controls.Add(Me.RadioButtonNormal)
-        Me.GroupBoxParto.Location = New System.Drawing.Point(510, 12)
-        Me.GroupBoxParto.Name = "GroupBoxParto"
-        Me.GroupBoxParto.Size = New System.Drawing.Size(213, 48)
-        Me.GroupBoxParto.TabIndex = 23
-        Me.GroupBoxParto.TabStop = False
-        Me.GroupBoxParto.Text = "El parto fue:"
-        '
-        'RadioButtonCesarea
-        '
-        Me.RadioButtonCesarea.AutoSize = True
-        Me.RadioButtonCesarea.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonCesarea.Location = New System.Drawing.Point(86, 20)
-        Me.RadioButtonCesarea.Name = "RadioButtonCesarea"
-        Me.RadioButtonCesarea.Size = New System.Drawing.Size(89, 21)
-        Me.RadioButtonCesarea.TabIndex = 2
-        Me.RadioButtonCesarea.TabStop = True
-        Me.RadioButtonCesarea.Text = "Cesárea"
-        Me.RadioButtonCesarea.UseVisualStyleBackColor = True
-        '
-        'RadioButtonNormal
-        '
-        Me.RadioButtonNormal.AutoSize = True
-        Me.RadioButtonNormal.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonNormal.Location = New System.Drawing.Point(6, 20)
-        Me.RadioButtonNormal.Name = "RadioButtonNormal"
-        Me.RadioButtonNormal.Size = New System.Drawing.Size(80, 21)
-        Me.RadioButtonNormal.TabIndex = 0
-        Me.RadioButtonNormal.TabStop = True
-        Me.RadioButtonNormal.Text = "Normal"
-        Me.RadioButtonNormal.UseVisualStyleBackColor = True
-        '
-        'GroupBoxEmbarazo
-        '
-        Me.GroupBoxEmbarazo.Controls.Add(Me.RadioButtonNO)
-        Me.GroupBoxEmbarazo.Controls.Add(Me.RadioButtonSI)
-        Me.GroupBoxEmbarazo.Location = New System.Drawing.Point(288, 12)
-        Me.GroupBoxEmbarazo.Name = "GroupBoxEmbarazo"
-        Me.GroupBoxEmbarazo.Size = New System.Drawing.Size(213, 48)
-        Me.GroupBoxEmbarazo.TabIndex = 21
-        Me.GroupBoxEmbarazo.TabStop = False
-        Me.GroupBoxEmbarazo.Text = "Fue un embarazo planeado:"
-        '
-        'RadioButtonNO
-        '
-        Me.RadioButtonNO.AutoSize = True
-        Me.RadioButtonNO.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonNO.Location = New System.Drawing.Point(53, 20)
-        Me.RadioButtonNO.Name = "RadioButtonNO"
-        Me.RadioButtonNO.Size = New System.Drawing.Size(52, 21)
-        Me.RadioButtonNO.TabIndex = 2
-        Me.RadioButtonNO.TabStop = True
-        Me.RadioButtonNO.Text = "NO"
-        Me.RadioButtonNO.UseVisualStyleBackColor = True
-        '
-        'RadioButtonSI
-        '
-        Me.RadioButtonSI.AutoSize = True
-        Me.RadioButtonSI.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonSI.Location = New System.Drawing.Point(6, 21)
-        Me.RadioButtonSI.Name = "RadioButtonSI"
-        Me.RadioButtonSI.Size = New System.Drawing.Size(43, 21)
-        Me.RadioButtonSI.TabIndex = 0
-        Me.RadioButtonSI.TabStop = True
-        Me.RadioButtonSI.Text = "SI"
-        Me.RadioButtonSI.UseVisualStyleBackColor = True
-        '
-        'TxtNacimiento
-        '
-        Me.TxtNacimiento.Location = New System.Drawing.Point(10, 38)
-        Me.TxtNacimiento.Name = "TxtNacimiento"
-        Me.TxtNacimiento.Size = New System.Drawing.Size(272, 22)
-        Me.TxtNacimiento.TabIndex = 25
-        '
-        'Label93
-        '
-        Me.Label93.AutoSize = True
-        Me.Label93.Location = New System.Drawing.Point(5, 18)
-        Me.Label93.Name = "Label93"
-        Me.Label93.Size = New System.Drawing.Size(277, 17)
-        Me.Label93.TabIndex = 24
-        Me.Label93.Text = "Lugar de nacimiento que ocupa el alumno:"
+        'TxtIdFichaIdentificacion
+        '
+        Me.TxtIdFichaIdentificacion.Enabled = False
+        Me.TxtIdFichaIdentificacion.Location = New System.Drawing.Point(936, 48)
+        Me.TxtIdFichaIdentificacion.Name = "TxtIdFichaIdentificacion"
+        Me.TxtIdFichaIdentificacion.ReadOnly = True
+        Me.TxtIdFichaIdentificacion.Size = New System.Drawing.Size(161, 22)
+        Me.TxtIdFichaIdentificacion.TabIndex = 127
+        '
+        'Label97
+        '
+        Me.Label97.AutoSize = True
+        Me.Label97.Location = New System.Drawing.Point(933, 28)
+        Me.Label97.Name = "Label97"
+        Me.Label97.Size = New System.Drawing.Size(169, 17)
+        Me.Label97.TabIndex = 126
+        Me.Label97.Text = "ID Ficha de Identificación:"
+        '
+        'GroupBoxConducta
+        '
+        Me.GroupBoxConducta.Controls.Add(Me.GroupBoxBerrinche)
+        Me.GroupBoxConducta.Controls.Add(Me.TxtActividadesConPadre)
+        Me.GroupBoxConducta.Controls.Add(Me.Label129)
+        Me.GroupBoxConducta.Controls.Add(Me.TxtTemorMenor)
+        Me.GroupBoxConducta.Controls.Add(Me.Label128)
+        Me.GroupBoxConducta.Controls.Add(Me.TxtFuncionaEstrategia)
+        Me.GroupBoxConducta.Controls.Add(Me.Label127)
+        Me.GroupBoxConducta.Controls.Add(Me.TxtReaccionBerrinche)
+        Me.GroupBoxConducta.Controls.Add(Me.Label126)
+        Me.GroupBoxConducta.Controls.Add(Me.TxtQueBerrinche)
+        Me.GroupBoxConducta.Controls.Add(Me.Label119)
+        Me.GroupBoxConducta.Controls.Add(Me.TxtApodo)
+        Me.GroupBoxConducta.Controls.Add(Me.Label118)
+        Me.GroupBoxConducta.Location = New System.Drawing.Point(3, 756)
+        Me.GroupBoxConducta.Name = "GroupBoxConducta"
+        Me.GroupBoxConducta.Size = New System.Drawing.Size(1109, 122)
+        Me.GroupBoxConducta.TabIndex = 125
+        Me.GroupBoxConducta.TabStop = False
+        Me.GroupBoxConducta.Text = "CONDUCTA"
+        '
+        'GroupBoxBerrinche
+        '
+        Me.GroupBoxBerrinche.Controls.Add(Me.RadioButtonBerrincheNo)
+        Me.GroupBoxBerrinche.Controls.Add(Me.RadioButtonBerrincheSi)
+        Me.GroupBoxBerrinche.Location = New System.Drawing.Point(170, 12)
+        Me.GroupBoxBerrinche.Name = "GroupBoxBerrinche"
+        Me.GroupBoxBerrinche.Size = New System.Drawing.Size(145, 48)
+        Me.GroupBoxBerrinche.TabIndex = 99
+        Me.GroupBoxBerrinche.TabStop = False
+        Me.GroupBoxBerrinche.Text = "Hace berrinche?"
+        '
+        'RadioButtonBerrincheNo
+        '
+        Me.RadioButtonBerrincheNo.AutoSize = True
+        Me.RadioButtonBerrincheNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonBerrincheNo.Location = New System.Drawing.Point(53, 20)
+        Me.RadioButtonBerrincheNo.Name = "RadioButtonBerrincheNo"
+        Me.RadioButtonBerrincheNo.Size = New System.Drawing.Size(52, 21)
+        Me.RadioButtonBerrincheNo.TabIndex = 2
+        Me.RadioButtonBerrincheNo.Text = "NO"
+        Me.RadioButtonBerrincheNo.UseVisualStyleBackColor = True
+        '
+        'RadioButtonBerrincheSi
+        '
+        Me.RadioButtonBerrincheSi.AutoSize = True
+        Me.RadioButtonBerrincheSi.Checked = True
+        Me.RadioButtonBerrincheSi.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonBerrincheSi.Location = New System.Drawing.Point(6, 21)
+        Me.RadioButtonBerrincheSi.Name = "RadioButtonBerrincheSi"
+        Me.RadioButtonBerrincheSi.Size = New System.Drawing.Size(43, 21)
+        Me.RadioButtonBerrincheSi.TabIndex = 0
+        Me.RadioButtonBerrincheSi.TabStop = True
+        Me.RadioButtonBerrincheSi.Text = "SI"
+        Me.RadioButtonBerrincheSi.UseVisualStyleBackColor = True
+        '
+        'TxtActividadesConPadre
+        '
+        Me.TxtActividadesConPadre.Location = New System.Drawing.Point(644, 83)
+        Me.TxtActividadesConPadre.MaxLength = 50
+        Me.TxtActividadesConPadre.Name = "TxtActividadesConPadre"
+        Me.TxtActividadesConPadre.Size = New System.Drawing.Size(457, 22)
+        Me.TxtActividadesConPadre.TabIndex = 111
+        '
+        'Label129
+        '
+        Me.Label129.AutoSize = True
+        Me.Label129.Location = New System.Drawing.Point(642, 63)
+        Me.Label129.Name = "Label129"
+        Me.Label129.Size = New System.Drawing.Size(246, 17)
+        Me.Label129.TabIndex = 110
+        Me.Label129.Text = "Qué actividades realiza con su papá?"
+        '
+        'TxtTemorMenor
+        '
+        Me.TxtTemorMenor.Location = New System.Drawing.Point(208, 83)
+        Me.TxtTemorMenor.MaxLength = 50
+        Me.TxtTemorMenor.Name = "TxtTemorMenor"
+        Me.TxtTemorMenor.Size = New System.Drawing.Size(430, 22)
+        Me.TxtTemorMenor.TabIndex = 109
+        '
+        'Label128
+        '
+        Me.Label128.AutoSize = True
+        Me.Label128.Location = New System.Drawing.Point(206, 63)
+        Me.Label128.Name = "Label128"
+        Me.Label128.Size = New System.Drawing.Size(148, 17)
+        Me.Label128.TabIndex = 108
+        Me.Label128.Text = "A qué le teme su hijo?"
+        '
+        'TxtFuncionaEstrategia
+        '
+        Me.TxtFuncionaEstrategia.Location = New System.Drawing.Point(3, 83)
+        Me.TxtFuncionaEstrategia.MaxLength = 50
+        Me.TxtFuncionaEstrategia.Name = "TxtFuncionaEstrategia"
+        Me.TxtFuncionaEstrategia.Size = New System.Drawing.Size(201, 22)
+        Me.TxtFuncionaEstrategia.TabIndex = 107
+        '
+        'Label127
+        '
+        Me.Label127.AutoSize = True
+        Me.Label127.Location = New System.Drawing.Point(1, 63)
+        Me.Label127.Name = "Label127"
+        Me.Label127.Size = New System.Drawing.Size(202, 17)
+        Me.Label127.TabIndex = 106
+        Me.Label127.Text = "Ha funcionado esa estrategia?"
+        '
+        'TxtReaccionBerrinche
+        '
+        Me.TxtReaccionBerrinche.Location = New System.Drawing.Point(644, 38)
+        Me.TxtReaccionBerrinche.MaxLength = 50
+        Me.TxtReaccionBerrinche.Name = "TxtReaccionBerrinche"
+        Me.TxtReaccionBerrinche.Size = New System.Drawing.Size(457, 22)
+        Me.TxtReaccionBerrinche.TabIndex = 105
+        '
+        'Label126
+        '
+        Me.Label126.AutoSize = True
+        Me.Label126.Location = New System.Drawing.Point(642, 18)
+        Me.Label126.Name = "Label126"
+        Me.Label126.Size = New System.Drawing.Size(459, 17)
+        Me.Label126.TabIndex = 104
+        Me.Label126.Text = "Cuál es su reacción cuando si hijo presenta una conducta inadecuada?"
+        '
+        'TxtQueBerrinche
+        '
+        Me.TxtQueBerrinche.Location = New System.Drawing.Point(323, 38)
+        Me.TxtQueBerrinche.MaxLength = 50
+        Me.TxtQueBerrinche.Name = "TxtQueBerrinche"
+        Me.TxtQueBerrinche.Size = New System.Drawing.Size(315, 22)
+        Me.TxtQueBerrinche.TabIndex = 103
+        '
+        'Label119
+        '
+        Me.Label119.AutoSize = True
+        Me.Label119.Location = New System.Drawing.Point(321, 18)
+        Me.Label119.Name = "Label119"
+        Me.Label119.Size = New System.Drawing.Size(321, 17)
+        Me.Label119.TabIndex = 102
+        Me.Label119.Text = "Qué berrinches hace su hijo, en qué situaciones?"
+        '
+        'TxtApodo
+        '
+        Me.TxtApodo.Location = New System.Drawing.Point(4, 38)
+        Me.TxtApodo.MaxLength = 50
+        Me.TxtApodo.Name = "TxtApodo"
+        Me.TxtApodo.Size = New System.Drawing.Size(159, 22)
+        Me.TxtApodo.TabIndex = 101
+        '
+        'Label118
+        '
+        Me.Label118.AutoSize = True
+        Me.Label118.Location = New System.Drawing.Point(2, 18)
+        Me.Label118.Name = "Label118"
+        Me.Label118.Size = New System.Drawing.Size(167, 17)
+        Me.Label118.TabIndex = 100
+        Me.Label118.Text = "Cómo se dirige a su hijo?"
+        '
+        'GroupBoxAlimentacion
+        '
+        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtVerduras)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.Label114)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtFrutas)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.Label112)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.Label136)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtHoraCena)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.Label135)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtHoraCome)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.Label134)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtHoraDesayuno)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtHoraDulces)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.Label115)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtQueDulces)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.Label116)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtQueCena)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.Label122)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.Label125)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtQueCome)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.Label120)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.Label121)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtQueDesayuna)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.Label123)
+        Me.GroupBoxAlimentacion.Controls.Add(Me.Label124)
+        Me.GroupBoxAlimentacion.Location = New System.Drawing.Point(3, 571)
+        Me.GroupBoxAlimentacion.Name = "GroupBoxAlimentacion"
+        Me.GroupBoxAlimentacion.Size = New System.Drawing.Size(1112, 179)
+        Me.GroupBoxAlimentacion.TabIndex = 124
+        Me.GroupBoxAlimentacion.TabStop = False
+        Me.GroupBoxAlimentacion.Text = "ALIMENTACIÓN"
+        '
+        'TxtVerduras
+        '
+        Me.TxtVerduras.Location = New System.Drawing.Point(563, 148)
+        Me.TxtVerduras.MaxLength = 50
+        Me.TxtVerduras.Name = "TxtVerduras"
+        Me.TxtVerduras.Size = New System.Drawing.Size(536, 22)
+        Me.TxtVerduras.TabIndex = 141
+        '
+        'Label114
+        '
+        Me.Label114.AutoSize = True
+        Me.Label114.Location = New System.Drawing.Point(561, 128)
+        Me.Label114.Name = "Label114"
+        Me.Label114.Size = New System.Drawing.Size(164, 17)
+        Me.Label114.TabIndex = 140
+        Me.Label114.Text = "Qué verduras consume?"
+        '
+        'TxtFrutas
+        '
+        Me.TxtFrutas.Location = New System.Drawing.Point(11, 148)
+        Me.TxtFrutas.MaxLength = 50
+        Me.TxtFrutas.Name = "TxtFrutas"
+        Me.TxtFrutas.Size = New System.Drawing.Size(547, 22)
+        Me.TxtFrutas.TabIndex = 139
+        '
+        'Label112
+        '
+        Me.Label112.AutoSize = True
+        Me.Label112.Location = New System.Drawing.Point(9, 128)
+        Me.Label112.Name = "Label112"
+        Me.Label112.Size = New System.Drawing.Size(144, 17)
+        Me.Label112.TabIndex = 138
+        Me.Label112.Text = "Qué frutas consume?"
+        '
+        'Label136
+        '
+        Me.Label136.AutoSize = True
+        Me.Label136.Location = New System.Drawing.Point(78, 98)
+        Me.Label136.Name = "Label136"
+        Me.Label136.Size = New System.Drawing.Size(44, 17)
+        Me.Label136.TabIndex = 137
+        Me.Label136.Text = "horas"
+        '
+        'TxtHoraCena
+        '
+        Me.TxtHoraCena.Location = New System.Drawing.Point(11, 93)
+        Me.TxtHoraCena.Mask = "90:00"
+        Me.TxtHoraCena.Name = "TxtHoraCena"
+        Me.TxtHoraCena.Size = New System.Drawing.Size(63, 22)
+        Me.TxtHoraCena.TabIndex = 136
+        Me.TxtHoraCena.ValidatingType = GetType(Date)
+        '
+        'Label135
+        '
+        Me.Label135.AutoSize = True
+        Me.Label135.Location = New System.Drawing.Point(631, 43)
+        Me.Label135.Name = "Label135"
+        Me.Label135.Size = New System.Drawing.Size(44, 17)
+        Me.Label135.TabIndex = 135
+        Me.Label135.Text = "horas"
+        '
+        'TxtHoraCome
+        '
+        Me.TxtHoraCome.Location = New System.Drawing.Point(564, 38)
+        Me.TxtHoraCome.Mask = "90:00"
+        Me.TxtHoraCome.Name = "TxtHoraCome"
+        Me.TxtHoraCome.Size = New System.Drawing.Size(63, 22)
+        Me.TxtHoraCome.TabIndex = 134
+        Me.TxtHoraCome.ValidatingType = GetType(Date)
+        '
+        'Label134
+        '
+        Me.Label134.AutoSize = True
+        Me.Label134.Location = New System.Drawing.Point(75, 43)
+        Me.Label134.Name = "Label134"
+        Me.Label134.Size = New System.Drawing.Size(44, 17)
+        Me.Label134.TabIndex = 133
+        Me.Label134.Text = "horas"
+        '
+        'TxtHoraDesayuno
+        '
+        Me.TxtHoraDesayuno.Location = New System.Drawing.Point(8, 38)
+        Me.TxtHoraDesayuno.Mask = "90:00"
+        Me.TxtHoraDesayuno.Name = "TxtHoraDesayuno"
+        Me.TxtHoraDesayuno.Size = New System.Drawing.Size(63, 22)
+        Me.TxtHoraDesayuno.TabIndex = 132
+        Me.TxtHoraDesayuno.ValidatingType = GetType(Date)
+        '
+        'TxtHoraDulces
+        '
+        Me.TxtHoraDulces.Location = New System.Drawing.Point(978, 93)
+        Me.TxtHoraDulces.MaxLength = 50
+        Me.TxtHoraDulces.Name = "TxtHoraDulces"
+        Me.TxtHoraDulces.Size = New System.Drawing.Size(121, 22)
+        Me.TxtHoraDulces.TabIndex = 131
+        '
+        'Label115
+        '
+        Me.Label115.AutoSize = True
+        Me.Label115.Location = New System.Drawing.Point(976, 73)
+        Me.Label115.Name = "Label115"
+        Me.Label115.Size = New System.Drawing.Size(123, 17)
+        Me.Label115.TabIndex = 130
+        Me.Label115.Text = "En qué momento?"
+        '
+        'TxtQueDulces
+        '
+        Me.TxtQueDulces.Location = New System.Drawing.Point(564, 93)
+        Me.TxtQueDulces.MaxLength = 50
+        Me.TxtQueDulces.Name = "TxtQueDulces"
+        Me.TxtQueDulces.Size = New System.Drawing.Size(408, 22)
+        Me.TxtQueDulces.TabIndex = 129
+        '
+        'Label116
+        '
+        Me.Label116.AutoSize = True
+        Me.Label116.Location = New System.Drawing.Point(562, 73)
+        Me.Label116.Name = "Label116"
+        Me.Label116.Size = New System.Drawing.Size(149, 17)
+        Me.Label116.TabIndex = 128
+        Me.Label116.Text = "Qué dulces consume?"
+        '
+        'TxtQueCena
+        '
+        Me.TxtQueCena.Location = New System.Drawing.Point(167, 93)
+        Me.TxtQueCena.MaxLength = 50
+        Me.TxtQueCena.Name = "TxtQueCena"
+        Me.TxtQueCena.Size = New System.Drawing.Size(391, 22)
+        Me.TxtQueCena.TabIndex = 127
+        '
+        'Label122
+        '
+        Me.Label122.AutoSize = True
+        Me.Label122.Location = New System.Drawing.Point(165, 73)
+        Me.Label122.Name = "Label122"
+        Me.Label122.Size = New System.Drawing.Size(78, 17)
+        Me.Label122.TabIndex = 126
+        Me.Label122.Text = "Qué cena?"
+        '
+        'Label125
+        '
+        Me.Label125.AutoSize = True
+        Me.Label125.Location = New System.Drawing.Point(9, 73)
+        Me.Label125.Name = "Label125"
+        Me.Label125.Size = New System.Drawing.Size(121, 17)
+        Me.Label125.TabIndex = 125
+        Me.Label125.Text = "A qué hora cena?"
+        '
+        'TxtQueCome
+        '
+        Me.TxtQueCome.Location = New System.Drawing.Point(708, 38)
+        Me.TxtQueCome.MaxLength = 50
+        Me.TxtQueCome.Name = "TxtQueCome"
+        Me.TxtQueCome.Size = New System.Drawing.Size(391, 22)
+        Me.TxtQueCome.TabIndex = 124
+        '
+        'Label120
+        '
+        Me.Label120.AutoSize = True
+        Me.Label120.Location = New System.Drawing.Point(706, 18)
+        Me.Label120.Name = "Label120"
+        Me.Label120.Size = New System.Drawing.Size(81, 17)
+        Me.Label120.TabIndex = 123
+        Me.Label120.Text = "Qué come?"
+        '
+        'Label121
+        '
+        Me.Label121.AutoSize = True
+        Me.Label121.Location = New System.Drawing.Point(562, 18)
+        Me.Label121.Name = "Label121"
+        Me.Label121.Size = New System.Drawing.Size(124, 17)
+        Me.Label121.TabIndex = 122
+        Me.Label121.Text = "A qué hora come?"
+        '
+        'TxtQueDesayuna
+        '
+        Me.TxtQueDesayuna.Location = New System.Drawing.Point(167, 38)
+        Me.TxtQueDesayuna.MaxLength = 50
+        Me.TxtQueDesayuna.Name = "TxtQueDesayuna"
+        Me.TxtQueDesayuna.Size = New System.Drawing.Size(391, 22)
+        Me.TxtQueDesayuna.TabIndex = 121
+        '
+        'Label123
+        '
+        Me.Label123.AutoSize = True
+        Me.Label123.Location = New System.Drawing.Point(165, 18)
+        Me.Label123.Name = "Label123"
+        Me.Label123.Size = New System.Drawing.Size(109, 17)
+        Me.Label123.TabIndex = 120
+        Me.Label123.Text = "Qué desayuna?"
+        '
+        'Label124
+        '
+        Me.Label124.AutoSize = True
+        Me.Label124.Location = New System.Drawing.Point(7, 18)
+        Me.Label124.Name = "Label124"
+        Me.Label124.Size = New System.Drawing.Size(152, 17)
+        Me.Label124.TabIndex = 119
+        Me.Label124.Text = "A qué hora desayuna?"
+        '
+        'GroupBoxHigiene
+        '
+        Me.GroupBoxHigiene.Controls.Add(Me.TxtMomentoLavaManos)
+        Me.GroupBoxHigiene.Controls.Add(Me.Label117)
+        Me.GroupBoxHigiene.Controls.Add(Me.GroupBoxBaniarse)
+        Me.GroupBoxHigiene.Controls.Add(Me.GroupBoxBanio)
+        Me.GroupBoxHigiene.Controls.Add(Me.TxtMomentoLavaDientes)
+        Me.GroupBoxHigiene.Controls.Add(Me.Label113)
+        Me.GroupBoxHigiene.Controls.Add(Me.GroupBoxLavaDientes)
+        Me.GroupBoxHigiene.Controls.Add(Me.GroupBoxSeLavaManos)
+        Me.GroupBoxHigiene.Location = New System.Drawing.Point(3, 489)
+        Me.GroupBoxHigiene.Name = "GroupBoxHigiene"
+        Me.GroupBoxHigiene.Size = New System.Drawing.Size(1112, 76)
+        Me.GroupBoxHigiene.TabIndex = 123
+        Me.GroupBoxHigiene.TabStop = False
+        Me.GroupBoxHigiene.Text = "HIGIENE"
+        '
+        'TxtMomentoLavaManos
+        '
+        Me.TxtMomentoLavaManos.Location = New System.Drawing.Point(198, 45)
+        Me.TxtMomentoLavaManos.Name = "TxtMomentoLavaManos"
+        Me.TxtMomentoLavaManos.Size = New System.Drawing.Size(156, 22)
+        Me.TxtMomentoLavaManos.TabIndex = 60
+        '
+        'Label117
+        '
+        Me.Label117.AutoSize = True
+        Me.Label117.Location = New System.Drawing.Point(196, 25)
+        Me.Label117.Name = "Label117"
+        Me.Label117.Size = New System.Drawing.Size(130, 17)
+        Me.Label117.TabIndex = 59
+        Me.Label117.Text = "En qué momentos?"
+        '
+        'GroupBoxBaniarse
+        '
+        Me.GroupBoxBaniarse.Controls.Add(Me.RadioButtonBaniarseNo)
+        Me.GroupBoxBaniarse.Controls.Add(Me.RadioButtonBaniarseSi)
+        Me.GroupBoxBaniarse.Location = New System.Drawing.Point(858, 21)
+        Me.GroupBoxBaniarse.Name = "GroupBoxBaniarse"
+        Me.GroupBoxBaniarse.Size = New System.Drawing.Size(145, 48)
+        Me.GroupBoxBaniarse.TabIndex = 56
+        Me.GroupBoxBaniarse.TabStop = False
+        Me.GroupBoxBaniarse.Text = "Le gusta bañarse?"
+        '
+        'RadioButtonBaniarseNo
+        '
+        Me.RadioButtonBaniarseNo.AutoSize = True
+        Me.RadioButtonBaniarseNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonBaniarseNo.Location = New System.Drawing.Point(53, 20)
+        Me.RadioButtonBaniarseNo.Name = "RadioButtonBaniarseNo"
+        Me.RadioButtonBaniarseNo.Size = New System.Drawing.Size(52, 21)
+        Me.RadioButtonBaniarseNo.TabIndex = 2
+        Me.RadioButtonBaniarseNo.Text = "NO"
+        Me.RadioButtonBaniarseNo.UseVisualStyleBackColor = True
+        '
+        'RadioButtonBaniarseSi
+        '
+        Me.RadioButtonBaniarseSi.AutoSize = True
+        Me.RadioButtonBaniarseSi.Checked = True
+        Me.RadioButtonBaniarseSi.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonBaniarseSi.Location = New System.Drawing.Point(6, 21)
+        Me.RadioButtonBaniarseSi.Name = "RadioButtonBaniarseSi"
+        Me.RadioButtonBaniarseSi.Size = New System.Drawing.Size(43, 21)
+        Me.RadioButtonBaniarseSi.TabIndex = 0
+        Me.RadioButtonBaniarseSi.TabStop = True
+        Me.RadioButtonBaniarseSi.Text = "SI"
+        Me.RadioButtonBaniarseSi.UseVisualStyleBackColor = True
+        '
+        'GroupBoxBanio
+        '
+        Me.GroupBoxBanio.Controls.Add(Me.RadioButtonBanioNo)
+        Me.GroupBoxBanio.Controls.Add(Me.RadioButtonBanioSi)
+        Me.GroupBoxBanio.Location = New System.Drawing.Point(707, 21)
+        Me.GroupBoxBanio.Name = "GroupBoxBanio"
+        Me.GroupBoxBanio.Size = New System.Drawing.Size(145, 48)
+        Me.GroupBoxBanio.TabIndex = 55
+        Me.GroupBoxBanio.TabStop = False
+        Me.GroupBoxBanio.Text = "Va al baño solo?"
+        '
+        'RadioButtonBanioNo
+        '
+        Me.RadioButtonBanioNo.AutoSize = True
+        Me.RadioButtonBanioNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonBanioNo.Location = New System.Drawing.Point(53, 20)
+        Me.RadioButtonBanioNo.Name = "RadioButtonBanioNo"
+        Me.RadioButtonBanioNo.Size = New System.Drawing.Size(52, 21)
+        Me.RadioButtonBanioNo.TabIndex = 2
+        Me.RadioButtonBanioNo.Text = "NO"
+        Me.RadioButtonBanioNo.UseVisualStyleBackColor = True
+        '
+        'RadioButtonBanioSi
+        '
+        Me.RadioButtonBanioSi.AutoSize = True
+        Me.RadioButtonBanioSi.Checked = True
+        Me.RadioButtonBanioSi.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonBanioSi.Location = New System.Drawing.Point(6, 21)
+        Me.RadioButtonBanioSi.Name = "RadioButtonBanioSi"
+        Me.RadioButtonBanioSi.Size = New System.Drawing.Size(43, 21)
+        Me.RadioButtonBanioSi.TabIndex = 0
+        Me.RadioButtonBanioSi.TabStop = True
+        Me.RadioButtonBanioSi.Text = "SI"
+        Me.RadioButtonBanioSi.UseVisualStyleBackColor = True
+        '
+        'TxtMomentoLavaDientes
+        '
+        Me.TxtMomentoLavaDientes.Location = New System.Drawing.Point(545, 46)
+        Me.TxtMomentoLavaDientes.Name = "TxtMomentoLavaDientes"
+        Me.TxtMomentoLavaDientes.Size = New System.Drawing.Size(156, 22)
+        Me.TxtMomentoLavaDientes.TabIndex = 58
+        '
+        'Label113
+        '
+        Me.Label113.AutoSize = True
+        Me.Label113.Location = New System.Drawing.Point(543, 26)
+        Me.Label113.Name = "Label113"
+        Me.Label113.Size = New System.Drawing.Size(130, 17)
+        Me.Label113.TabIndex = 57
+        Me.Label113.Text = "En qué momentos?"
+        '
+        'GroupBoxLavaDientes
+        '
+        Me.GroupBoxLavaDientes.Controls.Add(Me.RadioButtonDientesNo)
+        Me.GroupBoxLavaDientes.Controls.Add(Me.RadioButtonDientesSi)
+        Me.GroupBoxLavaDientes.Location = New System.Drawing.Point(373, 21)
+        Me.GroupBoxLavaDientes.Name = "GroupBoxLavaDientes"
+        Me.GroupBoxLavaDientes.Size = New System.Drawing.Size(158, 48)
+        Me.GroupBoxLavaDientes.TabIndex = 54
+        Me.GroupBoxLavaDientes.TabStop = False
+        Me.GroupBoxLavaDientes.Text = "Se lava los dientes?"
+        '
+        'RadioButtonDientesNo
+        '
+        Me.RadioButtonDientesNo.AutoSize = True
+        Me.RadioButtonDientesNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonDientesNo.Location = New System.Drawing.Point(53, 20)
+        Me.RadioButtonDientesNo.Name = "RadioButtonDientesNo"
+        Me.RadioButtonDientesNo.Size = New System.Drawing.Size(52, 21)
+        Me.RadioButtonDientesNo.TabIndex = 2
+        Me.RadioButtonDientesNo.Text = "NO"
+        Me.RadioButtonDientesNo.UseVisualStyleBackColor = True
+        '
+        'RadioButtonDientesSi
+        '
+        Me.RadioButtonDientesSi.AutoSize = True
+        Me.RadioButtonDientesSi.Checked = True
+        Me.RadioButtonDientesSi.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonDientesSi.Location = New System.Drawing.Point(6, 21)
+        Me.RadioButtonDientesSi.Name = "RadioButtonDientesSi"
+        Me.RadioButtonDientesSi.Size = New System.Drawing.Size(43, 21)
+        Me.RadioButtonDientesSi.TabIndex = 0
+        Me.RadioButtonDientesSi.TabStop = True
+        Me.RadioButtonDientesSi.Text = "SI"
+        Me.RadioButtonDientesSi.UseVisualStyleBackColor = True
+        '
+        'GroupBoxSeLavaManos
+        '
+        Me.GroupBoxSeLavaManos.Controls.Add(Me.RadioButtonLavaNo)
+        Me.GroupBoxSeLavaManos.Controls.Add(Me.RadioButtonLavaSi)
+        Me.GroupBoxSeLavaManos.Location = New System.Drawing.Point(6, 21)
+        Me.GroupBoxSeLavaManos.Name = "GroupBoxSeLavaManos"
+        Me.GroupBoxSeLavaManos.Size = New System.Drawing.Size(186, 48)
+        Me.GroupBoxSeLavaManos.TabIndex = 53
+        Me.GroupBoxSeLavaManos.TabStop = False
+        Me.GroupBoxSeLavaManos.Text = "Se lava las manos solo?"
+        '
+        'RadioButtonLavaNo
+        '
+        Me.RadioButtonLavaNo.AutoSize = True
+        Me.RadioButtonLavaNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonLavaNo.Location = New System.Drawing.Point(53, 20)
+        Me.RadioButtonLavaNo.Name = "RadioButtonLavaNo"
+        Me.RadioButtonLavaNo.Size = New System.Drawing.Size(52, 21)
+        Me.RadioButtonLavaNo.TabIndex = 2
+        Me.RadioButtonLavaNo.Text = "NO"
+        Me.RadioButtonLavaNo.UseVisualStyleBackColor = True
+        '
+        'RadioButtonLavaSi
+        '
+        Me.RadioButtonLavaSi.AutoSize = True
+        Me.RadioButtonLavaSi.Checked = True
+        Me.RadioButtonLavaSi.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonLavaSi.Location = New System.Drawing.Point(6, 21)
+        Me.RadioButtonLavaSi.Name = "RadioButtonLavaSi"
+        Me.RadioButtonLavaSi.Size = New System.Drawing.Size(43, 21)
+        Me.RadioButtonLavaSi.TabIndex = 0
+        Me.RadioButtonLavaSi.TabStop = True
+        Me.RadioButtonLavaSi.Text = "SI"
+        Me.RadioButtonLavaSi.UseVisualStyleBackColor = True
         '
         'GroupBoxCaracteristicasDesarrollo
         '
@@ -2940,13 +3237,13 @@ Partial Class FrmInscripciones
         Me.RadioButtonCalleNo.Name = "RadioButtonCalleNo"
         Me.RadioButtonCalleNo.Size = New System.Drawing.Size(52, 21)
         Me.RadioButtonCalleNo.TabIndex = 2
-        Me.RadioButtonCalleNo.TabStop = True
         Me.RadioButtonCalleNo.Text = "NO"
         Me.RadioButtonCalleNo.UseVisualStyleBackColor = True
         '
         'RadioButtonCalleSi
         '
         Me.RadioButtonCalleSi.AutoSize = True
+        Me.RadioButtonCalleSi.Checked = True
         Me.RadioButtonCalleSi.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButtonCalleSi.Location = New System.Drawing.Point(6, 21)
         Me.RadioButtonCalleSi.Name = "RadioButtonCalleSi"
@@ -2993,13 +3290,13 @@ Partial Class FrmInscripciones
         Me.RadioButtonComparteNo.Name = "RadioButtonComparteNo"
         Me.RadioButtonComparteNo.Size = New System.Drawing.Size(52, 21)
         Me.RadioButtonComparteNo.TabIndex = 2
-        Me.RadioButtonComparteNo.TabStop = True
         Me.RadioButtonComparteNo.Text = "NO"
         Me.RadioButtonComparteNo.UseVisualStyleBackColor = True
         '
         'RadioButtonComparteSi
         '
         Me.RadioButtonComparteSi.AutoSize = True
+        Me.RadioButtonComparteSi.Checked = True
         Me.RadioButtonComparteSi.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButtonComparteSi.Location = New System.Drawing.Point(6, 21)
         Me.RadioButtonComparteSi.Name = "RadioButtonComparteSi"
@@ -3193,535 +3490,401 @@ Partial Class FrmInscripciones
         Me.Label98.TabIndex = 114
         Me.Label98.Text = "Cuántas horas duerme el niño:"
         '
-        'GroupBoxHigiene
-        '
-        Me.GroupBoxHigiene.Controls.Add(Me.GroupBoxBaniarse)
-        Me.GroupBoxHigiene.Controls.Add(Me.GroupBoxBanio)
-        Me.GroupBoxHigiene.Controls.Add(Me.TxtMomentoLavaDientes)
-        Me.GroupBoxHigiene.Controls.Add(Me.Label113)
-        Me.GroupBoxHigiene.Controls.Add(Me.GroupBoxLavaDientes)
-        Me.GroupBoxHigiene.Controls.Add(Me.GroupBoxSeLavaManos)
-        Me.GroupBoxHigiene.Location = New System.Drawing.Point(3, 489)
-        Me.GroupBoxHigiene.Name = "GroupBoxHigiene"
-        Me.GroupBoxHigiene.Size = New System.Drawing.Size(1112, 76)
-        Me.GroupBoxHigiene.TabIndex = 123
-        Me.GroupBoxHigiene.TabStop = False
-        Me.GroupBoxHigiene.Text = "HIGIENE"
-        '
-        'GroupBoxBaniarse
-        '
-        Me.GroupBoxBaniarse.Controls.Add(Me.RadioButtonBaniarseNo)
-        Me.GroupBoxBaniarse.Controls.Add(Me.RadioButtonBaniarseSi)
-        Me.GroupBoxBaniarse.Location = New System.Drawing.Point(858, 21)
-        Me.GroupBoxBaniarse.Name = "GroupBoxBaniarse"
-        Me.GroupBoxBaniarse.Size = New System.Drawing.Size(145, 48)
-        Me.GroupBoxBaniarse.TabIndex = 56
-        Me.GroupBoxBaniarse.TabStop = False
-        Me.GroupBoxBaniarse.Text = "Le gusta bañarse?"
-        '
-        'RadioButtonBaniarseNo
-        '
-        Me.RadioButtonBaniarseNo.AutoSize = True
-        Me.RadioButtonBaniarseNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonBaniarseNo.Location = New System.Drawing.Point(53, 20)
-        Me.RadioButtonBaniarseNo.Name = "RadioButtonBaniarseNo"
-        Me.RadioButtonBaniarseNo.Size = New System.Drawing.Size(52, 21)
-        Me.RadioButtonBaniarseNo.TabIndex = 2
-        Me.RadioButtonBaniarseNo.TabStop = True
-        Me.RadioButtonBaniarseNo.Text = "NO"
-        Me.RadioButtonBaniarseNo.UseVisualStyleBackColor = True
-        '
-        'RadioButtonBaniarseSi
-        '
-        Me.RadioButtonBaniarseSi.AutoSize = True
-        Me.RadioButtonBaniarseSi.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonBaniarseSi.Location = New System.Drawing.Point(6, 21)
-        Me.RadioButtonBaniarseSi.Name = "RadioButtonBaniarseSi"
-        Me.RadioButtonBaniarseSi.Size = New System.Drawing.Size(43, 21)
-        Me.RadioButtonBaniarseSi.TabIndex = 0
-        Me.RadioButtonBaniarseSi.TabStop = True
-        Me.RadioButtonBaniarseSi.Text = "SI"
-        Me.RadioButtonBaniarseSi.UseVisualStyleBackColor = True
-        '
-        'GroupBoxBanio
-        '
-        Me.GroupBoxBanio.Controls.Add(Me.RadioButtonBanioNo)
-        Me.GroupBoxBanio.Controls.Add(Me.RadioButtonBanioSi)
-        Me.GroupBoxBanio.Location = New System.Drawing.Point(707, 21)
-        Me.GroupBoxBanio.Name = "GroupBoxBanio"
-        Me.GroupBoxBanio.Size = New System.Drawing.Size(145, 48)
-        Me.GroupBoxBanio.TabIndex = 55
-        Me.GroupBoxBanio.TabStop = False
-        Me.GroupBoxBanio.Text = "Va al baño solo?"
-        '
-        'RadioButtonBanioNo
-        '
-        Me.RadioButtonBanioNo.AutoSize = True
-        Me.RadioButtonBanioNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonBanioNo.Location = New System.Drawing.Point(53, 20)
-        Me.RadioButtonBanioNo.Name = "RadioButtonBanioNo"
-        Me.RadioButtonBanioNo.Size = New System.Drawing.Size(52, 21)
-        Me.RadioButtonBanioNo.TabIndex = 2
-        Me.RadioButtonBanioNo.TabStop = True
-        Me.RadioButtonBanioNo.Text = "NO"
-        Me.RadioButtonBanioNo.UseVisualStyleBackColor = True
-        '
-        'RadioButtonBanioSi
-        '
-        Me.RadioButtonBanioSi.AutoSize = True
-        Me.RadioButtonBanioSi.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonBanioSi.Location = New System.Drawing.Point(6, 21)
-        Me.RadioButtonBanioSi.Name = "RadioButtonBanioSi"
-        Me.RadioButtonBanioSi.Size = New System.Drawing.Size(43, 21)
-        Me.RadioButtonBanioSi.TabIndex = 0
-        Me.RadioButtonBanioSi.TabStop = True
-        Me.RadioButtonBanioSi.Text = "SI"
-        Me.RadioButtonBanioSi.UseVisualStyleBackColor = True
-        '
-        'TxtMomentoLavaDientes
-        '
-        Me.TxtMomentoLavaDientes.Location = New System.Drawing.Point(362, 47)
-        Me.TxtMomentoLavaDientes.Name = "TxtMomentoLavaDientes"
-        Me.TxtMomentoLavaDientes.Size = New System.Drawing.Size(336, 22)
-        Me.TxtMomentoLavaDientes.TabIndex = 58
-        '
-        'Label113
-        '
-        Me.Label113.AutoSize = True
-        Me.Label113.Location = New System.Drawing.Point(360, 27)
-        Me.Label113.Name = "Label113"
-        Me.Label113.Size = New System.Drawing.Size(130, 17)
-        Me.Label113.TabIndex = 57
-        Me.Label113.Text = "En qué momentos?"
-        '
-        'GroupBoxLavaDientes
-        '
-        Me.GroupBoxLavaDientes.Controls.Add(Me.RadioButtonDientesNo)
-        Me.GroupBoxLavaDientes.Controls.Add(Me.RadioButtonDientesSi)
-        Me.GroupBoxLavaDientes.Location = New System.Drawing.Point(198, 21)
-        Me.GroupBoxLavaDientes.Name = "GroupBoxLavaDientes"
-        Me.GroupBoxLavaDientes.Size = New System.Drawing.Size(158, 48)
-        Me.GroupBoxLavaDientes.TabIndex = 54
-        Me.GroupBoxLavaDientes.TabStop = False
-        Me.GroupBoxLavaDientes.Text = "Se lava los dientes?"
-        '
-        'RadioButtonDientesNo
-        '
-        Me.RadioButtonDientesNo.AutoSize = True
-        Me.RadioButtonDientesNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonDientesNo.Location = New System.Drawing.Point(53, 20)
-        Me.RadioButtonDientesNo.Name = "RadioButtonDientesNo"
-        Me.RadioButtonDientesNo.Size = New System.Drawing.Size(52, 21)
-        Me.RadioButtonDientesNo.TabIndex = 2
-        Me.RadioButtonDientesNo.TabStop = True
-        Me.RadioButtonDientesNo.Text = "NO"
-        Me.RadioButtonDientesNo.UseVisualStyleBackColor = True
-        '
-        'RadioButtonDientesSi
-        '
-        Me.RadioButtonDientesSi.AutoSize = True
-        Me.RadioButtonDientesSi.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonDientesSi.Location = New System.Drawing.Point(6, 21)
-        Me.RadioButtonDientesSi.Name = "RadioButtonDientesSi"
-        Me.RadioButtonDientesSi.Size = New System.Drawing.Size(43, 21)
-        Me.RadioButtonDientesSi.TabIndex = 0
-        Me.RadioButtonDientesSi.TabStop = True
-        Me.RadioButtonDientesSi.Text = "SI"
-        Me.RadioButtonDientesSi.UseVisualStyleBackColor = True
-        '
-        'GroupBoxSeLavaManos
-        '
-        Me.GroupBoxSeLavaManos.Controls.Add(Me.RadioButtonLavaNo)
-        Me.GroupBoxSeLavaManos.Controls.Add(Me.RadioButtonLavaSi)
-        Me.GroupBoxSeLavaManos.Location = New System.Drawing.Point(6, 21)
-        Me.GroupBoxSeLavaManos.Name = "GroupBoxSeLavaManos"
-        Me.GroupBoxSeLavaManos.Size = New System.Drawing.Size(186, 48)
-        Me.GroupBoxSeLavaManos.TabIndex = 53
-        Me.GroupBoxSeLavaManos.TabStop = False
-        Me.GroupBoxSeLavaManos.Text = "Se lava las manos solo?"
-        '
-        'RadioButtonLavaNo
-        '
-        Me.RadioButtonLavaNo.AutoSize = True
-        Me.RadioButtonLavaNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonLavaNo.Location = New System.Drawing.Point(53, 20)
-        Me.RadioButtonLavaNo.Name = "RadioButtonLavaNo"
-        Me.RadioButtonLavaNo.Size = New System.Drawing.Size(52, 21)
-        Me.RadioButtonLavaNo.TabIndex = 2
-        Me.RadioButtonLavaNo.TabStop = True
-        Me.RadioButtonLavaNo.Text = "NO"
-        Me.RadioButtonLavaNo.UseVisualStyleBackColor = True
-        '
-        'RadioButtonLavaSi
-        '
-        Me.RadioButtonLavaSi.AutoSize = True
-        Me.RadioButtonLavaSi.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonLavaSi.Location = New System.Drawing.Point(6, 21)
-        Me.RadioButtonLavaSi.Name = "RadioButtonLavaSi"
-        Me.RadioButtonLavaSi.Size = New System.Drawing.Size(43, 21)
-        Me.RadioButtonLavaSi.TabIndex = 0
-        Me.RadioButtonLavaSi.TabStop = True
-        Me.RadioButtonLavaSi.Text = "SI"
-        Me.RadioButtonLavaSi.UseVisualStyleBackColor = True
-        '
-        'GroupBoxAlimentacion
-        '
-        Me.GroupBoxAlimentacion.Controls.Add(Me.Label136)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtHoraCena)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.Label135)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtHoraCome)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.Label134)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtHoraDesayuno)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtHoraDulces)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.Label115)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtQueDulces)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.Label116)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtQueCena)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.Label122)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.Label125)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtQueCome)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.Label120)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.Label121)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.TxtQueDesayuna)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.Label123)
-        Me.GroupBoxAlimentacion.Controls.Add(Me.Label124)
-        Me.GroupBoxAlimentacion.Location = New System.Drawing.Point(3, 571)
-        Me.GroupBoxAlimentacion.Name = "GroupBoxAlimentacion"
-        Me.GroupBoxAlimentacion.Size = New System.Drawing.Size(1112, 127)
-        Me.GroupBoxAlimentacion.TabIndex = 124
-        Me.GroupBoxAlimentacion.TabStop = False
-        Me.GroupBoxAlimentacion.Text = "ALIMENTACIÓN"
-        '
-        'Label136
-        '
-        Me.Label136.AutoSize = True
-        Me.Label136.Location = New System.Drawing.Point(78, 98)
-        Me.Label136.Name = "Label136"
-        Me.Label136.Size = New System.Drawing.Size(44, 17)
-        Me.Label136.TabIndex = 137
-        Me.Label136.Text = "horas"
-        '
-        'TxtHoraCena
-        '
-        Me.TxtHoraCena.Location = New System.Drawing.Point(11, 93)
-        Me.TxtHoraCena.Mask = "90:00"
-        Me.TxtHoraCena.Name = "TxtHoraCena"
-        Me.TxtHoraCena.Size = New System.Drawing.Size(63, 22)
-        Me.TxtHoraCena.TabIndex = 136
-        Me.TxtHoraCena.ValidatingType = GetType(Date)
-        '
-        'Label135
-        '
-        Me.Label135.AutoSize = True
-        Me.Label135.Location = New System.Drawing.Point(631, 43)
-        Me.Label135.Name = "Label135"
-        Me.Label135.Size = New System.Drawing.Size(44, 17)
-        Me.Label135.TabIndex = 135
-        Me.Label135.Text = "horas"
-        '
-        'TxtHoraCome
-        '
-        Me.TxtHoraCome.Location = New System.Drawing.Point(564, 38)
-        Me.TxtHoraCome.Mask = "90:00"
-        Me.TxtHoraCome.Name = "TxtHoraCome"
-        Me.TxtHoraCome.Size = New System.Drawing.Size(63, 22)
-        Me.TxtHoraCome.TabIndex = 134
-        Me.TxtHoraCome.ValidatingType = GetType(Date)
-        '
-        'Label134
-        '
-        Me.Label134.AutoSize = True
-        Me.Label134.Location = New System.Drawing.Point(75, 43)
-        Me.Label134.Name = "Label134"
-        Me.Label134.Size = New System.Drawing.Size(44, 17)
-        Me.Label134.TabIndex = 133
-        Me.Label134.Text = "horas"
-        '
-        'TxtHoraDesayuno
-        '
-        Me.TxtHoraDesayuno.Location = New System.Drawing.Point(8, 38)
-        Me.TxtHoraDesayuno.Mask = "90:00"
-        Me.TxtHoraDesayuno.Name = "TxtHoraDesayuno"
-        Me.TxtHoraDesayuno.Size = New System.Drawing.Size(63, 22)
-        Me.TxtHoraDesayuno.TabIndex = 132
-        Me.TxtHoraDesayuno.ValidatingType = GetType(Date)
-        '
-        'TxtHoraDulces
-        '
-        Me.TxtHoraDulces.Location = New System.Drawing.Point(978, 93)
-        Me.TxtHoraDulces.MaxLength = 50
-        Me.TxtHoraDulces.Name = "TxtHoraDulces"
-        Me.TxtHoraDulces.Size = New System.Drawing.Size(121, 22)
-        Me.TxtHoraDulces.TabIndex = 131
-        '
-        'Label115
-        '
-        Me.Label115.AutoSize = True
-        Me.Label115.Location = New System.Drawing.Point(976, 73)
-        Me.Label115.Name = "Label115"
-        Me.Label115.Size = New System.Drawing.Size(123, 17)
-        Me.Label115.TabIndex = 130
-        Me.Label115.Text = "En qué momento?"
-        '
-        'TxtQueDulces
-        '
-        Me.TxtQueDulces.Location = New System.Drawing.Point(564, 93)
-        Me.TxtQueDulces.MaxLength = 50
-        Me.TxtQueDulces.Name = "TxtQueDulces"
-        Me.TxtQueDulces.Size = New System.Drawing.Size(408, 22)
-        Me.TxtQueDulces.TabIndex = 129
-        '
-        'Label116
-        '
-        Me.Label116.AutoSize = True
-        Me.Label116.Location = New System.Drawing.Point(562, 73)
-        Me.Label116.Name = "Label116"
-        Me.Label116.Size = New System.Drawing.Size(149, 17)
-        Me.Label116.TabIndex = 128
-        Me.Label116.Text = "Qué dulces consume?"
-        '
-        'TxtQueCena
-        '
-        Me.TxtQueCena.Location = New System.Drawing.Point(167, 93)
-        Me.TxtQueCena.MaxLength = 50
-        Me.TxtQueCena.Name = "TxtQueCena"
-        Me.TxtQueCena.Size = New System.Drawing.Size(391, 22)
-        Me.TxtQueCena.TabIndex = 127
-        '
-        'Label122
-        '
-        Me.Label122.AutoSize = True
-        Me.Label122.Location = New System.Drawing.Point(165, 73)
-        Me.Label122.Name = "Label122"
-        Me.Label122.Size = New System.Drawing.Size(78, 17)
-        Me.Label122.TabIndex = 126
-        Me.Label122.Text = "Qué cena?"
-        '
-        'Label125
-        '
-        Me.Label125.AutoSize = True
-        Me.Label125.Location = New System.Drawing.Point(9, 73)
-        Me.Label125.Name = "Label125"
-        Me.Label125.Size = New System.Drawing.Size(121, 17)
-        Me.Label125.TabIndex = 125
-        Me.Label125.Text = "A qué hora cena?"
-        '
-        'TxtQueCome
-        '
-        Me.TxtQueCome.Location = New System.Drawing.Point(708, 38)
-        Me.TxtQueCome.MaxLength = 50
-        Me.TxtQueCome.Name = "TxtQueCome"
-        Me.TxtQueCome.Size = New System.Drawing.Size(391, 22)
-        Me.TxtQueCome.TabIndex = 124
-        '
-        'Label120
-        '
-        Me.Label120.AutoSize = True
-        Me.Label120.Location = New System.Drawing.Point(706, 18)
-        Me.Label120.Name = "Label120"
-        Me.Label120.Size = New System.Drawing.Size(81, 17)
-        Me.Label120.TabIndex = 123
-        Me.Label120.Text = "Qué come?"
-        '
-        'Label121
-        '
-        Me.Label121.AutoSize = True
-        Me.Label121.Location = New System.Drawing.Point(562, 18)
-        Me.Label121.Name = "Label121"
-        Me.Label121.Size = New System.Drawing.Size(124, 17)
-        Me.Label121.TabIndex = 122
-        Me.Label121.Text = "A qué hora come?"
-        '
-        'TxtQueDesayuna
-        '
-        Me.TxtQueDesayuna.Location = New System.Drawing.Point(167, 38)
-        Me.TxtQueDesayuna.MaxLength = 50
-        Me.TxtQueDesayuna.Name = "TxtQueDesayuna"
-        Me.TxtQueDesayuna.Size = New System.Drawing.Size(391, 22)
-        Me.TxtQueDesayuna.TabIndex = 121
-        '
-        'Label123
-        '
-        Me.Label123.AutoSize = True
-        Me.Label123.Location = New System.Drawing.Point(165, 18)
-        Me.Label123.Name = "Label123"
-        Me.Label123.Size = New System.Drawing.Size(109, 17)
-        Me.Label123.TabIndex = 120
-        Me.Label123.Text = "Qué desayuna?"
-        '
-        'Label124
-        '
-        Me.Label124.AutoSize = True
-        Me.Label124.Location = New System.Drawing.Point(7, 18)
-        Me.Label124.Name = "Label124"
-        Me.Label124.Size = New System.Drawing.Size(152, 17)
-        Me.Label124.TabIndex = 119
-        Me.Label124.Text = "A qué hora desayuna?"
-        '
-        'GroupBoxConducta
-        '
-        Me.GroupBoxConducta.Controls.Add(Me.GroupBoxBerrinche)
-        Me.GroupBoxConducta.Controls.Add(Me.TxtActividadesConPadre)
-        Me.GroupBoxConducta.Controls.Add(Me.Label129)
-        Me.GroupBoxConducta.Controls.Add(Me.TxtTemorMenor)
-        Me.GroupBoxConducta.Controls.Add(Me.Label128)
-        Me.GroupBoxConducta.Controls.Add(Me.TxtFuncionaEstrategia)
-        Me.GroupBoxConducta.Controls.Add(Me.Label127)
-        Me.GroupBoxConducta.Controls.Add(Me.TxtReaccionBerrinche)
-        Me.GroupBoxConducta.Controls.Add(Me.Label126)
-        Me.GroupBoxConducta.Controls.Add(Me.TxtQueBerrinche)
-        Me.GroupBoxConducta.Controls.Add(Me.Label119)
-        Me.GroupBoxConducta.Controls.Add(Me.TxtApodo)
-        Me.GroupBoxConducta.Controls.Add(Me.Label118)
-        Me.GroupBoxConducta.Location = New System.Drawing.Point(6, 704)
-        Me.GroupBoxConducta.Name = "GroupBoxConducta"
-        Me.GroupBoxConducta.Size = New System.Drawing.Size(1109, 122)
-        Me.GroupBoxConducta.TabIndex = 125
-        Me.GroupBoxConducta.TabStop = False
-        Me.GroupBoxConducta.Text = "CONDUCTA"
-        '
-        'GroupBoxBerrinche
-        '
-        Me.GroupBoxBerrinche.Controls.Add(Me.RadioButtonBerrincheNo)
-        Me.GroupBoxBerrinche.Controls.Add(Me.RadioButtonBerrincheSi)
-        Me.GroupBoxBerrinche.Location = New System.Drawing.Point(170, 12)
-        Me.GroupBoxBerrinche.Name = "GroupBoxBerrinche"
-        Me.GroupBoxBerrinche.Size = New System.Drawing.Size(145, 48)
-        Me.GroupBoxBerrinche.TabIndex = 99
-        Me.GroupBoxBerrinche.TabStop = False
-        Me.GroupBoxBerrinche.Text = "Hace berrinche?"
-        '
-        'RadioButtonBerrincheNo
-        '
-        Me.RadioButtonBerrincheNo.AutoSize = True
-        Me.RadioButtonBerrincheNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonBerrincheNo.Location = New System.Drawing.Point(53, 20)
-        Me.RadioButtonBerrincheNo.Name = "RadioButtonBerrincheNo"
-        Me.RadioButtonBerrincheNo.Size = New System.Drawing.Size(52, 21)
-        Me.RadioButtonBerrincheNo.TabIndex = 2
-        Me.RadioButtonBerrincheNo.TabStop = True
-        Me.RadioButtonBerrincheNo.Text = "NO"
-        Me.RadioButtonBerrincheNo.UseVisualStyleBackColor = True
-        '
-        'RadioButtonBerrincheSi
-        '
-        Me.RadioButtonBerrincheSi.AutoSize = True
-        Me.RadioButtonBerrincheSi.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonBerrincheSi.Location = New System.Drawing.Point(6, 21)
-        Me.RadioButtonBerrincheSi.Name = "RadioButtonBerrincheSi"
-        Me.RadioButtonBerrincheSi.Size = New System.Drawing.Size(43, 21)
-        Me.RadioButtonBerrincheSi.TabIndex = 0
-        Me.RadioButtonBerrincheSi.TabStop = True
-        Me.RadioButtonBerrincheSi.Text = "SI"
-        Me.RadioButtonBerrincheSi.UseVisualStyleBackColor = True
-        '
-        'TxtActividadesConPadre
-        '
-        Me.TxtActividadesConPadre.Location = New System.Drawing.Point(644, 83)
-        Me.TxtActividadesConPadre.MaxLength = 50
-        Me.TxtActividadesConPadre.Name = "TxtActividadesConPadre"
-        Me.TxtActividadesConPadre.Size = New System.Drawing.Size(457, 22)
-        Me.TxtActividadesConPadre.TabIndex = 111
-        '
-        'Label129
-        '
-        Me.Label129.AutoSize = True
-        Me.Label129.Location = New System.Drawing.Point(642, 63)
-        Me.Label129.Name = "Label129"
-        Me.Label129.Size = New System.Drawing.Size(246, 17)
-        Me.Label129.TabIndex = 110
-        Me.Label129.Text = "Qué actividades realiza con su papá?"
-        '
-        'TxtTemorMenor
-        '
-        Me.TxtTemorMenor.Location = New System.Drawing.Point(208, 83)
-        Me.TxtTemorMenor.MaxLength = 50
-        Me.TxtTemorMenor.Name = "TxtTemorMenor"
-        Me.TxtTemorMenor.Size = New System.Drawing.Size(430, 22)
-        Me.TxtTemorMenor.TabIndex = 109
-        '
-        'Label128
-        '
-        Me.Label128.AutoSize = True
-        Me.Label128.Location = New System.Drawing.Point(206, 63)
-        Me.Label128.Name = "Label128"
-        Me.Label128.Size = New System.Drawing.Size(148, 17)
-        Me.Label128.TabIndex = 108
-        Me.Label128.Text = "A qué le teme su hijo?"
-        '
-        'TxtFuncionaEstrategia
-        '
-        Me.TxtFuncionaEstrategia.Location = New System.Drawing.Point(3, 83)
-        Me.TxtFuncionaEstrategia.MaxLength = 50
-        Me.TxtFuncionaEstrategia.Name = "TxtFuncionaEstrategia"
-        Me.TxtFuncionaEstrategia.Size = New System.Drawing.Size(201, 22)
-        Me.TxtFuncionaEstrategia.TabIndex = 107
-        '
-        'Label127
-        '
-        Me.Label127.AutoSize = True
-        Me.Label127.Location = New System.Drawing.Point(1, 63)
-        Me.Label127.Name = "Label127"
-        Me.Label127.Size = New System.Drawing.Size(202, 17)
-        Me.Label127.TabIndex = 106
-        Me.Label127.Text = "Ha funcionado esa estrategia?"
-        '
-        'TxtReaccionBerrinche
-        '
-        Me.TxtReaccionBerrinche.Location = New System.Drawing.Point(644, 38)
-        Me.TxtReaccionBerrinche.MaxLength = 50
-        Me.TxtReaccionBerrinche.Name = "TxtReaccionBerrinche"
-        Me.TxtReaccionBerrinche.Size = New System.Drawing.Size(457, 22)
-        Me.TxtReaccionBerrinche.TabIndex = 105
-        '
-        'Label126
-        '
-        Me.Label126.AutoSize = True
-        Me.Label126.Location = New System.Drawing.Point(642, 18)
-        Me.Label126.Name = "Label126"
-        Me.Label126.Size = New System.Drawing.Size(459, 17)
-        Me.Label126.TabIndex = 104
-        Me.Label126.Text = "Cuál es su reacción cuando si hijo presenta una conducta inadecuada?"
-        '
-        'TxtQueBerrinche
-        '
-        Me.TxtQueBerrinche.Location = New System.Drawing.Point(323, 38)
-        Me.TxtQueBerrinche.MaxLength = 50
-        Me.TxtQueBerrinche.Name = "TxtQueBerrinche"
-        Me.TxtQueBerrinche.Size = New System.Drawing.Size(315, 22)
-        Me.TxtQueBerrinche.TabIndex = 103
-        '
-        'Label119
-        '
-        Me.Label119.AutoSize = True
-        Me.Label119.Location = New System.Drawing.Point(321, 18)
-        Me.Label119.Name = "Label119"
-        Me.Label119.Size = New System.Drawing.Size(321, 17)
-        Me.Label119.TabIndex = 102
-        Me.Label119.Text = "Qué berrinches hace su hijo, en qué situaciones?"
-        '
-        'TxtApodo
-        '
-        Me.TxtApodo.Location = New System.Drawing.Point(4, 38)
-        Me.TxtApodo.MaxLength = 50
-        Me.TxtApodo.Name = "TxtApodo"
-        Me.TxtApodo.Size = New System.Drawing.Size(159, 22)
-        Me.TxtApodo.TabIndex = 101
-        '
-        'Label118
-        '
-        Me.Label118.AutoSize = True
-        Me.Label118.Location = New System.Drawing.Point(2, 18)
-        Me.Label118.Name = "Label118"
-        Me.Label118.Size = New System.Drawing.Size(167, 17)
-        Me.Label118.TabIndex = 100
-        Me.Label118.Text = "Cómo se dirige a su hijo?"
+        'GroupBoxAntecedentes
+        '
+        Me.GroupBoxAntecedentes.Controls.Add(Me.TxtEdadControlBanio)
+        Me.GroupBoxAntecedentes.Controls.Add(Me.Label96)
+        Me.GroupBoxAntecedentes.Controls.Add(Me.TxtTiempoLeche)
+        Me.GroupBoxAntecedentes.Controls.Add(Me.Label95)
+        Me.GroupBoxAntecedentes.Controls.Add(Me.GroupBoxLeche)
+        Me.GroupBoxAntecedentes.Controls.Add(Me.TxtComplicaciones)
+        Me.GroupBoxAntecedentes.Controls.Add(Me.Label94)
+        Me.GroupBoxAntecedentes.Controls.Add(Me.GroupBoxParto)
+        Me.GroupBoxAntecedentes.Controls.Add(Me.GroupBoxEmbarazo)
+        Me.GroupBoxAntecedentes.Controls.Add(Me.TxtNacimiento)
+        Me.GroupBoxAntecedentes.Controls.Add(Me.Label93)
+        Me.GroupBoxAntecedentes.Location = New System.Drawing.Point(3, 165)
+        Me.GroupBoxAntecedentes.Name = "GroupBoxAntecedentes"
+        Me.GroupBoxAntecedentes.Size = New System.Drawing.Size(1099, 124)
+        Me.GroupBoxAntecedentes.TabIndex = 121
+        Me.GroupBoxAntecedentes.TabStop = False
+        Me.GroupBoxAntecedentes.Text = "ANTECEDENTES DEL DESARROLLO"
+        '
+        'TxtEdadControlBanio
+        '
+        Me.TxtEdadControlBanio.Location = New System.Drawing.Point(415, 92)
+        Me.TxtEdadControlBanio.Name = "TxtEdadControlBanio"
+        Me.TxtEdadControlBanio.Size = New System.Drawing.Size(255, 22)
+        Me.TxtEdadControlBanio.TabIndex = 31
+        '
+        'Label96
+        '
+        Me.Label96.AutoSize = True
+        Me.Label96.Location = New System.Drawing.Point(413, 72)
+        Me.Label96.Name = "Label96"
+        Me.Label96.Size = New System.Drawing.Size(257, 17)
+        Me.Label96.TabIndex = 30
+        Me.Label96.Text = "A qué edad logró el control del esfínter:"
+        '
+        'TxtTiempoLeche
+        '
+        Me.TxtTiempoLeche.Location = New System.Drawing.Point(284, 92)
+        Me.TxtTiempoLeche.Name = "TxtTiempoLeche"
+        Me.TxtTiempoLeche.Size = New System.Drawing.Size(125, 22)
+        Me.TxtTiempoLeche.TabIndex = 29
+        '
+        'Label95
+        '
+        Me.Label95.AutoSize = True
+        Me.Label95.Location = New System.Drawing.Point(282, 72)
+        Me.Label95.Name = "Label95"
+        Me.Label95.Size = New System.Drawing.Size(127, 17)
+        Me.Label95.TabIndex = 28
+        Me.Label95.Text = "Por cuánto tiempo:"
+        '
+        'GroupBoxLeche
+        '
+        Me.GroupBoxLeche.Controls.Add(Me.RadioButtonBiberon)
+        Me.GroupBoxLeche.Controls.Add(Me.RadioButtonMaterna)
+        Me.GroupBoxLeche.Location = New System.Drawing.Point(8, 66)
+        Me.GroupBoxLeche.Name = "GroupBoxLeche"
+        Me.GroupBoxLeche.Size = New System.Drawing.Size(274, 48)
+        Me.GroupBoxLeche.TabIndex = 22
+        Me.GroupBoxLeche.TabStop = False
+        Me.GroupBoxLeche.Text = "De bebé fué alimentado con leche:"
+        '
+        'RadioButtonBiberon
+        '
+        Me.RadioButtonBiberon.AutoSize = True
+        Me.RadioButtonBiberon.Checked = True
+        Me.RadioButtonBiberon.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonBiberon.Location = New System.Drawing.Point(93, 21)
+        Me.RadioButtonBiberon.Name = "RadioButtonBiberon"
+        Me.RadioButtonBiberon.Size = New System.Drawing.Size(85, 21)
+        Me.RadioButtonBiberon.TabIndex = 2
+        Me.RadioButtonBiberon.TabStop = True
+        Me.RadioButtonBiberon.Text = "Biberón"
+        Me.RadioButtonBiberon.UseVisualStyleBackColor = True
+        '
+        'RadioButtonMaterna
+        '
+        Me.RadioButtonMaterna.AutoSize = True
+        Me.RadioButtonMaterna.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonMaterna.Location = New System.Drawing.Point(6, 21)
+        Me.RadioButtonMaterna.Name = "RadioButtonMaterna"
+        Me.RadioButtonMaterna.Size = New System.Drawing.Size(88, 21)
+        Me.RadioButtonMaterna.TabIndex = 0
+        Me.RadioButtonMaterna.Text = "Materna"
+        Me.RadioButtonMaterna.UseVisualStyleBackColor = True
+        '
+        'TxtComplicaciones
+        '
+        Me.TxtComplicaciones.Location = New System.Drawing.Point(729, 38)
+        Me.TxtComplicaciones.Name = "TxtComplicaciones"
+        Me.TxtComplicaciones.Size = New System.Drawing.Size(296, 22)
+        Me.TxtComplicaciones.TabIndex = 27
+        '
+        'Label94
+        '
+        Me.Label94.AutoSize = True
+        Me.Label94.Location = New System.Drawing.Point(727, 18)
+        Me.Label94.Name = "Label94"
+        Me.Label94.Size = New System.Drawing.Size(298, 17)
+        Me.Label94.TabIndex = 26
+        Me.Label94.Text = "Con complicaciones (especifique de que tipo):"
+        '
+        'GroupBoxParto
+        '
+        Me.GroupBoxParto.Controls.Add(Me.RadioButtonCesarea)
+        Me.GroupBoxParto.Controls.Add(Me.RadioButtonNormal)
+        Me.GroupBoxParto.Location = New System.Drawing.Point(510, 12)
+        Me.GroupBoxParto.Name = "GroupBoxParto"
+        Me.GroupBoxParto.Size = New System.Drawing.Size(213, 48)
+        Me.GroupBoxParto.TabIndex = 23
+        Me.GroupBoxParto.TabStop = False
+        Me.GroupBoxParto.Text = "El parto fue:"
+        '
+        'RadioButtonCesarea
+        '
+        Me.RadioButtonCesarea.AutoSize = True
+        Me.RadioButtonCesarea.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonCesarea.Location = New System.Drawing.Point(86, 20)
+        Me.RadioButtonCesarea.Name = "RadioButtonCesarea"
+        Me.RadioButtonCesarea.Size = New System.Drawing.Size(89, 21)
+        Me.RadioButtonCesarea.TabIndex = 2
+        Me.RadioButtonCesarea.Text = "Cesárea"
+        Me.RadioButtonCesarea.UseVisualStyleBackColor = True
+        '
+        'RadioButtonNormal
+        '
+        Me.RadioButtonNormal.AutoSize = True
+        Me.RadioButtonNormal.Checked = True
+        Me.RadioButtonNormal.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonNormal.Location = New System.Drawing.Point(6, 20)
+        Me.RadioButtonNormal.Name = "RadioButtonNormal"
+        Me.RadioButtonNormal.Size = New System.Drawing.Size(80, 21)
+        Me.RadioButtonNormal.TabIndex = 0
+        Me.RadioButtonNormal.TabStop = True
+        Me.RadioButtonNormal.Text = "Normal"
+        Me.RadioButtonNormal.UseVisualStyleBackColor = True
+        '
+        'GroupBoxEmbarazo
+        '
+        Me.GroupBoxEmbarazo.Controls.Add(Me.RadioButtonNO)
+        Me.GroupBoxEmbarazo.Controls.Add(Me.RadioButtonSI)
+        Me.GroupBoxEmbarazo.Location = New System.Drawing.Point(288, 12)
+        Me.GroupBoxEmbarazo.Name = "GroupBoxEmbarazo"
+        Me.GroupBoxEmbarazo.Size = New System.Drawing.Size(213, 48)
+        Me.GroupBoxEmbarazo.TabIndex = 21
+        Me.GroupBoxEmbarazo.TabStop = False
+        Me.GroupBoxEmbarazo.Text = "Fue un embarazo planeado:"
+        '
+        'RadioButtonNO
+        '
+        Me.RadioButtonNO.AutoSize = True
+        Me.RadioButtonNO.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonNO.Location = New System.Drawing.Point(53, 20)
+        Me.RadioButtonNO.Name = "RadioButtonNO"
+        Me.RadioButtonNO.Size = New System.Drawing.Size(52, 21)
+        Me.RadioButtonNO.TabIndex = 2
+        Me.RadioButtonNO.Text = "NO"
+        Me.RadioButtonNO.UseVisualStyleBackColor = True
+        '
+        'RadioButtonSI
+        '
+        Me.RadioButtonSI.AutoSize = True
+        Me.RadioButtonSI.Checked = True
+        Me.RadioButtonSI.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonSI.Location = New System.Drawing.Point(6, 21)
+        Me.RadioButtonSI.Name = "RadioButtonSI"
+        Me.RadioButtonSI.Size = New System.Drawing.Size(43, 21)
+        Me.RadioButtonSI.TabIndex = 0
+        Me.RadioButtonSI.TabStop = True
+        Me.RadioButtonSI.Text = "SI"
+        Me.RadioButtonSI.UseVisualStyleBackColor = True
+        '
+        'TxtNacimiento
+        '
+        Me.TxtNacimiento.Location = New System.Drawing.Point(10, 38)
+        Me.TxtNacimiento.Name = "TxtNacimiento"
+        Me.TxtNacimiento.Size = New System.Drawing.Size(272, 22)
+        Me.TxtNacimiento.TabIndex = 25
+        '
+        'Label93
+        '
+        Me.Label93.AutoSize = True
+        Me.Label93.Location = New System.Drawing.Point(5, 18)
+        Me.Label93.Name = "Label93"
+        Me.Label93.Size = New System.Drawing.Size(277, 17)
+        Me.Label93.TabIndex = 24
+        Me.Label93.Text = "Lugar de nacimiento que ocupa el alumno:"
+        '
+        'GroupBoxVivienda
+        '
+        Me.GroupBoxVivienda.Controls.Add(Me.TxtPersonasCasa)
+        Me.GroupBoxVivienda.Controls.Add(Me.GroupBoxCuarto)
+        Me.GroupBoxVivienda.Controls.Add(Me.Label91)
+        Me.GroupBoxVivienda.Controls.Add(Me.TxtTipoConstruccion)
+        Me.GroupBoxVivienda.Controls.Add(Me.Label90)
+        Me.GroupBoxVivienda.Controls.Add(Me.GroupBoxCasa)
+        Me.GroupBoxVivienda.Location = New System.Drawing.Point(3, 81)
+        Me.GroupBoxVivienda.Name = "GroupBoxVivienda"
+        Me.GroupBoxVivienda.Size = New System.Drawing.Size(1099, 78)
+        Me.GroupBoxVivienda.TabIndex = 120
+        Me.GroupBoxVivienda.TabStop = False
+        Me.GroupBoxVivienda.Text = "CARACTERÍSTICAS DE LA VIVIENDA"
+        '
+        'TxtPersonasCasa
+        '
+        Me.TxtPersonasCasa.Location = New System.Drawing.Point(548, 47)
+        Me.TxtPersonasCasa.Name = "TxtPersonasCasa"
+        Me.TxtPersonasCasa.Size = New System.Drawing.Size(62, 22)
+        Me.TxtPersonasCasa.TabIndex = 107
+        '
+        'GroupBoxCuarto
+        '
+        Me.GroupBoxCuarto.Controls.Add(Me.RadioButtonCompartido)
+        Me.GroupBoxCuarto.Controls.Add(Me.RadioButtonIndependiente)
+        Me.GroupBoxCuarto.Location = New System.Drawing.Point(768, 21)
+        Me.GroupBoxCuarto.Name = "GroupBoxCuarto"
+        Me.GroupBoxCuarto.Size = New System.Drawing.Size(256, 47)
+        Me.GroupBoxCuarto.TabIndex = 103
+        Me.GroupBoxCuarto.TabStop = False
+        Me.GroupBoxCuarto.Text = "El niño duerme en cuarto:"
+        '
+        'RadioButtonCompartido
+        '
+        Me.RadioButtonCompartido.AutoSize = True
+        Me.RadioButtonCompartido.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonCompartido.Location = New System.Drawing.Point(145, 20)
+        Me.RadioButtonCompartido.Name = "RadioButtonCompartido"
+        Me.RadioButtonCompartido.Size = New System.Drawing.Size(111, 21)
+        Me.RadioButtonCompartido.TabIndex = 2
+        Me.RadioButtonCompartido.Text = "Compartido"
+        Me.RadioButtonCompartido.UseVisualStyleBackColor = True
+        '
+        'RadioButtonIndependiente
+        '
+        Me.RadioButtonIndependiente.AutoSize = True
+        Me.RadioButtonIndependiente.Checked = True
+        Me.RadioButtonIndependiente.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonIndependiente.Location = New System.Drawing.Point(6, 21)
+        Me.RadioButtonIndependiente.Name = "RadioButtonIndependiente"
+        Me.RadioButtonIndependiente.Size = New System.Drawing.Size(132, 21)
+        Me.RadioButtonIndependiente.TabIndex = 0
+        Me.RadioButtonIndependiente.TabStop = True
+        Me.RadioButtonIndependiente.Text = "Independiente"
+        Me.RadioButtonIndependiente.UseVisualStyleBackColor = True
+        '
+        'Label91
+        '
+        Me.Label91.AutoSize = True
+        Me.Label91.Location = New System.Drawing.Point(544, 26)
+        Me.Label91.Name = "Label91"
+        Me.Label91.Size = New System.Drawing.Size(218, 17)
+        Me.Label91.TabIndex = 106
+        Me.Label91.Text = "Cuantas personas viven en casa:"
+        '
+        'TxtTipoConstruccion
+        '
+        Me.TxtTipoConstruccion.Location = New System.Drawing.Point(291, 46)
+        Me.TxtTipoConstruccion.Name = "TxtTipoConstruccion"
+        Me.TxtTipoConstruccion.Size = New System.Drawing.Size(250, 22)
+        Me.TxtTipoConstruccion.TabIndex = 105
+        '
+        'Label90
+        '
+        Me.Label90.AutoSize = True
+        Me.Label90.Location = New System.Drawing.Point(288, 26)
+        Me.Label90.Name = "Label90"
+        Me.Label90.Size = New System.Drawing.Size(144, 17)
+        Me.Label90.TabIndex = 104
+        Me.Label90.Text = "Tipo de construccion:"
+        '
+        'GroupBoxCasa
+        '
+        Me.GroupBoxCasa.Controls.Add(Me.RadioButtonPrestada)
+        Me.GroupBoxCasa.Controls.Add(Me.RadioButtonRentada)
+        Me.GroupBoxCasa.Controls.Add(Me.RadioButtonPropia)
+        Me.GroupBoxCasa.Location = New System.Drawing.Point(8, 21)
+        Me.GroupBoxCasa.Name = "GroupBoxCasa"
+        Me.GroupBoxCasa.Size = New System.Drawing.Size(279, 47)
+        Me.GroupBoxCasa.TabIndex = 102
+        Me.GroupBoxCasa.TabStop = False
+        Me.GroupBoxCasa.Text = "Su casa es:"
+        '
+        'RadioButtonPrestada
+        '
+        Me.RadioButtonPrestada.AutoSize = True
+        Me.RadioButtonPrestada.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonPrestada.Location = New System.Drawing.Point(179, 21)
+        Me.RadioButtonPrestada.Name = "RadioButtonPrestada"
+        Me.RadioButtonPrestada.Size = New System.Drawing.Size(94, 21)
+        Me.RadioButtonPrestada.TabIndex = 2
+        Me.RadioButtonPrestada.Text = "Prestada"
+        Me.RadioButtonPrestada.UseVisualStyleBackColor = True
+        '
+        'RadioButtonRentada
+        '
+        Me.RadioButtonRentada.AutoSize = True
+        Me.RadioButtonRentada.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonRentada.Location = New System.Drawing.Point(82, 21)
+        Me.RadioButtonRentada.Name = "RadioButtonRentada"
+        Me.RadioButtonRentada.Size = New System.Drawing.Size(90, 21)
+        Me.RadioButtonRentada.TabIndex = 1
+        Me.RadioButtonRentada.Text = "Rentada"
+        Me.RadioButtonRentada.UseVisualStyleBackColor = True
+        '
+        'RadioButtonPropia
+        '
+        Me.RadioButtonPropia.AutoSize = True
+        Me.RadioButtonPropia.Checked = True
+        Me.RadioButtonPropia.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonPropia.Location = New System.Drawing.Point(6, 21)
+        Me.RadioButtonPropia.Name = "RadioButtonPropia"
+        Me.RadioButtonPropia.Size = New System.Drawing.Size(76, 21)
+        Me.RadioButtonPropia.TabIndex = 0
+        Me.RadioButtonPropia.TabStop = True
+        Me.RadioButtonPropia.Text = "Propia"
+        Me.RadioButtonPropia.UseVisualStyleBackColor = True
+        '
+        'GroupBoxEstructuraFamiliar
+        '
+        Me.GroupBoxEstructuraFamiliar.Controls.Add(Me.TxtConQuienConvive)
+        Me.GroupBoxEstructuraFamiliar.Controls.Add(Me.Label88)
+        Me.GroupBoxEstructuraFamiliar.Controls.Add(Me.Label130)
+        Me.GroupBoxEstructuraFamiliar.Controls.Add(Me.TxtOrdenNacimiento)
+        Me.GroupBoxEstructuraFamiliar.Location = New System.Drawing.Point(5, 12)
+        Me.GroupBoxEstructuraFamiliar.Name = "GroupBoxEstructuraFamiliar"
+        Me.GroupBoxEstructuraFamiliar.Size = New System.Drawing.Size(454, 63)
+        Me.GroupBoxEstructuraFamiliar.TabIndex = 119
+        Me.GroupBoxEstructuraFamiliar.TabStop = False
+        Me.GroupBoxEstructuraFamiliar.Text = "ESTRUCTURA FAMILIAR"
+        '
+        'TxtConQuienConvive
+        '
+        Me.TxtConQuienConvive.Location = New System.Drawing.Point(6, 36)
+        Me.TxtConQuienConvive.Name = "TxtConQuienConvive"
+        Me.TxtConQuienConvive.Size = New System.Drawing.Size(209, 22)
+        Me.TxtConQuienConvive.TabIndex = 6
+        '
+        'Label88
+        '
+        Me.Label88.AutoSize = True
+        Me.Label88.Location = New System.Drawing.Point(3, 16)
+        Me.Label88.Name = "Label88"
+        Me.Label88.Size = New System.Drawing.Size(212, 17)
+        Me.Label88.TabIndex = 4
+        Me.Label88.Text = "Con quién convive más en casa:"
+        '
+        'Label130
+        '
+        Me.Label130.AutoSize = True
+        Me.Label130.Location = New System.Drawing.Point(219, 16)
+        Me.Label130.Name = "Label130"
+        Me.Label130.Size = New System.Drawing.Size(211, 17)
+        Me.Label130.TabIndex = 99
+        Me.Label130.Text = "Orden de nacimiento del menor:"
+        '
+        'TxtOrdenNacimiento
+        '
+        Me.TxtOrdenNacimiento.Location = New System.Drawing.Point(221, 36)
+        Me.TxtOrdenNacimiento.Mask = "00"
+        Me.TxtOrdenNacimiento.Name = "TxtOrdenNacimiento"
+        Me.TxtOrdenNacimiento.Size = New System.Drawing.Size(63, 22)
+        Me.TxtOrdenNacimiento.TabIndex = 102
+        Me.TxtOrdenNacimiento.ValidatingType = GetType(Integer)
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(4, 40)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(334, 46)
+        Me.Label1.TabIndex = 50
+        Me.Label1.Text = "INSCRIPCIONES"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = Global.Guarderia.My.Resources.Resources.zoom_in
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(29, 24)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
+        '
+        'ToolStripLabel3
+        '
+        Me.ToolStripLabel3.Name = "ToolStripLabel3"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(66, 24)
+        Me.ToolStripLabel3.Text = "Consulta"
         '
         'FrmInscripciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1193, 626)
+        Me.ClientSize = New System.Drawing.Size(1193, 700)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel)
         Me.Controls.Add(Me.ToolStrip1)
@@ -3773,29 +3936,13 @@ Partial Class FrmInscripciones
         Me.GroupBox8.PerformLayout()
         Me.FichaIdentificacion.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
-        Me.GroupBoxEstructuraFamiliar.ResumeLayout(False)
-        Me.GroupBoxEstructuraFamiliar.PerformLayout()
-        Me.GroupBoxVivienda.ResumeLayout(False)
-        Me.GroupBoxVivienda.PerformLayout()
-        CType(Me.TxtPersonasCasa, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBoxCuarto.ResumeLayout(False)
-        Me.GroupBoxCuarto.PerformLayout()
-        Me.GroupBoxCasa.ResumeLayout(False)
-        Me.GroupBoxCasa.PerformLayout()
-        Me.GroupBoxAntecedentes.ResumeLayout(False)
-        Me.GroupBoxAntecedentes.PerformLayout()
-        Me.GroupBoxLeche.ResumeLayout(False)
-        Me.GroupBoxLeche.PerformLayout()
-        Me.GroupBoxParto.ResumeLayout(False)
-        Me.GroupBoxParto.PerformLayout()
-        Me.GroupBoxEmbarazo.ResumeLayout(False)
-        Me.GroupBoxEmbarazo.PerformLayout()
-        Me.GroupBoxCaracteristicasDesarrollo.ResumeLayout(False)
-        Me.GroupBoxCaracteristicasDesarrollo.PerformLayout()
-        Me.GroupBoxTiempoCalle.ResumeLayout(False)
-        Me.GroupBoxTiempoCalle.PerformLayout()
-        Me.GroupBoxComparteJuguetes.ResumeLayout(False)
-        Me.GroupBoxComparteJuguetes.PerformLayout()
+        Me.Panel1.PerformLayout()
+        Me.GroupBoxConducta.ResumeLayout(False)
+        Me.GroupBoxConducta.PerformLayout()
+        Me.GroupBoxBerrinche.ResumeLayout(False)
+        Me.GroupBoxBerrinche.PerformLayout()
+        Me.GroupBoxAlimentacion.ResumeLayout(False)
+        Me.GroupBoxAlimentacion.PerformLayout()
         Me.GroupBoxHigiene.ResumeLayout(False)
         Me.GroupBoxHigiene.PerformLayout()
         Me.GroupBoxBaniarse.ResumeLayout(False)
@@ -3806,12 +3953,29 @@ Partial Class FrmInscripciones
         Me.GroupBoxLavaDientes.PerformLayout()
         Me.GroupBoxSeLavaManos.ResumeLayout(False)
         Me.GroupBoxSeLavaManos.PerformLayout()
-        Me.GroupBoxAlimentacion.ResumeLayout(False)
-        Me.GroupBoxAlimentacion.PerformLayout()
-        Me.GroupBoxConducta.ResumeLayout(False)
-        Me.GroupBoxConducta.PerformLayout()
-        Me.GroupBoxBerrinche.ResumeLayout(False)
-        Me.GroupBoxBerrinche.PerformLayout()
+        Me.GroupBoxCaracteristicasDesarrollo.ResumeLayout(False)
+        Me.GroupBoxCaracteristicasDesarrollo.PerformLayout()
+        Me.GroupBoxTiempoCalle.ResumeLayout(False)
+        Me.GroupBoxTiempoCalle.PerformLayout()
+        Me.GroupBoxComparteJuguetes.ResumeLayout(False)
+        Me.GroupBoxComparteJuguetes.PerformLayout()
+        Me.GroupBoxAntecedentes.ResumeLayout(False)
+        Me.GroupBoxAntecedentes.PerformLayout()
+        Me.GroupBoxLeche.ResumeLayout(False)
+        Me.GroupBoxLeche.PerformLayout()
+        Me.GroupBoxParto.ResumeLayout(False)
+        Me.GroupBoxParto.PerformLayout()
+        Me.GroupBoxEmbarazo.ResumeLayout(False)
+        Me.GroupBoxEmbarazo.PerformLayout()
+        Me.GroupBoxVivienda.ResumeLayout(False)
+        Me.GroupBoxVivienda.PerformLayout()
+        CType(Me.TxtPersonasCasa, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBoxCuarto.ResumeLayout(False)
+        Me.GroupBoxCuarto.PerformLayout()
+        Me.GroupBoxCasa.ResumeLayout(False)
+        Me.GroupBoxCasa.PerformLayout()
+        Me.GroupBoxEstructuraFamiliar.ResumeLayout(False)
+        Me.GroupBoxEstructuraFamiliar.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -4151,4 +4315,20 @@ Partial Class FrmInscripciones
     Friend WithEvents Label88 As Label
     Friend WithEvents Label130 As Label
     Friend WithEvents TxtOrdenNacimiento As MaskedTextBox
+    Friend WithEvents CboGrupo As ComboBox
+    Friend WithEvents Label87 As Label
+    Friend WithEvents Label92 As Label
+    Friend WithEvents TxtHoraSalida As TextBox
+    Friend WithEvents Label89 As Label
+    Friend WithEvents TxtHoraEntrada As TextBox
+    Friend WithEvents TxtIdFichaIdentificacion As TextBox
+    Friend WithEvents Label97 As Label
+    Friend WithEvents TxtVerduras As TextBox
+    Friend WithEvents Label114 As Label
+    Friend WithEvents TxtFrutas As TextBox
+    Friend WithEvents Label112 As Label
+    Friend WithEvents TxtMomentoLavaManos As TextBox
+    Friend WithEvents Label117 As Label
+    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents ToolStripLabel3 As ToolStripLabel
 End Class

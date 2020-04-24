@@ -85,6 +85,12 @@
     <Compile Include="FrmCambioHorario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmConsultaBitacora.Designer.vb">
+      <DependentUpon>FrmConsultaBitacora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaBitacora.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmConsultaCambioHorario.Designer.vb">
       <DependentUpon>FrmConsultaCambioHorario.vb</DependentUpon>
     </Compile>
@@ -101,6 +107,24 @@
       <DependentUpon>FrmConsultaInasistenciasJustificadas.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmConsultaInasistenciasJustificadas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaIngresoEgreso.Designer.vb">
+      <DependentUpon>FrmConsultaIngresoEgreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaIngresoEgreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaInscripciones.Designer.vb">
+      <DependentUpon>FrmConsultaInscripciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaInscripciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaPagos.Designer.vb">
+      <DependentUpon>FrmConsultaPagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaPagos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmConsultaPermisos.Designer.vb">
@@ -125,6 +149,12 @@
       <DependentUpon>FrmInasistenciasJustificadas.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmInasistenciasJustificadas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresoEgreso.Designer.vb">
+      <DependentUpon>FrmIngresoEgreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngresoEgreso.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmInscripciones.Designer.vb">
@@ -231,6 +261,9 @@
     <EmbeddedResource Include="FrmCambioHorario.resx">
       <DependentUpon>FrmCambioHorario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaBitacora.resx">
+      <DependentUpon>FrmConsultaBitacora.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultaCambioHorario.resx">
       <DependentUpon>FrmConsultaCambioHorario.vb</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +272,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultaInasistenciasJustificadas.resx">
       <DependentUpon>FrmConsultaInasistenciasJustificadas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaIngresoEgreso.resx">
+      <DependentUpon>FrmConsultaIngresoEgreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaInscripciones.resx">
+      <DependentUpon>FrmConsultaInscripciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaPagos.resx">
+      <DependentUpon>FrmConsultaPagos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultaPermisos.resx">
       <DependentUpon>FrmConsultaPermisos.vb</DependentUpon>
@@ -251,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInasistenciasJustificadas.resx">
       <DependentUpon>FrmInasistenciasJustificadas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngresoEgreso.resx">
+      <DependentUpon>FrmIngresoEgreso.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInscripciones.resx">
       <DependentUpon>FrmInscripciones.vb</DependentUpon>

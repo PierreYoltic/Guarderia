@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Linq
 Public Class FrmInscripciones
     Dim conexion As New SqlConnection("Data Source=PIER18;Initial catalog=Guarderia; Integrated security = true")
     Dim comando As New SqlCommand
@@ -9,10 +10,9 @@ Public Class FrmInscripciones
         TabControlPersonasES.TabPages.Remove(PersonaES3)
         TabControlPersonasE.TabPages.Remove(PersonaE2)
         TabControlPersonasE.TabPages.Remove(PersonaE3)
-
+        TabControlInscripcion.TabPages.Remove(FichaIdentificacion)
         conexion.Open()
         comando = conexion.CreateCommand
-
     End Sub
 
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
@@ -25,6 +25,10 @@ Public Class FrmInscripciones
         comando.CommandText = "SELECT COUNT(*) FROM Menores"
         N = comando.ExecuteScalar + 1
         TxtIdMenor.Text = N
+
+        comando.CommandText = "SELECT COUNT(*) FROM FichaIdentificacion"
+        N = comando.ExecuteScalar + 1
+        TxtIdFichaIdentificacion.Text = N
 
         comando.CommandText = "SELECT nombre FROM Tutores"
         lector = comando.ExecuteReader
@@ -44,6 +48,13 @@ Public Class FrmInscripciones
         lector = comando.ExecuteReader
         While lector.Read()
             CboNombrePE1.Items.Add(lector(0))
+        End While
+        lector.Close()
+
+        comando.CommandText = "SELECT descripcion FROM Salas"
+        lector = comando.ExecuteReader
+        While lector.Read()
+            CboGrupo.Items.Add(lector(0))
         End While
         lector.Close()
 
@@ -236,4 +247,139 @@ Public Class FrmInscripciones
         lector.Close()
     End Sub
 
+    Private Sub ComboTipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboTipo.SelectedIndexChanged
+        If ComboTipo.Text = "Normal" Then
+            TabControlInscripcion.TabPages.Insert(2, FichaIdentificacion)
+        Else
+            TabControlInscripcion.TabPages.Remove(FichaIdentificacion)
+        End If
+    End Sub
+
+    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
+        BtnGuardar.Enabled = False
+        BtnNuevo.Enabled = True
+        comando.CommandText = "SELECT idGrupo FROM Grupos INNER JOIN SALAS AS S ON Grupos.idSala = S.idSala WHERE s.descripcion = '" & CboGrupo.Text & "'"
+        lector = comando.ExecuteReader
+        lector.Read()
+        Dim idGrupo As Integer = lector(0)
+        lector.Close()
+        Dim R As String
+        R = "INSERT INTO Menores
+        VALUES(" & Val(TxtIdMenor.Text) & "," & Val(idGrupo) & ",'" & TxtApellidoPat.Text & "','" & TxtApellidoMat.Text &
+                "','" & TxtNombre.Text & "','" & DateNacimiento.Text & "','" & TxtCURP.Text &
+                "','" & TxtTipoSangre.Text & "','" & ComboTipo.Text & "'," & Val(MM.Value) & "," & Val(AA.Value) & ")"
+        comando.CommandText = R
+        comando.ExecuteNonQuery()
+        R = "INSERT INTO FichaTecTutores " &
+            "VALUES(" & Val(TxtIdMenor.Text) & "," & Val(TxtIdTutor.Text) & ")"
+        comando.CommandText = R
+        comando.ExecuteNonQuery()
+        If TabControlTutor.TabCount > 1 Then
+            R = "INSERT INTO FichaTecTutores " &
+            "VALUES(" & Val(TxtIdMenor.Text) & "," & Val(TxtIdTutor2.Text) & ")"
+            comando.CommandText = R
+            comando.ExecuteNonQuery()
+        End If
+
+        If TabControlPersonasES.TabCount = 1 Then
+            R = "INSERT INTO FichaTecPES " &
+            "VALUES(" & Val(TxtIdMenor.Text) & "," & Val(TxtIDPES1.Text) & ")"
+            comando.CommandText = R
+            comando.ExecuteNonQuery()
+        End If
+        If TabControlPersonasES.TabCount > 1 Then
+            R = "INSERT INTO FichaTecPES " &
+            "VALUES(" & Val(TxtIdMenor.Text) & "," & Val(TxtIDPES2.Text) & ")"
+            comando.CommandText = R
+            comando.ExecuteNonQuery()
+        End If
+        If TabControlPersonasES.TabCount > 2 Then
+            R = "INSERT INTO FichaTecPES " &
+            "VALUES(" & Val(TxtIdMenor.Text) & "," & Val(TxtIDPES3.Text) & ")"
+            comando.CommandText = R
+            comando.ExecuteNonQuery()
+        End If
+
+        If TabControlPersonasE.TabCount = 1 Then
+            R = "INSERT INTO FichaTecPE " &
+            "VALUES(" & Val(TxtIdMenor.Text) & "," & Val(TxtIDPE1.Text) & ")"
+            comando.CommandText = R
+            comando.ExecuteNonQuery()
+        End If
+        If TabControlPersonasE.TabCount > 1 Then
+            R = "INSERT INTO FichaTecPE " &
+            "VALUES(" & Val(TxtIdMenor.Text) & "," & Val(TxtIDPE2.Text) & ")"
+            comando.CommandText = R
+            comando.ExecuteNonQuery()
+        End If
+        If TabControlPersonasE.TabCount > 2 Then
+            R = "INSERT INTO FichaTecPE " &
+            "VALUES(" & Val(TxtIdMenor.Text) & "," & Val(TxtIDPE3.Text) & ")"
+            comando.CommandText = R
+            comando.ExecuteNonQuery()
+        End If
+
+        If ComboTipo.Text = "Normal" Then
+            Dim rButtonVivienda As RadioButton = GroupBoxCasa.Controls.OfType(Of RadioButton).FirstOrDefault(Function(radioButton) radioButton.Checked = True)
+            Dim rButtonCuarto As RadioButton = GroupBoxCuarto.Controls.OfType(Of RadioButton).FirstOrDefault(Function(radioButton) radioButton.Checked = True)
+            Dim rButtonEmbarazo As RadioButton = GroupBoxEmbarazo.Controls.OfType(Of RadioButton).FirstOrDefault(Function(radioButton) radioButton.Checked = True)
+            Dim rButtonParto As RadioButton = GroupBoxParto.Controls.OfType(Of RadioButton).FirstOrDefault(Function(radioButton) radioButton.Checked = True)
+            Dim rButtonLeche As RadioButton = GroupBoxLeche.Controls.OfType(Of RadioButton).FirstOrDefault(Function(radioButton) radioButton.Checked = True)
+            Dim rButtonComparteJuguetes As RadioButton = GroupBoxComparteJuguetes.Controls.OfType(Of RadioButton).FirstOrDefault(Function(radioButton) radioButton.Checked = True)
+            Dim rButtonTiempoCalle As RadioButton = GroupBoxTiempoCalle.Controls.OfType(Of RadioButton).FirstOrDefault(Function(radioButton) radioButton.Checked = True)
+            Dim rButtonSeLavaManos As RadioButton = GroupBoxSeLavaManos.Controls.OfType(Of RadioButton).FirstOrDefault(Function(radioButton) radioButton.Checked = True)
+            Dim rButtonLavaDientes As RadioButton = GroupBoxLavaDientes.Controls.OfType(Of RadioButton).FirstOrDefault(Function(radioButton) radioButton.Checked = True)
+            Dim rButtonBanio As RadioButton = GroupBoxBanio.Controls.OfType(Of RadioButton).FirstOrDefault(Function(radioButton) radioButton.Checked = True)
+            Dim rButtonBaniarse As RadioButton = GroupBoxBaniarse.Controls.OfType(Of RadioButton).FirstOrDefault(Function(radioButton) radioButton.Checked = True)
+            Dim rButtonBerrinche As RadioButton = GroupBoxBerrinche.Controls.OfType(Of RadioButton).FirstOrDefault(Function(radioButton) radioButton.Checked = True)
+
+            R = "INSERT INTO FichaIdentificacion " &
+            "VALUES(" & Val(TxtIdFichaIdentificacion.Text) & "," & Val(TxtIdMenor.Text) & ",'" & TxtConQuienConvive.Text &
+            "','" & rButtonVivienda.Text & "','" & TxtTipoConstruccion.Text & "'," & Val(TxtPersonasCasa.Text) &
+            ",'" & rButtonCuarto.Text & "'," & Val(TxtOrdenNacimiento.Text) & ",'" & TxtLugarNacimiento.Text &
+            "','" & rButtonEmbarazo.Text & "','" & rButtonParto.Text & "','" & TxtComplicaciones.Text &
+            "','" & rButtonLeche.Text & "','" & TxtTiempoLeche.Text & "','" & TxtEdadControlBanio.Text &
+            "'," & Val(TxtHorasDuerme.Text) & ",'" & TxtHoraDuerme.Text & "','" & TxtHoraDespierta.Text &
+            "','" & TxtQuienDuermeConEl.Text & "','" & TxtDondeJuega.Text & "','" & TxtAQueJuega.Text &
+            "','" & TxtConQuienJuega.Text & "','" & TxtAmigos.Text & "','" & rButtonComparteJuguetes.Text &
+            "','" & rButtonTiempoCalle.Text & "','" & TextBoxQuienConElCalle.Text & "','" & TxtHoraTv.Text &
+            "'," & Val(TxtHorasTv.Text) & ",'" & TxtProgramasTv.Text & "','" & rButtonSeLavaManos.Text & "','" & TxtMomentoLavaManos.Text &
+            "','" & rButtonLavaDientes.Text & "','" & TxtMomentoLavaDientes.Text & "','" & rButtonBanio.Text &
+            "','" & rButtonBaniarse.Text & "','" & TxtHoraDesayuno.Text & "','" & TxtQueDesayuna.Text &
+            "','" & TxtHoraCome.Text & "','" & TxtQueCome.Text & "','" & TxtHoraCena.Text &
+            "','" & TxtQueCena.Text & "','" & TxtQueDulces.Text & "','" & TxtHoraDulces.Text &
+            "','" & TxtFrutas.Text & "','" & TxtVerduras.Text & "','" & TxtApodo.Text &
+            "','" & rButtonBerrinche.Text & "','" & TxtQueBerrinche.Text & "','" & TxtReaccionBerrinche.Text &
+            "','" & TxtFuncionaEstrategia.Text & "','" & TxtTemorMenor.Text & "','" & TxtActividadesConPadre.Text & "')"
+
+            comando.CommandText = R
+            comando.ExecuteNonQuery()
+        End If
+
+    End Sub
+
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboGrupo.SelectedIndexChanged
+        Dim R As String = "Select H.horaEn, H.horaSa " &
+                            "From Horarios As H " &
+                            "INNER Join Grupos As G ON G.idHorario = H.idHorario " &
+                            "INNER Join Salas AS S ON G.idSala = S.idSala " &
+                            "WHERE S.descripcion = '" & CboGrupo.Text & "'"
+        comando.CommandText = R
+        lector = comando.ExecuteReader
+        lector.Read()
+        TxtHoraEntrada.Text = lector(0)
+        TxtHoraSalida.Text = lector(1)
+        lector.Close()
+
+    End Sub
+
+    Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
+        conexion.Close()
+        Me.Dispose()
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        FrmConsultaInscripciones.Show()
+    End Sub
 End Class

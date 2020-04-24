@@ -76,4 +76,19 @@
         FrmInscripciones.StartPosition = FormStartPosition.CenterScreen
         FrmInscripciones.ShowDialog()
     End Sub
+
+    Private Sub IngresoEgresoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresoEgresoToolStripMenuItem.Click
+        FrmIngresoEgreso.StartPosition = FormStartPosition.CenterScreen
+        FrmIngresoEgreso.ShowDialog()
+    End Sub
+
+    Private Sub PagosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PagosToolStripMenuItem.Click
+        FrmPagos.StartPosition = FormStartPosition.CenterScreen
+        FrmPagos.ShowDialog()
+    End Sub
+
+    Private Sub BitácoraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BitácoraToolStripMenuItem.Click
+        FrmBitacora.StartPosition = FormStartPosition.CenterScreen
+        FrmBitacora.ShowDialog()
+    End Sub
 End Class

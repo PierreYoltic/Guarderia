@@ -23,11 +23,8 @@ Partial Class FrmPagos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.BtnNuevo = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
-        Me.BtnSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GrBxTutor = New System.Windows.Forms.GroupBox()
@@ -37,20 +34,20 @@ Partial Class FrmPagos
         Me.Label16 = New System.Windows.Forms.Label()
         Me.DTP_Fecha = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtIdSuspensiones = New System.Windows.Forms.TextBox()
+        Me.TxtIdPago = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GrBxMenor = New System.Windows.Forms.GroupBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TxtTipo = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TxtTurno = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TxtGrupo = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtUltimoAnio = New System.Windows.Forms.TextBox()
+        Me.TxtUltimoMes = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TxtCurp = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TxtApellidoMat = New System.Windows.Forms.TextBox()
         Me.TxtApellidoPat = New System.Windows.Forms.TextBox()
@@ -60,57 +57,53 @@ Partial Class FrmPagos
         Me.TxtIdMenor = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.GroupBoxTipoPago = New System.Windows.Forms.GroupBox()
+        Me.ButtonAgregar = New System.Windows.Forms.Button()
+        Me.TxtCantidad = New System.Windows.Forms.NumericUpDown()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.ComboBoxConcepto = New System.Windows.Forms.ComboBox()
+        Me.TxtIdTipoPago = New System.Windows.Forms.TextBox()
+        Me.TxtPrecio = New System.Windows.Forms.MaskedTextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.GroupBoxDetallePago = New System.Windows.Forms.GroupBox()
+        Me.BtnPagar = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
+        Me.LabelTotal = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.DataGridViewDetallePago = New System.Windows.Forms.DataGridView()
+        Me.IdTipoPago = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Cant = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrecioU = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Importe = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.BtnNuevo = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
+        Me.BtnSalir = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStrip1.SuspendLayout()
         Me.GrBxTutor.SuspendLayout()
         Me.GrBxMenor.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBoxTipoPago.SuspendLayout()
+        CType(Me.TxtCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBoxDetallePago.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.DataGridViewDetallePago, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevo, Me.ToolStripLabel1, Me.BtnGuardar, Me.ToolStripLabel2, Me.BtnSalir, Me.ToolStripLabel4})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNuevo, Me.ToolStripLabel1, Me.BtnGuardar, Me.ToolStripLabel2, Me.ToolStripButton1, Me.ToolStripLabel3, Me.BtnSalir, Me.ToolStripLabel4})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1082, 27)
         Me.ToolStrip1.TabIndex = 49
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'BtnNuevo
-        '
-        Me.BtnNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BtnNuevo.Image = Global.Guarderia.My.Resources.Resources.copy
-        Me.BtnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(29, 24)
-        Me.BtnNuevo.Text = "ToolStripButton1"
-        Me.BtnNuevo.ToolTipText = "Crear un nuevo Grupo"
         '
         'ToolStripLabel1
         '
@@ -118,32 +111,11 @@ Partial Class FrmPagos
         Me.ToolStripLabel1.Size = New System.Drawing.Size(52, 24)
         Me.ToolStripLabel1.Text = "Nuevo"
         '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BtnGuardar.Enabled = False
-        Me.BtnGuardar.Image = Global.Guarderia.My.Resources.Resources.plus
-        Me.BtnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(29, 24)
-        Me.BtnGuardar.Text = "ToolStripButton2"
-        Me.BtnGuardar.ToolTipText = "Guardar los cambios"
-        '
         'ToolStripLabel2
         '
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
         Me.ToolStripLabel2.Size = New System.Drawing.Size(62, 24)
         Me.ToolStripLabel2.Text = "Guardar"
-        '
-        'BtnSalir
-        '
-        Me.BtnSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BtnSalir.Image = Global.Guarderia.My.Resources.Resources.cancel_2
-        Me.BtnSalir.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(29, 24)
-        Me.BtnSalir.Text = "ToolStripButton4"
-        Me.BtnSalir.ToolTipText = "Cerrar ventana"
         '
         'ToolStripLabel4
         '
@@ -228,14 +200,14 @@ Partial Class FrmPagos
         Me.Label2.TabIndex = 60
         Me.Label2.Text = "Fecha"
         '
-        'TxtIdSuspensiones
+        'TxtIdPago
         '
-        Me.TxtIdSuspensiones.Enabled = False
-        Me.TxtIdSuspensiones.Location = New System.Drawing.Point(840, 62)
-        Me.TxtIdSuspensiones.Name = "TxtIdSuspensiones"
-        Me.TxtIdSuspensiones.ReadOnly = True
-        Me.TxtIdSuspensiones.Size = New System.Drawing.Size(100, 22)
-        Me.TxtIdSuspensiones.TabIndex = 59
+        Me.TxtIdPago.Enabled = False
+        Me.TxtIdPago.Location = New System.Drawing.Point(840, 62)
+        Me.TxtIdPago.Name = "TxtIdPago"
+        Me.TxtIdPago.ReadOnly = True
+        Me.TxtIdPago.Size = New System.Drawing.Size(100, 22)
+        Me.TxtIdPago.TabIndex = 59
         '
         'Label11
         '
@@ -248,17 +220,17 @@ Partial Class FrmPagos
         '
         'GrBxMenor
         '
-        Me.GrBxMenor.Controls.Add(Me.TextBox6)
+        Me.GrBxMenor.Controls.Add(Me.TxtTipo)
         Me.GrBxMenor.Controls.Add(Me.Label14)
-        Me.GrBxMenor.Controls.Add(Me.TextBox5)
+        Me.GrBxMenor.Controls.Add(Me.TxtTurno)
         Me.GrBxMenor.Controls.Add(Me.Label13)
-        Me.GrBxMenor.Controls.Add(Me.TextBox4)
+        Me.GrBxMenor.Controls.Add(Me.TxtGrupo)
         Me.GrBxMenor.Controls.Add(Me.Label10)
-        Me.GrBxMenor.Controls.Add(Me.TextBox3)
-        Me.GrBxMenor.Controls.Add(Me.TextBox2)
+        Me.GrBxMenor.Controls.Add(Me.TxtUltimoAnio)
+        Me.GrBxMenor.Controls.Add(Me.TxtUltimoMes)
         Me.GrBxMenor.Controls.Add(Me.Label9)
         Me.GrBxMenor.Controls.Add(Me.Label8)
-        Me.GrBxMenor.Controls.Add(Me.TextBox1)
+        Me.GrBxMenor.Controls.Add(Me.TxtCurp)
         Me.GrBxMenor.Controls.Add(Me.Label5)
         Me.GrBxMenor.Controls.Add(Me.TxtApellidoMat)
         Me.GrBxMenor.Controls.Add(Me.TxtApellidoPat)
@@ -276,13 +248,13 @@ Partial Class FrmPagos
         Me.GrBxMenor.TabStop = False
         Me.GrBxMenor.Text = "Datos del Menor"
         '
-        'TextBox6
+        'TxtTipo
         '
-        Me.TextBox6.Location = New System.Drawing.Point(9, 97)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(115, 22)
-        Me.TextBox6.TabIndex = 65
+        Me.TxtTipo.Location = New System.Drawing.Point(9, 97)
+        Me.TxtTipo.Name = "TxtTipo"
+        Me.TxtTipo.ReadOnly = True
+        Me.TxtTipo.Size = New System.Drawing.Size(115, 22)
+        Me.TxtTipo.TabIndex = 65
         '
         'Label14
         '
@@ -293,13 +265,13 @@ Partial Class FrmPagos
         Me.Label14.TabIndex = 64
         Me.Label14.Text = "Tipo:"
         '
-        'TextBox5
+        'TxtTurno
         '
-        Me.TextBox5.Location = New System.Drawing.Point(260, 98)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(115, 22)
-        Me.TextBox5.TabIndex = 63
+        Me.TxtTurno.Location = New System.Drawing.Point(260, 98)
+        Me.TxtTurno.Name = "TxtTurno"
+        Me.TxtTurno.ReadOnly = True
+        Me.TxtTurno.Size = New System.Drawing.Size(115, 22)
+        Me.TxtTurno.TabIndex = 63
         '
         'Label13
         '
@@ -310,13 +282,13 @@ Partial Class FrmPagos
         Me.Label13.TabIndex = 62
         Me.Label13.Text = "Turno:"
         '
-        'TextBox4
+        'TxtGrupo
         '
-        Me.TextBox4.Location = New System.Drawing.Point(130, 98)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(124, 22)
-        Me.TextBox4.TabIndex = 61
+        Me.TxtGrupo.Location = New System.Drawing.Point(130, 98)
+        Me.TxtGrupo.Name = "TxtGrupo"
+        Me.TxtGrupo.ReadOnly = True
+        Me.TxtGrupo.Size = New System.Drawing.Size(124, 22)
+        Me.TxtGrupo.TabIndex = 61
         '
         'Label10
         '
@@ -327,21 +299,21 @@ Partial Class FrmPagos
         Me.Label10.TabIndex = 60
         Me.Label10.Text = "Grupo:"
         '
-        'TextBox3
+        'TxtUltimoAnio
         '
-        Me.TextBox3.Location = New System.Drawing.Point(518, 95)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(99, 22)
-        Me.TextBox3.TabIndex = 59
+        Me.TxtUltimoAnio.Location = New System.Drawing.Point(518, 95)
+        Me.TxtUltimoAnio.Name = "TxtUltimoAnio"
+        Me.TxtUltimoAnio.ReadOnly = True
+        Me.TxtUltimoAnio.Size = New System.Drawing.Size(99, 22)
+        Me.TxtUltimoAnio.TabIndex = 59
         '
-        'TextBox2
+        'TxtUltimoMes
         '
-        Me.TextBox2.Location = New System.Drawing.Point(381, 98)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(115, 22)
-        Me.TextBox2.TabIndex = 57
+        Me.TxtUltimoMes.Location = New System.Drawing.Point(381, 98)
+        Me.TxtUltimoMes.Name = "TxtUltimoMes"
+        Me.TxtUltimoMes.ReadOnly = True
+        Me.TxtUltimoMes.Size = New System.Drawing.Size(115, 22)
+        Me.TxtUltimoMes.TabIndex = 57
         '
         'Label9
         '
@@ -361,13 +333,13 @@ Partial Class FrmPagos
         Me.Label8.TabIndex = 56
         Me.Label8.Text = "Ultimo Mes Pagado:"
         '
-        'TextBox1
+        'TxtCurp
         '
-        Me.TextBox1.Location = New System.Drawing.Point(502, 47)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(163, 22)
-        Me.TextBox1.TabIndex = 55
+        Me.TxtCurp.Location = New System.Drawing.Point(502, 47)
+        Me.TxtCurp.Name = "TxtCurp"
+        Me.TxtCurp.ReadOnly = True
+        Me.TxtCurp.Size = New System.Drawing.Size(163, 22)
+        Me.TxtCurp.TabIndex = 55
         '
         'Label5
         '
@@ -446,31 +418,44 @@ Partial Class FrmPagos
         Me.Label4.TabIndex = 30
         Me.Label4.Text = "ID Menor:"
         '
-        'GroupBox1
+        'GroupBoxTipoPago
         '
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
-        Me.GroupBox1.Controls.Add(Me.Label19)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.TextBox7)
-        Me.GroupBox1.Controls.Add(Me.MaskedTextBox1)
-        Me.GroupBox1.Controls.Add(Me.Label15)
-        Me.GroupBox1.Controls.Add(Me.Label17)
-        Me.GroupBox1.Controls.Add(Me.Label18)
-        Me.GroupBox1.Enabled = False
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 229)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(671, 88)
-        Me.GroupBox1.TabIndex = 63
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Tipo de Pago:"
+        Me.GroupBoxTipoPago.Controls.Add(Me.ButtonAgregar)
+        Me.GroupBoxTipoPago.Controls.Add(Me.TxtCantidad)
+        Me.GroupBoxTipoPago.Controls.Add(Me.Label19)
+        Me.GroupBoxTipoPago.Controls.Add(Me.ComboBoxConcepto)
+        Me.GroupBoxTipoPago.Controls.Add(Me.TxtIdTipoPago)
+        Me.GroupBoxTipoPago.Controls.Add(Me.TxtPrecio)
+        Me.GroupBoxTipoPago.Controls.Add(Me.Label15)
+        Me.GroupBoxTipoPago.Controls.Add(Me.Label17)
+        Me.GroupBoxTipoPago.Controls.Add(Me.Label18)
+        Me.GroupBoxTipoPago.Enabled = False
+        Me.GroupBoxTipoPago.Location = New System.Drawing.Point(12, 229)
+        Me.GroupBoxTipoPago.Name = "GroupBoxTipoPago"
+        Me.GroupBoxTipoPago.Size = New System.Drawing.Size(671, 88)
+        Me.GroupBoxTipoPago.TabIndex = 63
+        Me.GroupBoxTipoPago.TabStop = False
+        Me.GroupBoxTipoPago.Text = "Tipo de Pago:"
         '
-        'NumericUpDown1
+        'ButtonAgregar
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(381, 52)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(70, 22)
-        Me.NumericUpDown1.TabIndex = 68
+        Me.ButtonAgregar.AutoSize = True
+        Me.ButtonAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonAgregar.Location = New System.Drawing.Point(502, 21)
+        Me.ButtonAgregar.Name = "ButtonAgregar"
+        Me.ButtonAgregar.Size = New System.Drawing.Size(146, 54)
+        Me.ButtonAgregar.TabIndex = 69
+        Me.ButtonAgregar.Text = "Agregar"
+        Me.ButtonAgregar.UseVisualStyleBackColor = True
+        '
+        'TxtCantidad
+        '
+        Me.TxtCantidad.Location = New System.Drawing.Point(381, 52)
+        Me.TxtCantidad.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.TxtCantidad.Name = "TxtCantidad"
+        Me.TxtCantidad.Size = New System.Drawing.Size(70, 22)
+        Me.TxtCantidad.TabIndex = 68
+        Me.TxtCantidad.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label19
         '
@@ -481,29 +466,29 @@ Partial Class FrmPagos
         Me.Label19.TabIndex = 67
         Me.Label19.Text = "Cantidad:"
         '
-        'ComboBox1
+        'ComboBoxConcepto
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(77, 51)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(177, 24)
-        Me.ComboBox1.TabIndex = 66
+        Me.ComboBoxConcepto.FormattingEnabled = True
+        Me.ComboBoxConcepto.Location = New System.Drawing.Point(77, 51)
+        Me.ComboBoxConcepto.Name = "ComboBoxConcepto"
+        Me.ComboBoxConcepto.Size = New System.Drawing.Size(177, 24)
+        Me.ComboBoxConcepto.TabIndex = 66
         '
-        'TextBox7
+        'TxtIdTipoPago
         '
-        Me.TextBox7.Location = New System.Drawing.Point(8, 53)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(63, 22)
-        Me.TextBox7.TabIndex = 66
+        Me.TxtIdTipoPago.Location = New System.Drawing.Point(8, 53)
+        Me.TxtIdTipoPago.Name = "TxtIdTipoPago"
+        Me.TxtIdTipoPago.ReadOnly = True
+        Me.TxtIdTipoPago.Size = New System.Drawing.Size(63, 22)
+        Me.TxtIdTipoPago.TabIndex = 66
         '
-        'MaskedTextBox1
+        'TxtPrecio
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(260, 51)
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.ReadOnly = True
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(115, 22)
-        Me.MaskedTextBox1.TabIndex = 29
+        Me.TxtPrecio.Location = New System.Drawing.Point(260, 51)
+        Me.TxtPrecio.Name = "TxtPrecio"
+        Me.TxtPrecio.ReadOnly = True
+        Me.TxtPrecio.Size = New System.Drawing.Size(115, 22)
+        Me.TxtPrecio.TabIndex = 29
         '
         'Label15
         '
@@ -532,71 +517,93 @@ Partial Class FrmPagos
         Me.Label18.TabIndex = 0
         Me.Label18.Text = "ID Pago:"
         '
-        'Button1
+        'GroupBoxDetallePago
         '
-        Me.Button1.AutoSize = True
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(502, 21)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(146, 54)
-        Me.Button1.TabIndex = 69
-        Me.Button1.Text = "Agregar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.GroupBoxDetallePago.Controls.Add(Me.BtnPagar)
+        Me.GroupBoxDetallePago.Controls.Add(Me.Panel2)
+        Me.GroupBoxDetallePago.Controls.Add(Me.Panel1)
+        Me.GroupBoxDetallePago.Enabled = False
+        Me.GroupBoxDetallePago.Location = New System.Drawing.Point(12, 323)
+        Me.GroupBoxDetallePago.Name = "GroupBoxDetallePago"
+        Me.GroupBoxDetallePago.Size = New System.Drawing.Size(1070, 246)
+        Me.GroupBoxDetallePago.TabIndex = 64
+        Me.GroupBoxDetallePago.TabStop = False
+        Me.GroupBoxDetallePago.Text = "Detalle de pago"
         '
-        'GroupBox2
+        'BtnPagar
         '
-        Me.GroupBox2.Controls.Add(Me.Button2)
-        Me.GroupBox2.Controls.Add(Me.Panel2)
-        Me.GroupBox2.Controls.Add(Me.Panel1)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 323)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1070, 246)
-        Me.GroupBox2.TabIndex = 64
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Detalle de pago"
+        Me.BtnPagar.AutoSize = True
+        Me.BtnPagar.BackColor = System.Drawing.Color.White
+        Me.BtnPagar.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPagar.ForeColor = System.Drawing.Color.LimeGreen
+        Me.BtnPagar.Location = New System.Drawing.Point(907, 176)
+        Me.BtnPagar.Name = "BtnPagar"
+        Me.BtnPagar.Size = New System.Drawing.Size(146, 54)
+        Me.BtnPagar.TabIndex = 70
+        Me.BtnPagar.Text = "Pagar"
+        Me.BtnPagar.UseVisualStyleBackColor = False
         '
-        'Panel1
+        'Panel2
         '
-        Me.Panel1.AutoScroll = True
-        Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Location = New System.Drawing.Point(12, 21)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(659, 209)
-        Me.Panel1.TabIndex = 0
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Cant, Me.Descripcion, Me.PrecioU, Me.Importe})
-        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ButtonShadow
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(650, 203)
-        Me.DataGridView1.TabIndex = 0
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Panel2.Controls.Add(Me.Label20)
+        Me.Panel2.Controls.Add(Me.LabelTotal)
+        Me.Panel2.Location = New System.Drawing.Point(723, 114)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(330, 56)
+        Me.Panel2.TabIndex = 67
         '
         'Label20
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(6, 7)
+        Me.Label20.Location = New System.Drawing.Point(3, 10)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(192, 46)
         Me.Label20.TabIndex = 65
         Me.Label20.Text = "TOTAL: $"
         '
-        'Label21
+        'LabelTotal
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.ForeColor = System.Drawing.Color.Red
-        Me.Label21.Location = New System.Drawing.Point(244, 10)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(119, 46)
-        Me.Label21.TabIndex = 66
-        Me.Label21.Text = "00.00"
+        Me.LabelTotal.AutoSize = True
+        Me.LabelTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTotal.ForeColor = System.Drawing.Color.Red
+        Me.LabelTotal.Location = New System.Drawing.Point(202, 10)
+        Me.LabelTotal.Name = "LabelTotal"
+        Me.LabelTotal.Size = New System.Drawing.Size(119, 46)
+        Me.LabelTotal.TabIndex = 66
+        Me.LabelTotal.Text = "00.00"
+        '
+        'Panel1
+        '
+        Me.Panel1.AutoScroll = True
+        Me.Panel1.Controls.Add(Me.DataGridViewDetallePago)
+        Me.Panel1.Location = New System.Drawing.Point(12, 21)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(705, 209)
+        Me.Panel1.TabIndex = 0
+        '
+        'DataGridViewDetallePago
+        '
+        Me.DataGridViewDetallePago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridViewDetallePago.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridViewDetallePago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewDetallePago.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdTipoPago, Me.Cant, Me.Descripcion, Me.PrecioU, Me.Importe})
+        Me.DataGridViewDetallePago.GridColor = System.Drawing.SystemColors.ButtonShadow
+        Me.DataGridViewDetallePago.Location = New System.Drawing.Point(3, 3)
+        Me.DataGridViewDetallePago.Name = "DataGridViewDetallePago"
+        Me.DataGridViewDetallePago.ReadOnly = True
+        Me.DataGridViewDetallePago.RowHeadersWidth = 51
+        Me.DataGridViewDetallePago.RowTemplate.Height = 24
+        Me.DataGridViewDetallePago.Size = New System.Drawing.Size(699, 203)
+        Me.DataGridViewDetallePago.TabIndex = 0
+        '
+        'IdTipoPago
+        '
+        Me.IdTipoPago.HeaderText = "IdTipoPago"
+        Me.IdTipoPago.MinimumWidth = 6
+        Me.IdTipoPago.Name = "IdTipoPago"
+        Me.IdTipoPago.ReadOnly = True
         '
         'Cant
         '
@@ -604,7 +611,6 @@ Partial Class FrmPagos
         Me.Cant.MinimumWidth = 6
         Me.Cant.Name = "Cant"
         Me.Cant.ReadOnly = True
-        Me.Cant.Width = 125
         '
         'Descripcion
         '
@@ -612,7 +618,6 @@ Partial Class FrmPagos
         Me.Descripcion.MinimumWidth = 6
         Me.Descripcion.Name = "Descripcion"
         Me.Descripcion.ReadOnly = True
-        Me.Descripcion.Width = 125
         '
         'PrecioU
         '
@@ -620,7 +625,6 @@ Partial Class FrmPagos
         Me.PrecioU.MinimumWidth = 6
         Me.PrecioU.Name = "PrecioU"
         Me.PrecioU.ReadOnly = True
-        Me.PrecioU.Width = 125
         '
         'Importe
         '
@@ -628,42 +632,64 @@ Partial Class FrmPagos
         Me.Importe.MinimumWidth = 6
         Me.Importe.Name = "Importe"
         Me.Importe.ReadOnly = True
-        Me.Importe.Width = 125
         '
-        'Panel2
+        'BtnNuevo
         '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Panel2.Controls.Add(Me.Label20)
-        Me.Panel2.Controls.Add(Me.Label21)
-        Me.Panel2.Location = New System.Drawing.Point(677, 114)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(376, 56)
-        Me.Panel2.TabIndex = 67
+        Me.BtnNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BtnNuevo.Image = Global.Guarderia.My.Resources.Resources.copy
+        Me.BtnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(29, 24)
+        Me.BtnNuevo.Text = "ToolStripButton1"
+        Me.BtnNuevo.ToolTipText = "Crear un nuevo Grupo"
         '
-        'Button2
+        'BtnGuardar
         '
-        Me.Button2.AutoSize = True
-        Me.Button2.BackColor = System.Drawing.Color.White
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Button2.Location = New System.Drawing.Point(907, 176)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(146, 54)
-        Me.Button2.TabIndex = 70
-        Me.Button2.Text = "Pagar"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.BtnGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BtnGuardar.Enabled = False
+        Me.BtnGuardar.Image = Global.Guarderia.My.Resources.Resources.plus
+        Me.BtnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(29, 24)
+        Me.BtnGuardar.Text = "ToolStripButton2"
+        Me.BtnGuardar.ToolTipText = "Guardar los cambios"
+        '
+        'BtnSalir
+        '
+        Me.BtnSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BtnSalir.Image = Global.Guarderia.My.Resources.Resources.cancel_2
+        Me.BtnSalir.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Size = New System.Drawing.Size(29, 24)
+        Me.BtnSalir.Text = "ToolStripButton4"
+        Me.BtnSalir.ToolTipText = "Cerrar ventana"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = Global.Guarderia.My.Resources.Resources.zoom_in
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(29, 24)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
+        '
+        'ToolStripLabel3
+        '
+        Me.ToolStripLabel3.Name = "ToolStripLabel3"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(66, 24)
+        Me.ToolStripLabel3.Text = "Consulta"
         '
         'FrmPagos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1082, 586)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.GroupBoxDetallePago)
+        Me.Controls.Add(Me.GroupBoxTipoPago)
         Me.Controls.Add(Me.GrBxTutor)
         Me.Controls.Add(Me.DTP_Fecha)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TxtIdSuspensiones)
+        Me.Controls.Add(Me.TxtIdPago)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.GrBxMenor)
         Me.Controls.Add(Me.Label1)
@@ -676,15 +702,15 @@ Partial Class FrmPagos
         Me.GrBxTutor.PerformLayout()
         Me.GrBxMenor.ResumeLayout(False)
         Me.GrBxMenor.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBoxTipoPago.ResumeLayout(False)
+        Me.GroupBoxTipoPago.PerformLayout()
+        CType(Me.TxtCantidad, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBoxDetallePago.ResumeLayout(False)
+        Me.GroupBoxDetallePago.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.DataGridViewDetallePago, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -705,7 +731,7 @@ Partial Class FrmPagos
     Friend WithEvents Label16 As Label
     Friend WithEvents DTP_Fecha As DateTimePicker
     Friend WithEvents Label2 As Label
-    Friend WithEvents TxtIdSuspensiones As TextBox
+    Friend WithEvents TxtIdPago As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents GrBxMenor As GroupBox
     Friend WithEvents TxtApellidoMat As TextBox
@@ -716,37 +742,40 @@ Partial Class FrmPagos
     Friend WithEvents TxtIdMenor As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtUltimoMes As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtCurp As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TxtTurno As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TxtGrupo As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TxtUltimoAnio As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TxtTipo As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents GroupBoxTipoPago As GroupBox
+    Friend WithEvents ComboBoxConcepto As ComboBox
+    Friend WithEvents TxtIdTipoPago As TextBox
+    Friend WithEvents TxtPrecio As MaskedTextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Label18 As Label
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents TxtCantidad As NumericUpDown
     Friend WithEvents Label19 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Label21 As Label
+    Friend WithEvents ButtonAgregar As Button
+    Friend WithEvents GroupBoxDetallePago As GroupBox
+    Friend WithEvents LabelTotal As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridViewDetallePago As DataGridView
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents BtnPagar As Button
+    Friend WithEvents IdTipoPago As DataGridViewTextBoxColumn
     Friend WithEvents Cant As DataGridViewTextBoxColumn
     Friend WithEvents Descripcion As DataGridViewTextBoxColumn
     Friend WithEvents PrecioU As DataGridViewTextBoxColumn
     Friend WithEvents Importe As DataGridViewTextBoxColumn
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button2 As Button
+    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents ToolStripLabel3 As ToolStripLabel
 End Class
